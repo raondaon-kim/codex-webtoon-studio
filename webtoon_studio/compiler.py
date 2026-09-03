@@ -55,6 +55,10 @@ def _bridge_lines(bridge: dict[str, Any] | None) -> list[str]:
             "stacked vertically, separated by clean gutters. Read them top-to-bottom as one continuous transition, not as "
             "duplicate variants of the same pose."
         ),
+        (
+            f"Canvas rule: preserve the declared 1:{panel_count} tall composite canvas with {panel_count} equal-height "
+            "full-width panels. Do not collapse it into one undivided scene or a differently proportioned strip."
+        ),
         f"Bridge function: {bridge['function']}. Ordered micro-beats: {panel_beats}.",
     ]
 

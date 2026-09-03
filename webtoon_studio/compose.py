@@ -18,7 +18,15 @@ def _hex_color(value: str) -> tuple[int, int, int]:
 
 
 def ordered_shot_ids(scroll_plan: dict[str, Any]) -> list[str]:
-    return [shot_id for sequence in scroll_plan["sequences"] for shot_id in sequence["shot_ids"]]
+    ordered: list[str] = []
+    for sequence in scroll_plan["sequences"]:
+        inserts_by_after: dict[str, list[str]] = {}
+        for bridge in sequence.get("bridge_inserts", []):
+            inserts_by_after.setdefault(bridge["after_shot_id"], []).append(bridge["shot_id"])
+        for shot_id in sequence["shot_ids"]:
+            ordered.append(shot_id)
+            ordered.extend(inserts_by_after.get(shot_id, []))
+    return ordered
 
 
 def compose_episode(

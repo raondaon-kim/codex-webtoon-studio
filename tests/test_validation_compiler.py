@@ -95,6 +95,7 @@ class ValidationCompilerTests(unittest.TestCase):
             "function": "reaction",
             "panel_beats": ["Haeun notices the wet notebook.", "She quietly pulls it closer."],
         }
+        brief["canvas"]["height_px"] = brief["canvas"]["width_px"] * 2
         project_config, provider_config = load_configs(PROJECT)
 
         task = compile_brief(brief, source, PROJECT, project_config, provider_config)
@@ -115,6 +116,19 @@ class ValidationCompilerTests(unittest.TestCase):
         report = validate_data(brief)
 
         self.assertTrue(any("length must match" in error for error in report.errors))
+
+    def test_bridge_canvas_must_match_panel_count(self) -> None:
+        brief = copy.deepcopy(load_json(PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"))
+        brief["bridge"] = {
+            "panel_count": 2,
+            "layout": "vertical_stack",
+            "function": "reaction",
+            "panel_beats": ["Haeun notices the wet notebook.", "She quietly pulls it closer."],
+        }
+
+        report = validate_data(brief)
+
+        self.assertTrue(any("height must equal width" in error for error in report.errors))
 
     def test_visual_asset_without_reference_is_generate(self) -> None:
         source = PROJECT / "visual-bible" / "characters" / "haeun.json"

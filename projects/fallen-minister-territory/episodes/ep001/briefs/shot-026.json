@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-003",
+  "shot_id": "shot-026",
+  "source": {
+    "beat_refs": ["beat-003"],
+    "dramatic_purpose": "형제의 웃음이 멎은 뒤에도 남은 식사의 온기가 어머니의 흐린 초상으로 이어져, 테오의 새 가족에 대한 감정을 과장 없이 만든다."
+  },
+  "bridge": {
+    "panel_count": 2,
+    "layout": "vertical_stack",
+    "function": "emotional_breath",
+    "panel_beats": [
+      "웃음이 멎은 식탁 위에서 국물 표면의 작은 물결과 아직 움직이는 카일의 소매 끝이 고요해진다.",
+      "테오가 고개를 들고 남쪽 벽의 흐린 타원 초상을 바라보며, 식탁의 온기 속 빈자리를 처음 의식한다."
+    ]
+  },
+  "canvas": {"width_px": 1536, "height_px": 3072, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 0.86, "whitespace_before_px": 80, "whitespace_after_px": 100, "transition_in": "continuous", "transition_out": "fade"},
+  "camera": {
+    "shot_size": "medium_close_up",
+    "angle": "over_shoulder",
+    "lens_feel": "portrait",
+    "position": "식탁의 그릇 위에서 테오의 어깨 너머 벽 초상으로 천천히 이어진다",
+    "movement": "push_in",
+    "focus": "사라지는 웃음의 흔적에서 테오의 조용한 시선으로 이동"
+  },
+  "subjects": [
+    {
+      "character_id": "theo-waldhart",
+      "bbox_norm": {"x": 0.18, "y": 0.52, "width": 0.34, "height": 0.40},
+      "depth": "midground",
+      "pose": "하단 패널에서 식탁에 앉은 채 고개만 천천히 남쪽 벽으로 든다",
+      "expression": "웃음 뒤에 남은 조용한 생각",
+      "gaze": "흐린 타원 초상",
+      "action": "숟가락을 잠시 멈춘다",
+      "identity_invariants": ["일곱 살의 둥근 얼굴 비율", "헝클어진 밤갈색 머리", "푸른 회색 튜닉과 세 잎 문장", "눈물과 과장된 비장함 금지"],
+      "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]
+    }
+  ],
+  "background": {
+    "location_id": "walt-fort-dining-hall",
+    "description": "상단은 국그릇·빵·카일의 푸른 소매가 보이는 식탁 접사, 하단은 테오와 남쪽 벽의 작은 흐린 타원 초상이다.",
+    "source_crop_norm": {"x": 0.12, "y": 0.16, "width": 0.76, "height": 0.72},
+    "perspective": "식탁의 원형 그릇에서 타원 초상으로 형태가 이어지는 얕은 대각선",
+    "depth_layers": ["식탁과 국그릇", "테오의 옆얼굴", "작고 흐린 초상과 나무 벽"],
+    "lighting": "따뜻하지만 절제된 실내광, 초상에는 인물 식별이 불가능할 정도의 부드러운 흐림",
+    "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]
+  },
+  "art_direction": {
+    "line": "그릇의 잔물결과 테오의 눈선만 섬세하게 강조",
+    "color": "따뜻한 목재와 무채색 푸른 회색의 낮은 대비",
+    "rendering": "부드러운 2D 웹툰 채색, 초상은 의도적으로 식별 불가",
+    "mood": "가족의 온기 안에서 비어 있는 자리를 느끼는 조용한 숨",
+    "composition": "두 개의 전폭 세로 패널과 가는 흰 여백, 하단 초상은 작게 유지",
+    "must_avoid": ["어머니의 구체적인 얼굴", "눈물", "멜로드라마", "말풍선", "읽을 수 있는 글자", "워터마크", "서명"]
+  },
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {
+    "previous_shot_id": "shot-012",
+    "screen_direction": "left_to_right",
+    "state_in": ["브람의 농담 뒤 가족의 짧은 웃음이 끝난 직후"],
+    "state_out": ["테오가 벽 초상과 식당 밖의 바람을 의식한다"]
+  },
+  "output": {"path": "episodes/ep001/art/shot-026.png", "format": "png", "quality": "high"}
+}

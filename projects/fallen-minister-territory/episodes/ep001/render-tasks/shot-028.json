@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-028",
+  "source_brief": "episodes/ep001/briefs/shot-028.json",
+  "source_hash": "29cbfdbb9b9e039fd8df035a570dfa8aae1fbe9bcc2adcc6c8ac4e8828fdd964",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 테오의 창가 관찰을 수문·갈대 습지·나루의 한 줄 시선으로 나누어, 영지의 취약함을 설명이 아니라 공간의 연결로 이해시킨다.\nCanvas: 1280x3840 pixels; keep a 5% safe margin.\nComposition and camera: wide shot, over_shoulder angle, normal lens feel, camera position 월트 요새 서쪽 창에서 테오의 손을 시작점으로 강 하류를 위에서 아래로 훑는다, movement tilt, focus on 창턱의 손에서 수문과 나루로 이어지는 취약한 물길. 세 개의 전폭 세로 패널, 물길의 곡선이 위에서 아래로 끊기지 않음\nBridge composition: this single generated image contains exactly 3 connected full-width mini-panels stacked vertically, separated by clean gutters. Read them top-to-bottom as one continuous transition, not as duplicate variants of the same pose.\nCanvas rule: preserve the declared 1:3 tall composite canvas with 3 equal-height full-width panels. Do not collapse it into one undivided scene or a differently proportioned strip.\nBridge function: observation. Ordered micro-beats: panel 1: 테오의 작은 손바닥이 차가운 돌 창턱에 닿고, 창밖 마른 마든 강의 물길을 따라간다.; panel 2: 낡고 기울어진 목제 수문과 진흙 둑, 갈대 습지가 같은 물길 위에 이어진다.; panel 3: 멀리 안개에 흐린 그레이포드 나루와 작은 배가 수문에서 이어진 시선의 끝에 놓인다..\nSubjects:\n- theo-waldhart at left 8%, top 4%, width 30%, height 30%, foreground; pose 상단 패널에서만 창가에 선 뒷모습과 손이 보이고 이후 패널은 풍경으로 이어진다; expression 얼굴을 완전히 보이지 않는 집중; gaze 강을 따라 수문과 나루 쪽; action 손을 창턱에 두고 아래를 살핀다. Preserve: 일곱 살의 작은 뒷모습, 푸른 회색 튜닉, 성인 키와 과장된 영웅 포즈 금지.\nBackground: location rowend-march; 월트 요새 서쪽 창에서 보이는 마든 강, 낡은 수문, 갈대 습지, 멀리 그레이포드 나루를 하나의 물길로 잇는다.. Use source crop left 4%, top 8%, width 92%, height 82%; perspective 창턱에서 아래 수문을 거쳐 먼 나루로 시선이 흘러가는 수직 깊이; depth layers: 창틀과 테오의 손, 마든 강과 수문, 갈대 습지와 안개 낀 나루; lighting 초해빙기의 흐린 낮빛, 극적인 햇살·안개·홍수 연출 없음.\nVisual treatment: line 가까운 창틀은 선명하게, 수문과 나루는 거리에 따라 단순화; color 푸른 회색 물, 갈대의 황갈색, 차가운 돌색의 절제된 팔레트; rendering 테오 기준 시트와 어울리는 깨끗한 2D 웹툰 환경 원근; mood 어린아이가 영지의 연결된 약점을 처음 계산하기 시작하는 관찰.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 테오가 서쪽 창에서 마든 강을 내려다보기 시작한 직후; state leaving: 수문과 나루가 하나의 취약한 생명선임을 테오가 파악한다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 거대한 성, 현대 시설, 홍수, 폭풍, 말풍선, 읽을 수 있는 표지판, 워터마크, 서명.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1280x3840",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-028.png",
+    "result_metadata_path": "episodes/ep001/art/shot-028.result.json"
+  }
+}

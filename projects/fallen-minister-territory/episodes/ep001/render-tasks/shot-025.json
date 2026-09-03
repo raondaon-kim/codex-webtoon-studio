@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-025",
+  "source_brief": "episodes/ep001/briefs/shot-025.json",
+  "source_hash": "b45a7f32950643aa6f40723dd387995760d66dc35191c8504ef97f8522833e5f",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 현재 식탁의 부스러기가 아르켄 몰락의 재와 장부로 이어지며, 회상이 갑자기 끊기지 않고 감각적으로 깊어진다.\nCanvas: 1280x3840 pixels; keep a 5% safe margin.\nComposition and camera: insert shot, top_down angle, portrait lens feel, camera position 손끝의 작은 물질을 따라 위에서 아래로 가까이 붙는다, movement pull_out, focus on 부스러기가 재가 되고 장부 위에 내려앉는 질감 변화. 세 개의 전폭 세로 패널과 일정한 흰 여백, 각 패널은 하나의 물질 변화만 보여 줌\nBridge composition: this single generated image contains exactly 3 connected full-width mini-panels stacked vertically, separated by clean gutters. Read them top-to-bottom as one continuous transition, not as duplicate variants of the same pose.\nCanvas rule: preserve the declared 1:3 tall composite canvas with 3 equal-height full-width panels. Do not collapse it into one undivided scene or a differently proportioned strip.\nBridge function: time_or_location_transition. Ordered micro-beats: panel 1: 테오의 푸른 회색 소매 아래 작은 손끝에 빵 부스러기 하나가 남아 있다.; panel 2: 같은 부스러기가 바람 없는 어둠 속에서 옅은 재 조각으로 변하며 아래로 흩어진다.; panel 3: 재가 낡은 장부의 검은 표지와 금 간 돌바닥 위에 내려앉아 몰락한 과거의 입구가 된다..\nSubjects:\n- theo-waldhart at left 8%, top 4%, width 42%, height 25%, foreground; pose 첫 패널에만 작은 손끝과 푸른 회색 소매가 보이고, 이후 패널에서는 인물이 사라진다; expression 얼굴을 보이지 않는다; gaze 손끝의 부스러기; action 부스러기를 멈춘 손끝에 붙든다. Preserve: 일곱 살의 작은 손, 푸른 회색 소매, 성인 손 금지.\nBackground: location arken-fall-memory-montage; 윗 패널의 월트 요새 나무 식탁이 중간의 무색 재 공간을 거쳐 아래 패널의 낡은 장부와 금 간 돌바닥으로 변한다.. Use source crop left 12%, top 10%, width 76%, height 80%; perspective 위에서 아래로 추락하는 직선 시선, 세 패널의 물질이 같은 위치를 이어받는다; depth layers: 테오 손끝, 흩어지는 재, 낡은 장부와 돌바닥; lighting 상단의 약한 실내 온기가 중간에서 소거되고 하단은 탁한 회갈색으로 가라앉음.\nVisual treatment: line 사물 윤곽이 재로 갈수록 풀리고 장부 모서리에서 다시 선명해지는 선화; color 빵의 베이지에서 회색 재, 검은 갈색 장부로 내려가는 채도 변화; rendering 테오와 회상 몽타주 시트를 잇는 부드러운 2D 웹툰 질감; mood 사소한 현재의 물질이 무거운 전생 기억을 여는 감각적 낙하.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: composition; use only for that declared role.\nContinuity: screen direction neutral; state entering: 식탁의 부스러기가 테오의 기억을 건드린 직후; state leaving: 아르켄 몰락 회상의 장부와 재로 완전히 진입한다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 성인 테오의 얼굴, 전투 장면, 읽을 수 있는 장부 글자, 말풍선, 워터마크, 서명.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "composition",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1280x3840",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-025.png",
+    "result_metadata_path": "episodes/ep001/art/shot-025.result.json"
+  }
+}

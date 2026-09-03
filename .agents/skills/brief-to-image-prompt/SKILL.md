@@ -29,7 +29,7 @@ Keep this stage mechanical. Do not invent new plot, costume, layout, or characte
 python tools/compile_render_tasks.py <brief-file-or-directory> --project-root <project-root> --check
 ```
 
-A bridge composite remains one render task and one output image. Never expand its mini-panels into separate image calls during compilation.
+A bridge composite remains one render task and one output image. Never expand its mini-panels into separate image calls during compilation. Its requested canvas must preserve the `1:panel_count` tall ratio so provider output can be normalized without cropping or distortion.
 
 ## Provider boundary
 

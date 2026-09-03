@@ -27,7 +27,8 @@
       "render_unit": "single_image",
       "panel_count": [2, 3],
       "layout": "vertical_stack",
-      "reading_order": "top_to_bottom"
+      "reading_order": "top_to_bottom",
+      "canvas_aspect": "1:panel_count"
     }
   },
   "workflow": {

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-001",
+  "shot_id": "shot-024",
+  "source": {
+    "beat_refs": ["beat-001"],
+    "dramatic_purpose": "카일의 장난스러운 먹거리 권유가 테오의 조용한 관찰로 옮겨가며, 가족 식사의 가벼운 호흡을 다음 시선 전환까지 자연스럽게 잇는다."
+  },
+  "bridge": {
+    "panel_count": 2,
+    "layout": "vertical_stack",
+    "function": "action_continuation",
+    "panel_beats": [
+      "카일의 손이 치즈 접시를 테오 쪽으로 조금 더 밀고, 테오의 작은 손은 빵 부스러기 하나를 조심스럽게 모은다.",
+      "테오는 치즈를 받으면서도 손끝의 부스러기를 잠시 내려다보고, 카일은 장난스러운 미소를 유지한다."
+    ]
+  },
+  "canvas": {"width_px": 1536, "height_px": 3072, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 0.92, "whitespace_before_px": 40, "whitespace_after_px": 80, "transition_in": "continuous", "transition_out": "continuous"},
+  "camera": {
+    "shot_size": "medium_close_up",
+    "angle": "eye_level",
+    "lens_feel": "portrait",
+    "position": "식탁 남쪽 모서리에서 형제의 손과 시선만 보이도록 낮게 붙는다",
+    "movement": "locked",
+    "focus": "치즈 접시를 미는 카일의 손에서 부스러기를 바라보는 테오의 손끝으로 옮겨가는 리듬"
+  },
+  "subjects": [
+    {
+      "character_id": "theo-waldhart",
+      "bbox_norm": {"x": 0.12, "y": 0.22, "width": 0.38, "height": 0.68},
+      "depth": "midground",
+      "pose": "두 패널 모두 식탁에 앉은 자세, 첫 패널은 손만 두드러지고 둘째 패널은 작은 옆얼굴이 함께 보인다",
+      "expression": "가벼운 미소에서 잠깐의 생각으로 가라앉음",
+      "gaze": "둘째 패널에서 손끝의 빵 부스러기",
+      "action": "치즈를 받으면서 부스러기 하나를 정리한다",
+      "identity_invariants": ["일곱 살의 작은 체격", "헝클어진 밤갈색 머리", "푸른 회색 튜닉과 은색 세 잎 문장", "성인 같은 손이나 체형 금지"],
+      "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]
+    },
+    {
+      "character_id": "kyle-waldhart",
+      "bbox_norm": {"x": 0.54, "y": 0.14, "width": 0.34, "height": 0.70},
+      "depth": "midground",
+      "pose": "식탁 너머에서 한 손으로 접시를 밀고, 둘째 패널에서는 테오를 향해 가볍게 기대어 앉는다",
+      "expression": "천연덕스럽고 다정한 미소",
+      "gaze": "테오",
+      "action": "치즈 조각을 권한다",
+      "identity_invariants": ["열네 살의 긴 팔다리", "붉은 갈색 머리", "문장 없는 푸른 조끼", "브로치와 망토 금지"],
+      "references": [{"path": "visual-bible/characters/kyle-waldhart-canonical-v2.png", "role": "character_identity", "asset_id": "kyle-waldhart-canonical-v2"}]
+    }
+  ],
+  "background": {
+    "location_id": "walt-fort-dining-hall",
+    "description": "월트 요새의 소박하지만 정돈된 나무 식탁을 같은 시점에서 두 개의 세로 미니 패널로 나눈다.",
+    "source_crop_norm": {"x": 0.18, "y": 0.34, "width": 0.64, "height": 0.46},
+    "perspective": "상단 패널의 접시와 손이 하단 패널의 테오 시선으로 자연스럽게 이어지는 얕은 대각선",
+    "depth_layers": ["식탁 가장자리와 빵 부스러기", "형제의 손과 얼굴", "흐린 벽장과 벽난로"],
+    "lighting": "과장 없는 따뜻한 실내 저녁빛, 역광과 광선 효과 없음",
+    "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]
+  },
+  "art_direction": {
+    "line": "테오의 작은 손과 카일의 접시 움직임에만 또렷한 선을 주는 정제된 웹툰 선화",
+    "color": "짙은 나무 갈색, 치즈의 따뜻한 베이지, 푸른 회색 의상의 절제된 대비",
+    "rendering": "테오 기준 시트와 일치하는 부드러운 2D 디지털 채색",
+    "mood": "형제의 장난이 조용한 관찰로 바뀌는 짧은 숨",
+    "composition": "가로 전체를 쓰는 두 개의 세로 적층 패널 사이에 얇고 깨끗한 흰 여백",
+    "must_avoid": ["망토", "브로치", "말풍선", "캡션", "읽을 수 있는 글자", "워터마크", "서명", "반복된 인물"]
+  },
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {
+    "previous_shot_id": "shot-002",
+    "screen_direction": "left_to_right",
+    "state_in": ["카일이 테오에게 치즈를 권한 직후"],
+    "state_out": ["테오의 손끝과 빵 부스러기에 시선이 머문다"]
+  },
+  "output": {"path": "episodes/ep001/art/shot-024.png", "format": "png", "quality": "high"}
+}

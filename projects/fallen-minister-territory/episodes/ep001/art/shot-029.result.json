@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-029",
+  "source_hash": "4cd0dbdf836a285042d0c97d3feb78c427e72ce8905e80b66dccf132c7e31419",
+  "provider": "codex",
+  "output_normalization": {
+    "source_dimensions": [
+      887,
+      1774
+    ],
+    "output_dimensions": [
+      1536,
+      3072
+    ],
+    "normalized": true
+  },
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788439286261838700-25836"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2206205,
+      "files": [
+        {
+          "bytes": 2206205,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-029.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-029.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x3072"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_033414bb1f5c271c016a996aba610487d0939bd4dba0c4be55"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_033414bb1f5c271c016a996ab7fe8c87d0a2590107a225e16d",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x3072 pixels, 1:2 tall composite canvas, exactly 2 equal-height full-width panels stacked vertically with a clean gutter, preserving 5% safe margin. Read top-to-bottom as one continuous transition, not duplicate variants. Style: restrained 2D webtoon close-up, high angle, portrait-lens feel, push-in movement.\n\nUse reference roles only:\n- Image 1 for character identity only: Theo Waldhart, a 7-year-old boy, blue-gray sleeve/clothing style, small soft child hand only.\n- Image 2 for background space only: rustic dining hall with dark oak table, wooden chairs, door, warm soup bowls, subdued fireplace-lit room.\n\nOverall purpose/mood: bridge reaction shot. Quiet resolve beginning from everyday traces after sudden movement. No text.\n\nPanel 1 (top half): high-angle close-up from the south-upper side of the dining table, narrowing through an empty chair toward the table. Kyle has just pushed back the chair and gone toward the door. Show the vacated chair slightly angled as if recently moved, a warm bowl of soup still faintly steaming on the table, and a thin cold draft slipping in from the slightly open door/corridor light. Focus on the absence and lingering motion: chair leg movement implied subtly, soup warmth vs faint cool light from door crack. Composition layers: table edge foreground, empty chair and soup bowl midground, door crack with pale cold hallway light background. Dark wood, simple beige soup, low-contrast blue-gray accents. No people visible.\n\nPanel 2 (bottom half): continue the same push-in, camera dropping from chair level down to the dark oak tabletop. Theo enters only as a small child hand and blue-gray sleeve coming in from the left side near lower-left quadrant, no face visible. The small soft 7-year-old fingertips stop just above a single bread crumb near the table edge. Keep the hand natural size, not exaggerated. Leave broad quiet negative space in the lower/right area to set up the next final cut. Focus sharpest on Theo’s fingertips and the crumb. No magic, no adult hand, no face.\n\nLighting: remaining warm dining-room light mixed with faint cool light from the door crack, subtle and not dramatic. Rendering: clean webtoon paneling, polished linework, gentle textures, no exaggerated glow. Emphasize only the fading motion in chair legs and Theo’s fingertips. Continuity left-to-right.\n\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, any face, magic effects, exaggerated lighting."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  }
+}

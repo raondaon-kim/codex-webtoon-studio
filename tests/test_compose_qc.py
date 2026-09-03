@@ -8,7 +8,7 @@ from pathlib import Path
 from PIL import Image
 
 from webtoon_studio.compiler import compile_brief, load_configs
-from webtoon_studio.compose import compose_episode, slice_master
+from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
 from webtoon_studio.qc import inspect_episode
 
@@ -66,7 +66,7 @@ class ComposeQcTests(unittest.TestCase):
             shutil.copytree(SOURCE_PROJECT, project)
             episode = project / "episodes" / "ep001"
             scroll_plan = load_json(episode / "scroll-plan.json")
-            scroll_plan["sequences"][0]["bridge_shot_id"] = "shot-002"
+            scroll_plan["sequences"][0]["bridge_inserts"] = [{"shot_id": "shot-003", "after_shot_id": "shot-002"}]
             dump_json(episode / "scroll-plan.json", scroll_plan)
 
             report = inspect_episode(
@@ -76,6 +76,21 @@ class ComposeQcTests(unittest.TestCase):
             )
 
             self.assertTrue(any(issue["code"] == "bridge_sequence_link" for issue in report["issues"]))
+
+    def test_bridge_is_composed_after_its_declared_regular_shot(self) -> None:
+        scroll_plan = {
+            "sequences": [
+                {
+                    "shot_ids": ["shot-001", "shot-002", "shot-003"],
+                    "bridge_inserts": [{"shot_id": "shot-024", "after_shot_id": "shot-002"}],
+                }
+            ]
+        }
+
+        self.assertEqual(
+            ["shot-001", "shot-002", "shot-024", "shot-003"],
+            ordered_shot_ids(scroll_plan),
+        )
 
 
 if __name__ == "__main__":

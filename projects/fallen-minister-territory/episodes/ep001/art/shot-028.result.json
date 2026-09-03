@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-028",
+  "source_hash": "29cbfdbb9b9e039fd8df035a570dfa8aae1fbe9bcc2adcc6c8ac4e8828fdd964",
+  "provider": "codex",
+  "output_normalization": {
+    "source_dimensions": [
+      724,
+      2172
+    ],
+    "output_dimensions": [
+      1280,
+      3840
+    ],
+    "normalized": true
+  },
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788439220097968900-110136"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2707768,
+      "files": [
+        {
+          "bytes": 2707768,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-028.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-028.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1280x3840"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0434ec1983b4cbce016a996a776a3887d08c3352045b681ade"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0434ec1983b4cbce016a996a75541087d0a1b992a9b4aa1afc",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1280x3840 pixels, preserve a 1:3 tall composite canvas with exactly 3 equal-height full-width panels stacked vertically, separated by clean gutters, with a 5% safe margin. Read top-to-bottom as one continuous transition. Do not collapse into one undivided scene or different proportion.\n\nPurpose: show Theo’s observation from the west window, dividing his line of sight into sluice gate, reed marsh, and distant ford ferry so the domain’s vulnerability is understood through connected space.\n\nStyle: clean 2D webtoon environment perspective, polished hand-drawn line art, soft painterly coloring, restrained palette, no text.\n\nPanel 1: wide shot, over-shoulder, normal lens feel. Camera starts at the west window of Wald fort, with Theo’s small hand on a cold stone windowsill as the visual starting point. Show only Theo’s small back and hand in this top panel, no full face. Seven-year-old child, small proportions, blue-gray tunic matching the reference sheet, no heroic pose, no adult proportions. He stands at the window, focused, looking downriver. Foreground left about 8% from left, top 4%, width around 30%, height around 30% of the panel area. The nearby window frame and sill are crisp. Outside, the dry late-winter/early-thaw Marden river channel begins, viewed from above.\n\nPanel 2: continue the same watercourse seamlessly downward. Show an old leaning wooden sluice gate, muddy embankment, and reed marsh connected on the same line of water. The curve of the waterway must visually continue from panel 1 into panel 2 without interruption. Perspective flows from windowsill viewpoint down toward the sluice. Mid-distance details moderately simplified.\n\nPanel 3: continue the same connected waterline farther down to a distant mist-softened Grayford ferry landing and a small boat at the end of the line of sight. No dramatic fog, just overcast haze. This is the end of Theo’s observation: the sluice and ferry are understood as one fragile lifeline.\n\nEnvironment: Rowend March landscape seen from Wald fort’s west window; Marden river, old sluice, reed wetlands, distant Grayford ferry, all connected by one waterway. Vertical depth from windowsill to sluice to distant landing. Depth layers: window frame and Theo’s hand, river and sluice, reed marsh and hazy ferry.\n\nLighting: overcast daylight in early thaw, subdued and cool, no dramatic sunlight, no flood, no storm.\n\nColor: blue-gray water, yellow-brown reeds, cold stone tones, muted earthy banks.\n\nLine/rendering: closest window frame sharp and defined; sluice and ferry increasingly simplified with distance.\n\nMood: a child beginning to calculate the linked weaknesses of his territory through observation.\n\nContinuity: screen direction left-to-right; state entering is just after Theo began looking down over the Marden river from the west window; state leaving is Theo understanding the sluice and ferry as one vulnerable lifeline.\n\nStrictly avoid: speech bubbles, captions, readable text, signs, watermark, signature, duplicate character, giant castle, modern facilities, flood, storm, exaggerated mist, heroic posing."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  }
+}

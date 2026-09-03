@@ -65,15 +65,15 @@ def main() -> int:
         provider = tasks[0][1]["provider"]
         doctor = run_preflight(provider_config, ["--provider", provider, "doctor"])
         auth = run_preflight(provider_config, ["auth", "inspect"])
-        print(json.dumps(redact_sensitive({"doctor": doctor, "auth": auth}), ensure_ascii=False, indent=2))
+        print(json.dumps(redact_sensitive({"doctor": doctor, "auth": auth}), ensure_ascii=True, indent=2))
         for path, task in tasks:
             print(f"EXECUTE {path}")
             result = execute_task(task, root, provider_config)
-            print(json.dumps(redact_sensitive(result), ensure_ascii=False, indent=2))
+            print(json.dumps(redact_sensitive(result), ensure_ascii=True, indent=2))
     except RuntimeErrorWithEnvelope as exc:
         print(f"FAIL {exc}", file=sys.stderr)
         if exc.envelope:
-            print(json.dumps(redact_sensitive(exc.envelope), ensure_ascii=False, indent=2), file=sys.stderr)
+            print(json.dumps(redact_sensitive(exc.envelope), ensure_ascii=True, indent=2), file=sys.stderr)
         return 1
     return 0
 

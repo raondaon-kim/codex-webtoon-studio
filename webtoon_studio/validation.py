@@ -83,6 +83,10 @@ def _custom_checks(data: dict[str, Any]) -> tuple[list[str], list[str]]:
                 f"$.canvas: {message}"
                 for message in validate_generation_size(canvas["width_px"], canvas["height_px"])
             )
+            if bridge is not None and canvas["height_px"] != canvas["width_px"] * bridge["panel_count"]:
+                errors.append(
+                    "$.canvas: bridge composite height must equal width multiplied by $.bridge.panel_count"
+                )
         for index, subject in enumerate(data.get("subjects", [])):
             errors.extend(
                 validate_normalized_box(subject.get("bbox_norm", {}), f"$.subjects[{index}].bbox_norm")

@@ -81,35 +81,45 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
         for value in [load_json(path)]
         if value.get("artifact_type") == "render_task" and "-shot-" in value.get("task_id", "")
     }
+    bridge_sequence_by_shot: dict[str, str] = {}
+    expected_previous_by_shot: dict[str, str | None] = {}
+    previous_primary_id: str | None = None
     for sequence in sequence_by_id.values():
-        bridge_shot_id = sequence.get("bridge_shot_id")
-        if bridge_shot_id is None:
-            continue
-        if bridge_shot_id not in sequence["shot_ids"]:
-            checks["continuity"] = False
-            issues.append(
-                _issue(
-                    "error",
-                    "bridge_sequence_link",
-                    "bridge_shot_id must be one of its sequence shot_ids",
-                    scroll_path,
-                    bridge_shot_id,
+        bridges_by_after: dict[str, list[str]] = {}
+        for bridge in sequence.get("bridge_inserts", []):
+            bridge_shot_id = bridge["shot_id"]
+            after_shot_id = bridge["after_shot_id"]
+            if bridge_shot_id in sequence["shot_ids"] or after_shot_id not in sequence["shot_ids"]:
+                checks["continuity"] = False
+                issues.append(
+                    _issue(
+                        "error",
+                        "bridge_sequence_link",
+                        "Bridge insert must be an extra shot placed after one of its sequence shot_ids",
+                        scroll_path,
+                        bridge_shot_id,
+                    )
                 )
-            )
-            continue
-        bridge_entry = briefs.get(bridge_shot_id)
-        if not bridge_entry or not bridge_entry[1].get("bridge"):
-            checks["continuity"] = False
-            issues.append(
-                _issue(
-                    "error",
-                    "bridge_brief_missing",
-                    "bridge_shot_id requires a director brief with a bridge composite definition",
-                    scroll_path,
-                    bridge_shot_id,
+                continue
+            bridge_sequence_by_shot[bridge_shot_id] = sequence["id"]
+            bridges_by_after.setdefault(after_shot_id, []).append(bridge_shot_id)
+            bridge_entry = briefs.get(bridge_shot_id)
+            if not bridge_entry or not bridge_entry[1].get("bridge"):
+                checks["continuity"] = False
+                issues.append(
+                    _issue(
+                        "error",
+                        "bridge_brief_missing",
+                        "A bridge insert requires a director brief with a bridge composite definition",
+                        scroll_path,
+                        bridge_shot_id,
+                    )
                 )
-            )
-    previous_id: str | None = None
+        for shot_id in sequence["shot_ids"]:
+            expected_previous_by_shot[shot_id] = previous_primary_id
+            for bridge_shot_id in bridges_by_after.get(shot_id, []):
+                expected_previous_by_shot[bridge_shot_id] = shot_id
+            previous_primary_id = shot_id
     for shot_id in shot_ids:
         brief_entry = briefs.get(shot_id)
         if not brief_entry:
@@ -118,7 +128,9 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
             continue
         brief_path, brief = brief_entry
         sequence = sequence_by_id.get(brief["sequence_id"])
-        if not sequence or shot_id not in sequence["shot_ids"]:
+        if not sequence or (
+            shot_id not in sequence["shot_ids"] and bridge_sequence_by_shot.get(shot_id) != brief["sequence_id"]
+        ):
             checks["continuity"] = False
             issues.append(_issue("error", "sequence_link", "Brief sequence_id does not own this shot", brief_path, shot_id))
         unknown_brief_beats = set(brief["source"]["beat_refs"]) - beat_ids
@@ -128,18 +140,18 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
                 _issue("error", "brief_unknown_beat", f"Brief references unknown beats: {sorted(unknown_brief_beats)}", brief_path, shot_id)
             )
         declared_previous = brief["continuity"]["previous_shot_id"]
-        if declared_previous != previous_id:
+        expected_previous = expected_previous_by_shot.get(shot_id)
+        if declared_previous != expected_previous:
             checks["continuity"] = False
             issues.append(
                 _issue(
                     "error",
                     "continuity_chain",
-                    f"previous_shot_id is {declared_previous!r}; expected {previous_id!r}",
+                    f"previous_shot_id is {declared_previous!r}; expected {expected_previous!r}",
                     brief_path,
                     shot_id,
                 )
             )
-        previous_id = shot_id
         if brief["text"]["mode"] == "deterministic_lettering":
             regions = brief["text"]["reserved_regions"]
             for item in brief["text"]["items"]:

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-004",
+  "shot_id": "shot-027",
+  "source": {
+    "beat_refs": ["beat-004"],
+    "dramatic_purpose": "열린 문으로 들어온 찬바람과 독촉장이 브람의 숨김 동작으로 이어져, 대화의 웃음이 경제적 부담으로 바뀌는 순간을 부드럽게 잇는다."
+  },
+  "bridge": {
+    "panel_count": 2,
+    "layout": "vertical_stack",
+    "function": "reaction",
+    "panel_beats": [
+      "열린 동쪽 문에서 들어온 찬바람이 식탁보 끝과 봉인된 편지를 함께 밀어 바닥 위로 회전시킨다.",
+      "브람의 손이 편지를 조용히 집어 들어 몸 가까이 숨기고, 테오의 작은 시선은 봉인의 닳은 가장자리에 멈춘다."
+    ]
+  },
+  "canvas": {"width_px": 1536, "height_px": 3072, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 0.90, "whitespace_before_px": 40, "whitespace_after_px": 100, "transition_in": "continuous", "transition_out": "cut"},
+  "camera": {
+    "shot_size": "close_up",
+    "angle": "high",
+    "lens_feel": "portrait",
+    "position": "문턱 가까운 식탁 끝에서 편지와 손의 동선만 좁게 본다",
+    "movement": "push_in",
+    "focus": "바람에 회전하는 편지에서 브람의 굳은 손가락으로 이동"
+  },
+  "subjects": [
+    {
+      "character_id": "bram-waldhart",
+      "bbox_norm": {"x": 0.34, "y": 0.48, "width": 0.48, "height": 0.40},
+      "depth": "foreground",
+      "pose": "하단 패널에서 숲빛 녹색 소매와 거친 손만 보이게 편지를 들어 올린다",
+      "expression": "얼굴을 보이지 않는다",
+      "gaze": "편지",
+      "action": "봉인된 편지를 몸쪽으로 끌어 숨긴다",
+      "identity_invariants": ["튼튼하고 거친 중년의 손", "숲빛 녹색 더블릿", "반지·망토·화려한 장식 금지"],
+      "references": [{"path": "visual-bible/characters/bram-waldhart-canonical-v1.png", "role": "character_identity", "asset_id": "bram-waldhart-canonical-v1"}]
+    },
+    {
+      "character_id": "theo-waldhart",
+      "bbox_norm": {"x": 0.06, "y": 0.68, "width": 0.22, "height": 0.20},
+      "depth": "foreground",
+      "pose": "하단 모서리에 작은 손끝과 머리 일부만 보인다",
+      "expression": "물음이 남은 조용한 긴장",
+      "gaze": "편지 봉인의 닳은 가장자리",
+      "action": "식탁 가장자리에서 손을 멈춘다",
+      "identity_invariants": ["작은 손", "푸른 회색 소매", "성인화 금지"],
+      "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]
+    }
+  ],
+  "background": {
+    "location_id": "walt-fort-dining-hall",
+    "description": "상단은 동쪽 문과 바닥의 편지, 하단은 식탁 가까이의 손과 봉인 접사로 이어지는 월트 요새 식당이다.",
+    "source_crop_norm": {"x": 0.10, "y": 0.28, "width": 0.80, "height": 0.58},
+    "perspective": "문에서 바닥, 바닥에서 식탁으로 내려오는 대각선",
+    "depth_layers": ["흩날리는 식탁보 모서리", "편지와 브람의 손", "열린 문과 차가운 복도"],
+    "lighting": "따뜻한 실내광과 문틈의 차가운 회색빛이 조용히 충돌, 폭풍 연출 없음",
+    "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]
+  },
+  "art_direction": {
+    "line": "편지 가장자리와 브람의 손가락에만 긴장된 선을 더함",
+    "color": "목재 갈색과 숲빛 녹색 사이에 차가운 회색 바람빛을 얹음",
+    "rendering": "정제된 2D 웹툰 접사, 편지에는 읽을 수 있는 글자를 만들지 않음",
+    "mood": "가벼운 식사를 말없이 가르는 숨은 부담",
+    "composition": "두 개의 전폭 세로 패널, 편지의 회전과 손의 회수가 같은 흐름으로 연결",
+    "must_avoid": ["읽을 수 있는 편지 글자", "전령의 얼굴", "말풍선", "워터마크", "서명", "중복 인물"]
+  },
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {
+    "previous_shot_id": "shot-014",
+    "screen_direction": "right_to_left",
+    "state_in": ["열린 문으로 편지가 식탁 곁에 떨어진 직후"],
+    "state_out": ["브람이 편지를 숨기고 테오는 빚의 존재를 감지한다"]
+  },
+  "output": {"path": "episodes/ep001/art/shot-027.png", "format": "png", "quality": "high"}
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-024",
+  "source_hash": "a2123a096b7b78c92408515d174a40128045b93ddfb72f8962fb773c8aefe2b3",
+  "provider": "codex",
+  "output_normalization": {
+    "source_dimensions": [
+      887,
+      1774
+    ],
+    "output_dimensions": [
+      1536,
+      3072
+    ],
+    "normalized": true
+  },
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 22
+    },
+    "history": {
+      "job_id": "job-1788438802507263800-174048"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2498275,
+      "files": [
+        {
+          "bytes": 2498275,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-024.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-024.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x3072"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0379ed97fb49e9b0016a9968d02d7487d08fc143c0ba200c41"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0379ed97fb49e9b0016a9968cd28a887d0bc068927e1f8325b",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1, on a 1536x3072 canvas with 5% safe margin. The image must contain exactly 2 connected full-width mini-panels stacked vertically, equal height, separated by a thin clean white gutter. Read top-to-bottom as one continuous action transition. Do not make one undivided scene.\n\nStyle: polished Korean webtoon 2D digital painting with refined linework, soft shading, warm natural interior evening light, no dramatic rays, no backlight effects, no text, no speech balloons, no watermark, no signature.\n\nScene purpose: Kyle’s playful offering of food shifts into Theo’s quiet observation during a family meal.\n\nCamera/composition: medium close-up, eye level, portrait lens feel. Camera is low near the south corner of the dining table so mainly the brothers’ hands and sightlines are emphasized. Locked camera. Rhythm shifts focus from Kyle’s hand pushing a cheese plate to Theo’s fingertips noticing a breadcrumb. Use the full width in both panels.\n\nBackground: rustic but tidy wooden dining hall of a small medieval fort, same viewpoint across both panels. Crop-like framing focused on table edge, bowls, bread, cheese plate, blurred cabinet and fireplace in the back. Shallow diagonal flow from the upper panel plate/hands into the lower panel Theo gaze. Depth layers: table edge and breadcrumb in foreground, brothers’ hands and partial faces in midground, soft cabinet and fireplace in background. Warm wood browns and muted neutral walls.\n\nCharacters:\nTheo Waldhart: 7-year-old boy, very small build, messy dark chestnut hair, blue-gray tunic with a small silver three-leaf crest on chest, childlike proportions and small hands, no adult body or hands. In both panels seated at table on left side. Panel 1 emphasizes only his small hand gathering one tiny bread crumb carefully. Panel 2 includes a small partial side profile with light smile fading into brief thoughtfulness; gaze directed at the breadcrumb near his fingertips while also receiving cheese. Quiet, observant mood.\nKyle Waldhart: 14-year-old boy, lanky teen proportions, reddish brown tousled hair, blue vest/tunic with no crest, no cape, no brooch. Seated across the table on right side. Gentle playful smile, gaze at Theo. Panel 1: one hand pushes a small plate with cheese a little closer to Theo. Panel 2: lightly leaning toward Theo, keeping the same teasingly kind smile as Theo accepts the cheese.\n\nPanel beat 1: Kyle’s hand slides the cheese plate slightly farther toward Theo. Theo’s small hand carefully gathers a single bread crumb. Focus on hands, plate motion, tabletop details.\n\nPanel beat 2: Theo receives the cheese but briefly looks down at the breadcrumb at his fingertips. Kyle maintains a playful, easy smile. Include Theo’s small side face and Kyle’s partial upper body/face from across the table. Keep screen direction left-to-right continuity.\n\nVisual priorities: crisp line emphasis only on Theo’s tiny hand and Kyle’s plate movement. Controlled palette: dark wood brown table, warm beige cheese, restrained blue-gray clothing contrast. Soft webtoon rendering consistent with fantasy character sheets. No duplicate characters, no extra people, no text."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  }
+}

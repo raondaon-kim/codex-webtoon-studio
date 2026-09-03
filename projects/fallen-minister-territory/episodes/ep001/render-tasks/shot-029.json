@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-029",
+  "source_brief": "episodes/ep001/briefs/shot-029.json",
+  "source_hash": "4cd0dbdf836a285042d0c97d3feb78c427e72ce8905e80b66dccf132c7e31419",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 브람과 카일이 급히 움직인 뒤 남은 빈 식탁과 테오의 손끝을 이어, 마지막 부스러기 결심이 갑작스러운 독백이 아니라 자연스러운 반응이 되게 한다.\nCanvas: 1536x3072 pixels; keep a 5% safe margin.\nComposition and camera: close_up shot, high angle, portrait lens feel, camera position 식탁 남쪽 위에서 빈 의자를 거쳐 테오의 손끝으로 좁아진다, movement push_in, focus on 움직임이 지나간 빈자리에서 부스러기 위에 멈춘 작은 손으로 이동. 두 개의 전폭 세로 패널, 하단에는 다음 마지막 컷을 위한 넓은 조용한 공간\nBridge composition: this single generated image contains exactly 2 connected full-width mini-panels stacked vertically, separated by clean gutters. Read them top-to-bottom as one continuous transition, not as duplicate variants of the same pose.\nCanvas rule: preserve the declared 1:2 tall composite canvas with 2 equal-height full-width panels. Do not collapse it into one undivided scene or a differently proportioned strip.\nBridge function: reaction. Ordered micro-beats: panel 1: 카일이 의자를 밀고 문 쪽으로 나간 뒤, 식탁 위의 따뜻한 국그릇과 빈 의자 사이로 차가운 바람이 가늘게 지난다.; panel 2: 테오의 작은 손이 식탁 가장자리로 돌아와 빵 부스러기 하나 바로 위에서 멈추며, 다음 결심을 위해 화면을 조용히 비운다..\nSubjects:\n- theo-waldhart at left 12%, top 58%, width 44%, height 30%, foreground; pose 하단 패널에서 얼굴 없이 작은 손과 푸른 회색 소매만 식탁 가장자리로 들어온다; expression 얼굴을 보이지 않는다; gaze 빵 부스러기; action 부스러기 바로 위에서 손끝을 멈춘다. Preserve: 일곱 살의 작고 부드러운 손, 푸른 회색 소매, 성인 손과 마법 효과 금지.\nBackground: location walt-fort-dining-hall; 상단은 문 쪽으로 비어 있는 의자와 아직 김이 남은 국그릇, 하단은 어두운 참나무 식탁과 부스러기 접사다.. Use source crop left 10%, top 38%, width 80%, height 48%; perspective 의자에서 식탁 표면으로 내려오는 짧은 고각 시선; depth layers: 식탁 모서리, 빈 의자와 국그릇, 문틈의 차가운 복도 빛; lighting 식당의 남은 따뜻한 빛과 문틈의 옅은 차가운 빛, 과장된 불빛 없음.\nVisual treatment: line 의자 다리의 사라지는 움직임과 테오 손끝만 선명하게 강조; color 어두운 목재, 담백한 국물 베이지, 푸른 회색 소매의 낮은 대비; rendering 절제된 2D 웹툰 접사, 손과 부스러기의 크기를 과장하지 않음; mood 위기 속에서도 남은 일상의 흔적에서 결심이 시작되는 고요.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 브람이 카일에게 움직이라고 지시하고 카일이 의자에서 일어난 직후; state leaving: 테오가 혼자 남아 부스러기를 바라보며 급해빙과 식량을 연결한다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 얼굴, 마법 효과, 과장된 불빛, 말풍선, 캡션, 읽을 수 있는 글자, 워터마크, 서명.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x3072",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-029.png",
+    "result_metadata_path": "episodes/ep001/art/shot-029.result.json"
+  }
+}

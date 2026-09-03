@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-027",
+  "source_hash": "87dfdb92831bb250cb7e882411b6f88b10ba83d5fb7fcbb02573e83523eb8f7f",
+  "provider": "codex",
+  "output_normalization": {
+    "source_dimensions": [
+      887,
+      1774
+    ],
+    "output_dimensions": [
+      1536,
+      3072
+    ],
+    "normalized": true
+  },
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788439124192602700-91860"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2502264,
+      "files": [
+        {
+          "bytes": 2502264,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-027.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-027.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x3072"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0816439823dd7a94016a996a0da92487d09397f5a18a764be1"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0816439823dd7a94016a996a0a16b487d0a4fd0c9cf0e82f18",
+      "revised_prompts": [
+        "Template: webtoon-shot-v1. Create one finished original vertical-scroll webtoon art shot in a 1536x3072 canvas with 5% safe margin. Preserve exactly 2 connected full-width mini-panels stacked vertically with equal height, separated by a clean gutter; read top-to-bottom as one continuous transition. Do not collapse into one scene.\n\nStyle: refined 2D webtoon close-up, portrait lens feel, high angle, camera near the threshold-side end of the dining table, push-in movement. Focus transitions from a sealed letter spinning in cold draft to Bram’s stiff fingers retrieving it. No speech balloons, captions, readable text, watermark, or signature.\n\nContinuity and direction: right_to_left screen direction. Mood: hidden burden quietly cutting through a light meal. Warm interior light collides softly with cold gray light from the open door; no storm theatrics.\n\nUse references implicitly: adult male identity from reference 1 only for Bram Waldhart; child identity from reference 2 only for Theo Waldhart; dining hall space from reference 3 only for background role.\n\nPanel 1, full width upper half: In Walt-fort dining hall, show the east door open in the background/right side, a cold draft entering. The end of a tablecloth flutters and pushes a sealed envelope off the table edge so it rotates over the wooden floor near the threshold-side end of the table. Composition is tight and close, seeing only the relevant portion of room: diagonal flow from door to floor to table edge. Show the letter as the main subject, spinning, with tense line emphasis on its edges. Include part of the table, tablecloth corner, wooden floorboards, and the open doorway with cool gray corridor light. No readable writing on the letter.\n\nPanel 2, full width lower half: Continue the same motion seamlessly, closer in. Bram is at left/foreground only by his forest-green sleeve and sturdy rough middle-aged hand, quietly lifting the sealed letter and drawing it inward toward his body to hide it. No face visible. No ring, cape, or ornate decoration. Theo appears only in the lower corner with a small hand and a partial top of head/hair, childlike, blue-gray sleeve visible, stopping at the table edge. His quiet tense attention rests on the worn edge of the seal. Focus on the seal close-up and Bram’s fingers. Add subtle tension lines only on the letter edge and Bram’s fingers.\n\nCharacter specifics: Bram—middle-aged man, rugged, rough strong hand, forest-green doublet sleeve, hidden action. Theo—small child hand, blue-gray sleeve, partial tousled brown hair visible only, not adultified.\n\nBackground crop feel: from the dining hall, use a tight crop suggesting left 10%, top 28%, width 80%, height 58% of the room; wooden browns, muted plaster, table nearby, open east door, floor-to-table diagonal perspective. Layering: fluttering tablecloth corner, letter and Bram’s hand, open door and cold corridor beyond.\n\nRendering: polished anime-influenced Korean webtoon paneling, soft painterly shading, crisp linework, subdued palette of wood browns and forest greens with cold gray wind-light overlay. Letter must have no readable text, only seal and paper texture. Avoid duplicate figures, avoid any messenger face, avoid extra hands, avoid text."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  }
+}

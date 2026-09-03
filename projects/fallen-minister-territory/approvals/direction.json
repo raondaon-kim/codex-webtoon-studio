@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "stage": "direction",
-  "approved_at": "2026-09-03T11:14:07.757550+00:00",
-  "fingerprint": "323f0c56ab5765f75f6c7d6c55700166825c388972e70e0cb6e060d422e31f72",
+  "approved_at": "2026-09-03T12:32:01.765019+00:00",
+  "fingerprint": "1120c61c1cb0bb48a22ceab1222224d5b30e661c277c4f7d31bed7f6999ea43f",
   "artifacts": [
     {
       "path": "episodes/ep001/briefs/shot-001.json",
@@ -97,9 +97,33 @@
       "hash": "5c364d6d92d7f674e999e7b048e06850159107707c6a439cb32776b0352ad325"
     },
     {
+      "path": "episodes/ep001/briefs/shot-024.json",
+      "hash": "a2123a096b7b78c92408515d174a40128045b93ddfb72f8962fb773c8aefe2b3"
+    },
+    {
+      "path": "episodes/ep001/briefs/shot-025.json",
+      "hash": "b45a7f32950643aa6f40723dd387995760d66dc35191c8504ef97f8522833e5f"
+    },
+    {
+      "path": "episodes/ep001/briefs/shot-026.json",
+      "hash": "1f69ca1b563f40d803227683417249169f99c9aef8740ee3792b28fc5df4f1d9"
+    },
+    {
+      "path": "episodes/ep001/briefs/shot-027.json",
+      "hash": "87dfdb92831bb250cb7e882411b6f88b10ba83d5fb7fcbb02573e83523eb8f7f"
+    },
+    {
+      "path": "episodes/ep001/briefs/shot-028.json",
+      "hash": "29cbfdbb9b9e039fd8df035a570dfa8aae1fbe9bcc2adcc6c8ac4e8828fdd964"
+    },
+    {
+      "path": "episodes/ep001/briefs/shot-029.json",
+      "hash": "4cd0dbdf836a285042d0c97d3feb78c427e72ce8905e80b66dccf132c7e31419"
+    },
+    {
       "path": "episodes/ep001/scroll-plan.json",
-      "hash": "6810e960b11f059e5b2f139705f5522dd58b12d2b820420cc1e758e8c2a6a4d2"
+      "hash": "e56514fbe90db0da82363fceb415538eb716f9595affcae8e628034c77e222fb"
     }
   ],
-  "note": "Approved episode 1 vertical-scroll direction: six sequences and twenty-three shot briefs."
+  "note": "Approved bridge inserts: one 1:panel-count vertical composite image per sequence."
 }
