@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-004", "shot_id": "shot-014",
+  "source": {"beat_refs": ["beat-004"], "dramatic_purpose": "문이 열리며 식당의 온기를 끊고, 바람과 함께 들어온 빚 독촉장을 먼저 보여준다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 1.0, "whitespace_before_px": 160, "whitespace_after_px": 20, "transition_in": "gutter", "transition_out": "cut"},
+  "camera": {"shot_size": "wide", "angle": "eye_level", "lens_feel": "normal", "position": "서쪽 창 쪽 식탁에서 동쪽 문을 향해", "movement": "locked", "focus": "열린 문, 바람에 날리는 식탁 천 조각, 바닥으로 떨어지는 봉인 편지"},
+  "subjects": [
+    {"character_id": "bram-waldhart", "bbox_norm": {"x": 0.56, "y": 0.28, "width": 0.27, "height": 0.52}, "depth": "midground", "pose": "의자에서 막 일어나 문을 향해 반걸음", "expression": "순간 굳은 경계", "gaze": "문과 떨어지는 편지", "action": "한 손을 편지 쪽으로 뻗는다", "identity_invariants": ["망토 없는 숲색 더블릿", "회색이 섞인 밤색 머리", "짧은 수염"], "references": [{"path": "visual-bible/characters/bram-waldhart-canonical-v1.png", "role": "character_identity", "asset_id": "bram-waldhart-canonical-v1"}]},
+    {"character_id": "theo-waldhart", "bbox_norm": {"x": 0.18, "y": 0.52, "width": 0.16, "height": 0.25}, "depth": "midground", "pose": "의자에서 고개를 든 작은 전신", "expression": "관찰하는 긴장", "gaze": "바닥의 편지", "action": "손을 식탁 위에 멈춘다", "identity_invariants": ["작은 일곱 살 체격", "푸른 회색 튜닉"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]}
+  ],
+  "background": {"location_id": "walt-fort-dining-hall", "description": "동쪽의 철띠 두른 참나무 문이 열린 식당, 바닥 위의 봉인 편지와 밀린 식탁 천 조각", "source_crop_norm": {"x": 0.58, "y": 0.08, "width": 0.35, "height": 0.82}, "perspective": "식탁에서 문까지 이어지는 대각선, 편지가 바닥 중앙에 떨어진다", "depth_layers": ["식탁 모서리", "테오·편지·브람", "열린 문과 바깥의 어두운 복도"], "lighting": "실내의 따뜻함에 문틈의 차가운 바람빛이 섞임", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
+  "art_direction": {"line": "편지의 낙하와 바람에만 날카로운 선", "color": "따뜻한 식당색에 차가운 회색 바람", "rendering": "정돈된 2D 동작", "mood": "일상이 현실에 끊기는 순간", "composition": "바닥 중앙의 편지 주위는 빈 공간으로 두고, 문밖 인물은 실루엣으로도 확정하지 않는다", "must_avoid": ["새 전령 캐릭터의 얼굴 디자인", "폭풍 연출", "읽을 수 있는 편지 글자"]},
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {"previous_shot_id": "shot-013", "screen_direction": "right_to_left", "state_in": ["테오는 초상화에서 시선을 거두지 않았다"], "state_out": ["문이 열려 있다", "봉인 편지가 바닥에 떨어진다", "브람이 편지로 향한다"]},
+  "output": {"path": "episodes/ep001/art/shot-014.png", "format": "png", "quality": "high"}
+}

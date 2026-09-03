@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-001", "shot_id": "shot-003",
+  "source": {"beat_refs": ["beat-001"], "dramatic_purpose": "테오의 아주 작은 손과 빵 부스러기를 다음 회상의 발화점으로 고정한다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.06},
+  "scroll": {"display_width_ratio": 0.72, "whitespace_before_px": 20, "whitespace_after_px": 120, "transition_in": "cut", "transition_out": "overlap"},
+  "camera": {"shot_size": "insert", "angle": "top_down", "lens_feel": "normal", "position": "테오 오른손 바로 위", "movement": "push_in", "focus": "작은 손끝에 모이는 흰 빵 부스러기"},
+  "subjects": [{"character_id": "theo-waldhart", "bbox_norm": {"x": 0.18, "y": 0.45, "width": 0.52, "height": 0.36}, "depth": "foreground", "pose": "손가락을 오므린 손 클로즈업", "expression": "얼굴은 보이지 않음", "gaze": "프레임 밖", "action": "빵 부스러기를 한 점으로 모은다", "identity_invariants": ["일곱 살에 맞는 작은 손", "푸른 회색 소매", "얼굴과 전신을 보이지 않음"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]}],
+  "background": {"location_id": "walt-fort-dining-hall", "description": "어두운 참나무 식탁 면과 흰 빵 부스러기만 보이는 추상적인 식사 클로즈업", "source_crop_norm": {"x": 0.32, "y": 0.48, "width": 0.42, "height": 0.28}, "perspective": "수평 왜곡 없는 수직 탑뷰", "depth_layers": ["테오의 손끝", "빵 부스러기", "짙은 목재 결"], "lighting": "부드러운 실내광", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
+  "art_direction": {"line": "손가락과 부스러기 윤곽을 또렷하게", "color": "따뜻한 목재 갈색 위의 무채색 흰 부스러기", "rendering": "단순하고 깨끗한 2D 재질", "mood": "평온이 멈추는 순간", "composition": "상단에 큰 빈 식탁 면을 남겨 다음 장면의 재가 겹칠 수 있게 한다", "must_avoid": ["성인 손", "얼굴 노출", "읽을 수 있는 글자"]},
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {"previous_shot_id": "shot-002", "screen_direction": "neutral", "state_in": ["테오가 치즈를 밀어두었다"], "state_out": ["부스러기가 손끝에 모인다", "현재의 소리가 멀어진다"]},
+  "output": {"path": "episodes/ep001/art/shot-003.png", "format": "png", "quality": "high"}
+}

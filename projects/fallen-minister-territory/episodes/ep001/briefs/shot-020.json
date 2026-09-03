@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-006", "shot_id": "shot-020",
+  "source": {"beat_refs": ["beat-006"], "dramatic_purpose": "빈 복도 쪽에서 들리는 두 번의 노크로 아직 보이지 않는 위기를 먼저 도착시킨다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.06},
+  "scroll": {"display_width_ratio": 0.62, "whitespace_before_px": 420, "whitespace_after_px": 220, "transition_in": "gutter", "transition_out": "cut"},
+  "camera": {"shot_size": "insert", "angle": "eye_level", "lens_feel": "portrait", "position": "식당 안에서 닫힌 동쪽 문을 정면으로", "movement": "locked", "focus": "철띠 참나무 문과 문을 두드린 쪽의 미세한 진동"},
+  "subjects": [{"character_id": "theo-waldhart", "bbox_norm": {"x": 0.06, "y": 0.74, "width": 0.16, "height": 0.16}, "depth": "foreground", "pose": "식탁 가장자리 너머의 작은 손만 보인다", "expression": "얼굴은 보이지 않음", "gaze": "문", "action": "손가락이 부스러기 위에서 멈춘다", "identity_invariants": ["작은 손", "푸른 회색 소매", "얼굴 없음"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]}],
+  "background": {"location_id": "walt-fort-dining-hall", "description": "철띠를 두른 동쪽 참나무 문, 그 아래 실내 바닥과 멈춘 빵 부스러기", "source_crop_norm": {"x": 0.59, "y": 0.10, "width": 0.31, "height": 0.75}, "perspective": "문을 정면으로 둔 정적인 수직 구도", "depth_layers": ["테오의 손과 부스러기", "닫힌 문", "문틀과 어두운 복도 틈"], "lighting": "실내의 고른 빛, 문틈은 차갑고 어둡다", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
+  "art_direction": {"line": "문 철띠와 손끝만 또렷하게", "color": "목재 갈색과 차가운 회색 그림자", "rendering": "간결한 2D 긴장", "mood": "소리가 먼저 도착한 불안", "composition": "문 위쪽을 SFX 오버레이용으로 비워 둔다", "must_avoid": ["문밖 인물 노출", "공포 효과", "읽을 수 있는 글자"]},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "sfx", "speaker": null, "content": "똑, 똑", "anchor_norm": {"x": 0.42, "y": 0.16, "width": 0.18, "height": 0.10}}], "reserved_regions": [{"x": 0.35, "y": 0.10, "width": 0.32, "height": 0.18}]},
+  "continuity": {"previous_shot_id": "shot-019", "screen_direction": "right_to_left", "state_in": ["카일과 테오가 창가에 있다"], "state_out": ["첫 노크가 모든 시선을 문으로 돌린다", "테오 손이 부스러기 위에서 멈춘다"]},
+  "output": {"path": "episodes/ep001/art/shot-020.png", "format": "png", "quality": "high"}
+}

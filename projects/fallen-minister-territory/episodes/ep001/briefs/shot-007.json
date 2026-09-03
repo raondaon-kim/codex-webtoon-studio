@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-002", "shot_id": "shot-007",
+  "source": {"beat_refs": ["beat-002"], "dramatic_purpose": "찢긴 지도와 장부의 표면으로 왕국 붕괴가 행정의 실패이기도 했음을 보여준다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.06},
+  "scroll": {"display_width_ratio": 0.94, "whitespace_before_px": 20, "whitespace_after_px": 80, "transition_in": "continuous", "transition_out": "continuous"},
+  "camera": {"shot_size": "insert", "angle": "top_down", "lens_feel": "normal", "position": "낡은 장부와 찢긴 지도 바로 위", "movement": "push_in", "focus": "번진 잉크와 찢긴 지도 가장자리"},
+  "subjects": [{"character_id": "theo-waldhart", "bbox_norm": {"x": 0.04, "y": 0.78, "width": 0.12, "height": 0.14}, "depth": "foreground", "pose": "재가 묻은 어린 손끝만 프레임 가장자리에 둔다", "expression": "얼굴은 보이지 않음", "gaze": "프레임 밖", "action": "기억 속 장부를 향해 닿지 못하고 멈춘다", "identity_invariants": ["작은 아이 손", "성인 테오로 변형하지 않음", "얼굴 없음"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]}],
+  "background": {"location_id": "arken-fall-memory", "description": "읽을 수 없는 선과 도형만 있는 찢긴 전황 지도, 번진 잉크와 닳은 마지막 장부", "source_crop_norm": {"x": 0.03, "y": 0.66, "width": 0.56, "height": 0.22}, "perspective": "낮은 왜곡의 수직 탑뷰", "depth_layers": ["어린 손끝과 재", "지도 가장자리", "장부와 짙은 목재"], "lighting": "색을 낮춘 종이빛과 숯회색", "references": [{"path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png", "role": "background_space", "asset_id": "arken-fall-memory-montage-v1"}]},
+  "art_direction": {"line": "손과 장부 모서리에만 미세한 선명도", "color": "바랜 양피지와 어두운 목재", "rendering": "읽을 수 없는 기호만 남긴 2D 재질", "mood": "계산이 남기지 못한 것", "composition": "상단 왼쪽의 말풍선 여백과 장부를 분리한다", "must_avoid": ["읽을 수 있는 지도 글자", "현대 문서", "전투 인물", "읽을 수 있는 글자"]},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "thought", "speaker": "theo-waldhart", "content": "장부에는 늘 숫자가 남았다. 굶은 사람은 남지 못했다.", "anchor_norm": {"x": 0.06, "y": 0.07, "width": 0.38, "height": 0.14}}], "reserved_regions": [{"x": 0.04, "y": 0.04, "width": 0.44, "height": 0.22}]},
+  "continuity": {"previous_shot_id": "shot-006", "screen_direction": "neutral", "state_in": ["창고의 재가 지도 위로 흐른다"], "state_out": ["마지막 장부가 화면 중심으로 남는다"]},
+  "output": {"path": "episodes/ep001/art/shot-007.png", "format": "png", "quality": "high"}
+}

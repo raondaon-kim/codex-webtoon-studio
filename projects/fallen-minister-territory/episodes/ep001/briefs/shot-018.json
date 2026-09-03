@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-005", "shot_id": "shot-018",
+  "source": {"beat_refs": ["beat-005"], "dramatic_purpose": "요새 창밖의 강·낡은 수문·습지·나루를 하나의 취약한 생활선으로 넓게 제시한다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 1.0, "whitespace_before_px": 40, "whitespace_after_px": 140, "transition_in": "continuous", "transition_out": "continuous"},
+  "camera": {"shot_size": "extreme_wide", "angle": "high", "lens_feel": "wide", "position": "월트 요새 돌창에서 동남쪽 강변을 내려다보며", "movement": "tilt", "focus": "구불거리는 마든 강과 낡은 수문, 갈대 습지, 안개 속 그레이포드 나루"},
+  "subjects": [{"character_id": "theo-waldhart", "bbox_norm": {"x": 0.06, "y": 0.68, "width": 0.13, "height": 0.22}, "depth": "foreground", "pose": "창틀 한쪽에 선 작은 뒷모습", "expression": "얼굴은 보이지 않음", "gaze": "강 아래", "action": "풍경을 내려다본다", "identity_invariants": ["아주 작은 일곱 살 실루엣", "푸른 회색 튜닉", "어른 체격으로 확대하지 않음"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]}],
+  "background": {"location_id": "rowend-march", "description": "마른 마든 강의 굽이, 진흙 제방, 기울어진 낡은 목제 수문, 갈대 습지, 멀리 안개 속 그레이포드 나루가 이어진 초해빙 전경", "source_crop_norm": {"x": 0.00, "y": 0.08, "width": 1.00, "height": 0.72}, "perspective": "높은 창에서 아래 강을 내려다보는 완만한 세로 원근", "depth_layers": ["돌창과 테오 실루엣", "제방·수문·강", "갈대 습지·안개 속 나루·낮은 하늘"], "lighting": "흐리고 차가운 해빙기 낮빛, 과장된 안개나 역광 없음", "references": []},
+  "art_direction": {"line": "가까운 돌창은 명료하게, 먼 풍경은 단순한 선으로", "color": "청회색·갈대색·진흙 갈색", "rendering": "정제된 2D 환경 원근", "mood": "작은 영지가 안고 있는 넓은 취약함", "composition": "수문과 나루가 한 시선으로 이어지도록 물길을 화면 세로로 배치한다", "must_avoid": ["대도시 전경", "판타지 성채", "폭풍·홍수의 확정 연출", "읽을 수 있는 표지판"]},
+  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "continuity": {"previous_shot_id": "shot-017", "screen_direction": "left_to_right", "state_in": ["테오가 창턱에 손을 올렸다"], "state_out": ["강·수문·제방·나루가 연결된 취약점으로 제시된다"]},
+  "output": {"path": "episodes/ep001/art/shot-018.png", "format": "png", "quality": "high"}
+}

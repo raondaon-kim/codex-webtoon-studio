@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "scroll_plan",
+  "episode_id": "ep001",
+  "target_master_width_px": 1080,
+  "sequences": [
+    {
+      "id": "seq-001",
+      "beat_refs": ["beat-001"],
+      "rhythm": "normal",
+      "reveal": "월트 요새의 작지만 정돈된 저녁 식탁과 세 가족의 관계를 짧은 호흡으로 소개한 뒤, 테오의 손으로 시선을 좁힌다.",
+      "whitespace_before_px": 160,
+      "whitespace_after_px": 260,
+      "estimated_height_px": 3200,
+      "shot_ids": ["shot-001", "shot-002", "shot-003", "shot-004"]
+    },
+    {
+      "id": "seq-002",
+      "beat_refs": ["beat-002"],
+      "rhythm": "splash",
+      "reveal": "빵 부스러기가 재가 되며 현재의 식탁이 아르켄의 몰락 기억으로 길게 추락하고, 마지막 장부에서 다시 어린 손으로 복귀한다.",
+      "whitespace_before_px": 360,
+      "whitespace_after_px": 540,
+      "estimated_height_px": 4200,
+      "shot_ids": ["shot-005", "shot-006", "shot-007", "shot-008", "shot-009"]
+    },
+    {
+      "id": "seq-003",
+      "beat_refs": ["beat-003"],
+      "rhythm": "normal",
+      "reveal": "기억의 무게를 카일과 브람의 소소한 농담으로 끊고, 테오가 가족이라는 새로운 책임을 처음 받아들인다.",
+      "whitespace_before_px": 240,
+      "whitespace_after_px": 220,
+      "estimated_height_px": 3400,
+      "shot_ids": ["shot-010", "shot-011", "shot-012", "shot-013"]
+    },
+    {
+      "id": "seq-004",
+      "beat_refs": ["beat-004"],
+      "rhythm": "compressed",
+      "reveal": "문이 열리고 밀린 빚 독촉장이 식탁에 떨어지며 가족의 가벼운 대화가 현실의 무게로 꺾인다.",
+      "whitespace_before_px": 160,
+      "whitespace_after_px": 280,
+      "estimated_height_px": 2500,
+      "shot_ids": ["shot-014", "shot-015", "shot-016"]
+    },
+    {
+      "id": "seq-005",
+      "beat_refs": ["beat-005"],
+      "rhythm": "expanded",
+      "reveal": "창가의 테오가 물·길·나루의 취약함을 한눈에 보고, 카일의 밝은 제안과 대비되는 계산을 시작한다.",
+      "whitespace_before_px": 300,
+      "whitespace_after_px": 340,
+      "estimated_height_px": 3500,
+      "shot_ids": ["shot-017", "shot-018", "shot-019"]
+    },
+    {
+      "id": "seq-006",
+      "beat_refs": ["beat-006"],
+      "rhythm": "splash",
+      "reveal": "두 번의 노크와 전령의 급보가 다가오는 급해빙을 현실의 위기로 바꾸고, 테오의 손끝에서 첫 대응의 결심으로 끝낸다.",
+      "whitespace_before_px": 420,
+      "whitespace_after_px": 640,
+      "estimated_height_px": 3500,
+      "shot_ids": ["shot-020", "shot-021", "shot-022", "shot-023"]
+    }
+  ]
+}

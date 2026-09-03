@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-004", "shot_id": "shot-016",
+  "source": {"beat_refs": ["beat-004"], "dramatic_purpose": "테오의 너무 정확한 질문을 카일의 조심스러운 제지가 받으며, 어린 몸과 재상의 사고가 어긋남을 보여준다."},
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
+  "scroll": {"display_width_ratio": 0.92, "whitespace_before_px": 0, "whitespace_after_px": 280, "transition_in": "cut", "transition_out": "gutter"},
+  "camera": {"shot_size": "medium", "angle": "eye_level", "lens_feel": "portrait", "position": "브람 자리 쪽에서 테오와 카일을 향해", "movement": "locked", "focus": "테오의 진지한 표정과 카일의 걱정스러운 옆눈"},
+  "subjects": [
+    {"character_id": "theo-waldhart", "bbox_norm": {"x": 0.25, "y": 0.35, "width": 0.28, "height": 0.48}, "depth": "midground", "pose": "똑바로 앉아 두 손을 모은다", "expression": "순진한 얼굴의 계산", "gaze": "브람 쪽 프레임 밖", "action": "빚이 매일 붙는지 묻는다", "identity_invariants": ["작은 일곱 살 체격", "회색 눈", "푸른 회색 튜닉"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]},
+    {"character_id": "kyle-waldhart", "bbox_norm": {"x": 0.58, "y": 0.28, "width": 0.28, "height": 0.54}, "depth": "midground", "pose": "테오 쪽으로 몸을 기울여 낮게 말한다", "expression": "걱정과 어이없음이 섞인 표정", "gaze": "테오", "action": "동생의 말을 조심스럽게 말린다", "identity_invariants": ["열네 살 소년", "붉은 갈색 머리", "문장 없는 푸른 저킨"], "references": [{"path": "visual-bible/characters/kyle-waldhart-canonical-v2.png", "role": "character_identity", "asset_id": "kyle-waldhart-canonical-v2"}]}
+  ],
+  "background": {"location_id": "walt-fort-dining-hall", "description": "식탁 위의 식사가 식어 가고, 뒤로 브람의 숲색 소매가 흐리게만 남은 구도", "source_crop_norm": {"x": 0.28, "y": 0.24, "width": 0.62, "height": 0.58}, "perspective": "테오와 카일을 같은 높이에 둔 가까운 식탁 구도", "depth_layers": ["식탁 가장자리", "테오와 카일", "흐린 브람 자리와 벽"], "lighting": "따뜻함이 조금 식은 평면 실내광", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
+  "art_direction": {"line": "테오의 눈과 카일의 옆눈에 선명도", "color": "푸른 저킨 둘과 식탁 갈색의 절제된 대비", "rendering": "표정 중심의 깨끗한 2D 채색", "mood": "웃음이 멎은 어린 질문", "composition": "상단 양쪽에 서로 다른 크기의 말풍선 여백", "must_avoid": ["성인 같은 테오 체격", "과장된 공포 표정", "읽을 수 있는 글자"]},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": "theo-waldhart", "content": "빚은 매일 붙어요?", "anchor_norm": {"x": 0.11, "y": 0.06, "width": 0.27, "height": 0.12}}, {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "테오, 그 말은 조금 무서운데.", "anchor_norm": {"x": 0.62, "y": 0.06, "width": 0.28, "height": 0.13}}], "reserved_regions": [{"x": 0.07, "y": 0.03, "width": 0.36, "height": 0.20}, {"x": 0.58, "y": 0.03, "width": 0.35, "height": 0.21}]},
+  "continuity": {"previous_shot_id": "shot-015", "screen_direction": "left_to_right", "state_in": ["브람이 편지를 감췄다", "식탁의 웃음이 멎었다"], "state_out": ["테오는 빚을 숫자로 보기 시작한다", "창가 쪽의 풍경으로 시선이 이동한다"]},
+  "output": {"path": "episodes/ep001/art/shot-016.png", "format": "png", "quality": "high"}
+}
