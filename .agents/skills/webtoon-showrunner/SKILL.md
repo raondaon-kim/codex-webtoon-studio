@@ -13,7 +13,8 @@ Coordinate the project without collapsing all stages into one opaque prompt.
 2. Run `python tools/check_state.py <project-root>` to identify the earliest missing or stale stage.
 3. State which artifact will be created or revised and which upstream artifacts constrain it.
 4. Follow the matching focused skill:
-   - premise/world/characters: `story-bible-builder`
+   - premise/characters and overall world rules: `story-bible-builder`
+   - territory geography, ecology, infrastructure, or chronic problems before selecting a disaster: `territory-foundation`
    - character/background reference assets: `reference-sheet-builder`
    - episode drama/dialogue: `episode-script-writer`
    - scroll plan or shot briefs: `scroll-director`

@@ -13,6 +13,7 @@ from .io_utils import load_json
 STUDIO_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_BY_ARTIFACT = {
     "story_bible": "story-bible.schema.json",
+    "territory_profile": "territory-profile.schema.json",
     "visual_asset": "visual-asset.schema.json",
     "episode_script": "episode-script.schema.json",
     "scroll_plan": "scroll-plan.schema.json",

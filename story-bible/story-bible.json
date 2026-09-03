@@ -17,7 +17,7 @@
   "world": {
     "era": "세 제국이 완충 왕국과 교역로를 두고 국지전을 반복하는 후기 봉건 판타지 시대",
     "locations": [
-      {"id": "rowend-march", "name": "로웬드 변경백령의 발트하르트 남작령", "function": "숲·습지·오래된 강 나루를 품은 작은 변방 영지이자 두 형제의 개발 실험장"},
+      {"id": "rowend-march", "name": "로웬드 변경백령의 발트하르트 남작령", "function": "마르덴 강의 범람원·하얀갈대 습지·두 자갈 능선·그레이포드 나루가 맞물린 작은 변방 영지이자 두 형제의 개발 실험장. 세부 지리와 고질적 문제는 territory/rowend-march-profile.json을 기준으로 한다."},
       {"id": "grayford", "name": "그레이포드 나루", "function": "곡물과 목재가 드나들 수 있지만 홍수와 통행세 분쟁에 취약한 유일한 교역 관문"},
       {"id": "three-empire-border", "name": "삼제국 접경로", "function": "전쟁, 난민, 밀수, 군수 수요가 로웬드에 밀려드는 외부 압력의 통로"}
     ],
@@ -114,16 +114,16 @@
     "start": {"year": 673, "season": "초봄"},
     "aging_policy": "calendar_continuous",
     "milestones": [
-      {"id": "season-001", "year": 673, "label": "일곱 살 차남의 첫 창고와 봄 홍수", "age_by_character": {"theo-waldhart": 7, "kyle-waldhart": 14, "bram-waldhart": 39}},
+      {"id": "season-001", "year": 673, "label": "일곱 살 차남의 첫 장부와 해빙기", "age_by_character": {"theo-waldhart": 7, "kyle-waldhart": 14, "bram-waldhart": 39}},
       {"id": "arc-001", "year": 674, "label": "첫 수확, 난민 정착, 형의 견습 기사 서약", "age_by_character": {"theo-waldhart": 8, "kyle-waldhart": 15, "bram-waldhart": 40}},
       {"id": "arc-002", "year": 676, "label": "나루 시장과 보급로를 둘러싼 귀족 분쟁", "age_by_character": {"theo-waldhart": 10, "kyle-waldhart": 17, "bram-waldhart": 42}},
       {"id": "arc-003", "year": 679, "label": "국경 전쟁과 망국 장부의 재등장", "age_by_character": {"theo-waldhart": 13, "kyle-waldhart": 20, "bram-waldhart": 45}}
     ]
   },
   "story_engine": {
-    "episode_pattern": "계절 재앙이나 전쟁 압력이 영지의 한 부족함을 드러낸다. 테오는 제한된 자원으로 개발·교섭·배급 계획을 내고, 카일과 주민들이 그 계획의 빈틈을 몸으로 메운다. 작은 성공은 새 인력·시장·방어력을 남기지만 동시에 더 큰 귀족이나 제국의 관심을 부른다.",
-    "escalation": "비상식량과 배수로에서 시작해 난민 정착, 나루 시장, 도로·창고·군수 체계, 국경 연합과 제국 외교로 문제의 질을 바꾼다. 영지가 커질수록 재난은 경제 문제가 아니라 정통성·정보·전쟁의 문제가 된다.",
-    "season_arc": "첫 시즌은 봄 홍수 뒤의 식량 위기와 빚으로 무너질 뻔한 발트하르트 남작령을 지키는 이야기다. 테오는 전생처럼 혼자 장부를 붙들려 하고, 카일은 동생의 기묘한 계획을 믿고 주민을 움직인다. 마지막에는 재난 피해를 의도적으로 키운 누군가의 흔적과 아르켄 왕국의 군수 장부가 발견된다.",
+    "episode_pattern": "계절 환경 변화나 전쟁 압력이 영지의 한 부족함을 드러낸다. 테오는 제한된 자원으로 개발·교섭·배급 계획을 내고, 카일과 주민들이 그 계획의 빈틈을 몸으로 메운다. 작은 성공은 새 인력·시장·방어력을 남기지만 동시에 더 큰 귀족이나 제국의 관심을 부른다.",
+    "escalation": "식량·교통·수리의 우선순위에서 시작해 난민 정착, 나루 시장, 도로·창고·군수 체계, 국경 연합과 제국 외교로 문제의 질을 바꾼다. 영지가 커질수록 자연환경의 취약점은 경제 문제가 아니라 정통성·정보·전쟁의 문제가 된다.",
+    "season_arc": "첫 시즌은 해빙기에 드러난 식량·도로·나루 빚의 복합 위기 속에서 발트하르트 남작령의 우선순위를 정하는 이야기다. 테오는 전생처럼 혼자 장부를 붙들려 하고, 카일은 동생의 기묘한 계획을 믿고 주민을 움직인다. 마지막에는 영지의 자연적 약점과 나루의 빚을 누군가 의도적으로 이용한 흔적, 그리고 아르켄 왕국의 군수 장부가 발견된다.",
     "territory_state_model": {
       "tracked_metrics": ["식량 잔여일", "인구", "은화", "치안", "민심", "병력", "보급량"],
       "sibling_roles": {"theo-waldhart": "경제·보급·장기 전략·협상", "kyle-waldhart": "현장 지휘·전술·훈련·구조"},

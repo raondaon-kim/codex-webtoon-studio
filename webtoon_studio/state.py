@@ -17,6 +17,13 @@ def _approval_status(root: Path, stage: str) -> str:
 
 def project_state(project_root: str | Path) -> dict[str, Any]:
     root = Path(project_root).resolve()
+    territory_profiles = []
+    for path in sorted((root / "territory").glob("**/*.json")):
+        try:
+            if load_json(path).get("artifact_type") == "territory_profile":
+                territory_profiles.append(path)
+        except Exception:
+            continue
     visual_assets = []
     for path in sorted((root / "visual-bible").glob("**/*.json")):
         try:
@@ -24,7 +31,7 @@ def project_state(project_root: str | Path) -> dict[str, Any]:
                 visual_assets.append(path)
         except Exception:
             continue
-    bible_files = [root / "story-bible" / "story-bible.json", *visual_assets]
+    bible_files = [root / "story-bible" / "story-bible.json", *territory_profiles, *visual_assets]
     bible_present = (root / "story-bible" / "story-bible.json").is_file()
     episodes = []
     episodes_root = root / "episodes"
@@ -49,5 +56,6 @@ def project_state(project_root: str | Path) -> dict[str, Any]:
         "project_root": str(root),
         "bible": "missing" if not bible_present else _approval_status(root, "bible"),
         "bible_artifact_count": sum(path.is_file() for path in bible_files),
+        "territory_profile_count": len(territory_profiles),
         "episodes": episodes,
     }

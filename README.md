@@ -1,6 +1,6 @@
 # Codex Webtoon Studio
 
-Codex와 대화하며 **바이블 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다. JSON이 기준 데이터이고 Markdown은 사람이 읽는 보조 산출물입니다.
+Codex와 대화하며 **바이블 → 영지/세계 기반 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다. 영지물에서는 개별 재난보다 지리·자원·인프라·고질적 문제를 먼저 JSON으로 확정합니다.
 
 ## 무엇이 가능한가
 
@@ -43,6 +43,7 @@ Codex가 읽는 단계별 절차는 [`.agents/skills`](.agents/skills)에, 데�
 .agents/skills/          Codex 단계별 제작 skill
 config/                  프로젝트·이미지 실행기·출판 프로필
 schemas/v1/              기준 JSON Schema
+territory/               영지의 지리·환경·인프라·고질 문제 프로필
 prompt-templates/        캐릭터/배경/컷 프롬프트 구성요소
 webtoon_studio/          검증·컴파일·실행·조립·QC 라이브러리
 tools/                   사람이 직접 실행할 CLI
