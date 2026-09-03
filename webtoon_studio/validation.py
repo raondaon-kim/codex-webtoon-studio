@@ -46,7 +46,33 @@ def _custom_checks(data: dict[str, Any]) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     kind = data.get("artifact_type")
-    if kind == "director_brief":
+    if kind == "story_bible":
+        characters = {character["id"]: character for character in data.get("characters", [])}
+        previous_year: int | None = None
+        previous_ages: dict[str, int] = {}
+        for index, milestone in enumerate(data.get("timeline", {}).get("milestones", [])):
+            year = milestone.get("year")
+            if isinstance(year, int):
+                if previous_year is not None and year < previous_year:
+                    errors.append(f"$.timeline.milestones[{index}].year: milestones must be chronological")
+                previous_year = year
+            for character_id, age in milestone.get("age_by_character", {}).items():
+                character = characters.get(character_id)
+                if character is None:
+                    errors.append(
+                        f"$.timeline.milestones[{index}].age_by_character.{character_id}: unknown character ID"
+                    )
+                    continue
+                if age < character["age_at_start"]:
+                    errors.append(
+                        f"$.timeline.milestones[{index}].age_by_character.{character_id}: age is below age_at_start"
+                    )
+                if character_id in previous_ages and age < previous_ages[character_id]:
+                    errors.append(
+                        f"$.timeline.milestones[{index}].age_by_character.{character_id}: age must not decrease"
+                    )
+                previous_ages[character_id] = age
+    elif kind == "director_brief":
         canvas = data.get("canvas", {})
         if "width_px" in canvas and "height_px" in canvas:
             errors.extend(

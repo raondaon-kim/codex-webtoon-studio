@@ -30,10 +30,17 @@
       "id": "haeun",
       "name": "윤해은",
       "role": "주인공이자 기억을 잃은 전학생",
+      "age_at_start": 16,
       "want": "아무 문제 없이 새 학교에 적응하고 싶다.",
       "need": "자신이 피한 과거를 타인과 함께 마주해야 한다.",
       "conflict": "진실을 찾을수록 지금의 평온과 새 친구를 잃을 가능성이 커진다.",
       "voice": ["짧고 정확하게 말한다", "당황하면 관찰한 사실을 먼저 나열한다", "감정을 직접 명명하는 일을 피한다"],
+      "growth_arc": {
+        "physical_and_social": "고등학생으로서 계절과 학년 변화에 맞춰 교복과 관계망이 변한다.",
+        "role_progression": "기억의 관찰자에서 기억의 주인들과 협상하는 사람으로 성장한다.",
+        "emotional": "혼자 감당하려는 습관을 버리고 친구들에게 진실을 나눈다."
+      },
+      "past_life": null,
       "identity_lock": {
         "silhouette": "작은 우산처럼 바깥으로 퍼지는 짧은 재킷과 곧은 자세",
         "face": "부드러운 역삼각형 얼굴, 곧은 눈썹, 짙은 갈색의 큰 눈, 왼쪽 눈 아래 작은 점",
@@ -44,6 +51,15 @@
       }
     }
   ],
+  "timeline": {
+    "calendar": "해명고 학사력",
+    "start": {"year": 1, "season": "봄"},
+    "aging_policy": "calendar_continuous",
+    "milestones": [
+      {"id": "season-001", "year": 1, "label": "전학과 옥상 온실의 발견", "age_by_character": {"haeun": 16}},
+      {"id": "season-002", "year": 2, "label": "기억의 주인들과 맺는 동맹", "age_by_character": {"haeun": 17}}
+    ]
+  },
   "story_engine": {
     "episode_pattern": "현재의 작은 관계 문제와 연결된 기억 병 하나를 발견하고, 병 속 장면이 더 큰 비밀의 단서를 남긴다.",
     "escalation": "개인의 기억에서 학급, 교사, 학교 전체가 합의해 잊은 사건으로 범위가 넓어진다.",

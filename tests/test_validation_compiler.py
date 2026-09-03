@@ -42,6 +42,15 @@ class ValidationCompilerTests(unittest.TestCase):
         report = validate_data(broken)
         self.assertTrue(any("x + width" in item for item in report.errors))
 
+    def test_story_bible_rejects_regressing_or_unknown_age_milestone(self) -> None:
+        story = load_json(PROJECT / "story-bible" / "story-bible.json")
+        broken = copy.deepcopy(story)
+        broken["timeline"]["milestones"][1]["year"] = 0
+        broken["timeline"]["milestones"][1]["age_by_character"]["unknown-child"] = 7
+        report = validate_data(broken)
+        self.assertTrue(any("milestones must be chronological" in item for item in report.errors))
+        self.assertTrue(any("unknown character ID" in item for item in report.errors))
+
     def test_brief_compiles_to_reference_edit_task(self) -> None:
         source = PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"
         brief = load_json(source)

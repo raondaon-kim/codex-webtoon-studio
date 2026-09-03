@@ -4,13 +4,31 @@
   "title": "Episode Script",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "artifact_type", "episode_id", "title", "summary", "continuity_in", "beats", "cliffhanger", "continuity_out"],
+  "required": ["schema_version", "artifact_type", "episode_id", "title", "summary", "timeline", "continuity_in", "beats", "cliffhanger", "continuity_out"],
   "properties": {
     "schema_version": {"const": "1.0"},
     "artifact_type": {"const": "episode_script"},
     "episode_id": {"type": "string", "pattern": "^ep[0-9]{3,}$"},
     "title": {"type": "string", "minLength": 1},
     "summary": {"type": "string", "minLength": 10},
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["story_year", "season", "elapsed_days_since_previous", "age_by_character"],
+      "properties": {
+        "story_year": {"type": "integer", "minimum": 0},
+        "season": {"type": "string", "minLength": 1},
+        "elapsed_days_since_previous": {"type": "integer", "minimum": 0},
+        "age_by_character": {
+          "type": "object",
+          "minProperties": 1,
+          "patternProperties": {
+            "^[a-z0-9][a-z0-9-]*$": {"type": "integer", "minimum": 0, "maximum": 150}
+          },
+          "additionalProperties": false
+        }
+      }
+    },
     "continuity_in": {"type": "array", "items": {"type": "string"}},
     "beats": {
       "type": "array",

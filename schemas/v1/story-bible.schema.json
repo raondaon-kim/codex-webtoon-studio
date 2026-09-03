@@ -4,7 +4,7 @@
   "title": "Story Bible",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "artifact_type", "project", "premise", "themes", "world", "characters", "story_engine", "continuity_rules"],
+  "required": ["schema_version", "artifact_type", "project", "premise", "themes", "world", "characters", "timeline", "story_engine", "continuity_rules"],
   "properties": {
     "schema_version": {"const": "1.0"},
     "artifact_type": {"const": "story_bible"},
@@ -47,15 +47,37 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "name", "role", "want", "need", "conflict", "voice", "identity_lock"],
+        "required": ["id", "name", "role", "age_at_start", "want", "need", "conflict", "voice", "growth_arc", "identity_lock"],
         "properties": {
           "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
           "name": {"type": "string", "minLength": 1},
           "role": {"type": "string"},
+          "age_at_start": {"type": "integer", "minimum": 0, "maximum": 150},
           "want": {"type": "string"},
           "need": {"type": "string"},
           "conflict": {"type": "string"},
           "voice": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "growth_arc": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["physical_and_social", "role_progression", "emotional"],
+            "properties": {
+              "physical_and_social": {"type": "string"},
+              "role_progression": {"type": "string"},
+              "emotional": {"type": "string"}
+            }
+          },
+          "past_life": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "required": ["role", "age_at_death", "failure", "core_wound"],
+            "properties": {
+              "role": {"type": "string"},
+              "age_at_death": {"type": "integer", "minimum": 0, "maximum": 200},
+              "failure": {"type": "string"},
+              "core_wound": {"type": "string"}
+            }
+          },
           "identity_lock": {
             "type": "object",
             "additionalProperties": false,
@@ -67,6 +89,46 @@
               "body": {"type": "string"},
               "palette": {"type": "array", "minItems": 2, "items": {"type": "string"}},
               "signature_items": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["calendar", "start", "aging_policy", "milestones"],
+      "properties": {
+        "calendar": {"type": "string", "minLength": 1},
+        "start": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["year", "season"],
+          "properties": {
+            "year": {"type": "integer", "minimum": 0},
+            "season": {"type": "string", "minLength": 1}
+          }
+        },
+        "aging_policy": {"const": "calendar_continuous"},
+        "milestones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "year", "label", "age_by_character"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^(season|arc)-[0-9]{3,}$"},
+              "year": {"type": "integer", "minimum": 0},
+              "label": {"type": "string", "minLength": 1},
+              "age_by_character": {
+                "type": "object",
+                "minProperties": 1,
+                "patternProperties": {
+                  "^[a-z0-9][a-z0-9-]*$": {"type": "integer", "minimum": 0, "maximum": 150}
+                },
+                "additionalProperties": false
+              }
             }
           }
         }

@@ -4,6 +4,7 @@
   "episode_id": "ep001",
   "title": "빈 병",
   "summary": "전학 첫날 방과 후, 해은은 잠기지 않은 옥상에서 자기 이름이 적힌 빈 기억 병을 발견한다.",
+  "timeline": {"story_year": 1, "season": "봄", "elapsed_days_since_previous": 0, "age_by_character": {"haeun": 16}},
   "continuity_in": ["해은은 오늘 처음 해명고에 왔다", "오후부터 약한 비가 내린다"],
   "beats": [
     {
