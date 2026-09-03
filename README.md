@@ -1,8 +1,6 @@
 # Codex Webtoon Studio
 
-Codex와 대화하며 **바이블 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다.
-
-이 프로젝트는 `codex-novel-to-comic-studio`의 단계/승인 개념, `gpt-image-2-skill`의 Codex 인증 이미지 실행기, GPT Image 프롬프트 갤러리의 시트 설계 패턴을 웹툰 제작에 맞게 재구성합니다. JSON이 기준 데이터이고 Markdown은 사람이 읽는 보조 산출물입니다.
+Codex와 대화하며 **바이블 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다. JSON이 기준 데이터이고 Markdown은 사람이 읽는 보조 산출물입니다.
 
 ## 무엇이 가능한가
 
@@ -11,7 +9,7 @@ Codex와 대화하며 **바이블 → 에피소드 스크립트 → 세로 스�
 - 회차 대본을 세로 스크롤의 호흡, 여백, 리빌 타이밍으로 분해
 - 샷 크기, 카메라, 정규화 bbox, 배경 크롭을 포함한 컷 브리프 작성
 - 브리프를 독립적인 이미지 프롬프트/편집 작업으로 컴파일
-- `~/.codex/auth.json`을 읽는 외부 `gpt-image-2-skill` CLI로 생성/편집 호출
+- Codex 인증을 활용하는 외부 이미지 실행기로 생성/편집 호출
 - 생성 컷을 세로 마스터로 조립하고 업로드용 슬라이스 및 QC 리포트 생성
 
 ## 빠른 시작
@@ -23,14 +21,7 @@ python tools/compile_render_tasks.py examples/project/episodes/ep001/briefs --pr
 python tools/run_image_tasks.py examples/project/episodes/ep001/render-tasks --project-root examples/project
 ```
 
-마지막 명령은 기본적으로 드라이런입니다. 실제 유료 이미지 호출은 실행기를 설치하고 인증 상태를 확인한 뒤 `--execute`를 명시해야 합니다.
-
-```powershell
-npm install -g gpt-image-2-skill
-gpt-image-2-skill --json doctor
-gpt-image-2-skill --json auth inspect
-python tools/run_image_tasks.py examples/project/episodes/ep001/render-tasks --project-root examples/project --execute
-```
+마지막 명령은 기본적으로 드라이런입니다. 실제 유료 이미지 호출은 이미지 실행기 설치와 인증 상태 확인을 마친 뒤 `--execute`를 명시해야 합니다.
 
 인증 파일은 복사하거나 저장소에 넣지 않습니다. 실행기가 Codex의 사용자 자격 증명 저장소 또는 `~/.codex/auth.json`을 직접 찾습니다.
 
@@ -67,6 +58,6 @@ third_party/             가져온 설계/코드의 출처와 라이선스
 - 생성 작업은 입력 파일의 SHA-256을 기록합니다. 바뀐 브리프를 예전 승인으로 실행하지 않습니다.
 - `auth.json`, 토큰, API 키는 산출물과 로그에 기록하지 않습니다.
 
-## 라이선스와 출처
+## 라이선스
 
-프로젝트 자체는 MIT 라이선스를 사용합니다. 참고하거나 개작한 업스트림과 구체적인 범위는 [`third_party/UPSTREAM.md`](third_party/UPSTREAM.md)에 기록합니다.
+프로젝트 자체는 MIT 라이선스를 사용합니다.
