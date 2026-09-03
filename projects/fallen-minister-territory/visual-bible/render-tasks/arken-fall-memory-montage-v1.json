@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "visual-arken-fall-memory-montage-v1",
+  "source_brief": "visual-bible/backgrounds/arken-fall-memory-montage.json",
+  "source_hash": "c76245b1050a9afc7ba4a5c0155f5821db063f9695dd66da49ddc7f37e4dc41d",
+  "template_id": "background-reference-sheet-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create a reusable spatial reference sheet for one original webtoon location.\nTemplate: background-reference-sheet-v1. Create reusable spatial canon for an original webtoon location.\nAsset ID: arken-fall-memory-montage-v1.\nLayout: 정사각형 캔버스 안에 위에서 아래로 흐르는 다섯 개의 넓고 낮은 가로 장면을 둔다. 장면 사이에는 넉넉한 종이빛 공백과 재 입자가 이어져, 개별 패널 모음이 아닌 한 번의 기억이 끊겼다 돌아오는 것처럼 보이게 한다..\nRequired views: 어두운 참나무 식탁 위에서 빵 부스러기를 모으는 일곱 살 아이의 작은 손 클로즈업, 흰 부스러기가 차가운 회색 재로 흩어지는 추상적 전환 클로즈업, 사람 없는 빈 곡물창: 비어 있는 선반, 납작한 곡물 자루, 먼지 낀 석벽, 찢긴 전황 지도와 마지막 장부 위로 중년 남성의 손과 어두운 소매만 보이는 테이블 클로즈업, 재가 다시 따뜻한 빵 부스러기가 되어 같은 어린 손 곁에 돌아오는 식탁 클로즈업.\nSheet background: 각 장면의 바깥은 옅은 아이보리 회색 종이빛 공백이다. 현재의 식당은 테이블 표면만 암시하고, 기억의 장소들은 단편으로만 두어 새로운 공간 설정처럼 보이지 않게 한다.. Labels: none.\nPreserve exactly: 이 시트는 아르켄 왕국의 몰락을 설명하는 배경이 아니라, 테오가 1화에서 겪는 짧은 기억의 문법을 고정하는 몽타주 시트다., 위에서 아래로 이어지는 다섯 개의 가로 장면이 한 흐름으로 보인다: 현재의 어린 손과 빵 부스러기, 부스러기에서 재로 바뀌는 전환, 텅 빈 곡물창, 찢긴 전황 지도와 마지막 장부를 붙든 성인 남성의 손, 다시 어린 테오의 손과 빵 부스러기., 첫 장면과 마지막 장면에는 일곱 살 테오의 작고 깨끗한 손만 보이며 얼굴이나 전신은 보이지 않는다. 진한 참나무 식탁과 소박한 식사의 색감으로 현재 식당 장면과 이어진다., 전환 장면의 흰 빵 부스러기는 공중에서 아주 고운 차가운 회색 재로 변한다. 재는 기억의 공백을 가로질러 다음 장면으로 이어진다., 곡물창은 사람이 없는 작은 석조 창고 내부의 비어 있는 선반과 납작해진 곡물 자루만 보이는 단편이다. 아르켄의 수도나 전체 도시를 정하지 않는다., 장부 장면에는 중년의 전생 재상 에드릭을 손과 소매로만 암시한다. 낡은 장부를 단단히 쥔 손, 찢어진 지도 가장자리, 번진 잉크 얼룩만 보이며 성인 얼굴과 몸은 보이지 않는다., 현재 장면은 부드러운 아이보리·청회색과 갈색, 기억은 숯회색·재색·바랜 종이색으로 낮춘다. 불길은 작은 무딘 벽돌색 점광 정도만 허용한다., 테오 확정 시트와 같은 정제된 한국 중세 판타지 웹툰 선화, 부드러운 2D 디지털 채색, 절제된 재질감과 명료한 화면 분리를 유지한다..\nReferences, in authoritative input order:\n- Image 1: art_style_reference; use only for that declared role.\n- Image 2: present_scene_reference; use only for that declared role.\nRequested change: produce only the declared new views while retaining the authoritative identity or spatial layout from the references.\nStandard sheet invariants: fixed entrances, windows, landmarks, circulation paths, horizon, and scale anchors, consistent architecture and material palette across views, clear foreground, midground, and background layers.\nPalette swatches: #d8d2c3, #5a5145, #7c8a8f, #4a4139, #8e5f3d.\nAvoid: 성인 에드릭의 얼굴, 전신, 새 정체성 디자인, 왕관, 왕좌, 전투 장면, 시체, 무기 사용, 군대 행렬, 불타는 수도의 전경, 대규모 성채나 도시 건축의 정식 설정, 극적인 역광, 강한 햇살 기둥, 폭발적인 불꽃, 사실적인 그릿 회화, 사진 질감, 과도하게 어두운 공포 연출, 읽을 수 있는 지도·장부 글자, 말풍선, 캡션, 로고, 워터마크, 서명, impossible topology, moving landmarks, fisheye unless requested, readable text, watermark, signature.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "art_style_reference",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "present_scene_reference",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "2048x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+    "result_metadata_path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.result.json"
+  }
+}
