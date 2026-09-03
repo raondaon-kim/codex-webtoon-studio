@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex-webtoon.dev/schemas/v1/qc-report.schema.json",
+  "title": "Webtoon QC Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "episode_id", "generated_at", "status", "checks", "issues"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_type": {"const": "qc_report"},
+    "episode_id": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["pass", "warn", "fail"]},
+    "checks": {
+      "type": "object",
+      "required": ["schema", "files", "dimensions", "continuity", "lettering", "publish_slices"],
+      "properties": {
+        "schema": {"type": "boolean"},
+        "files": {"type": "boolean"},
+        "dimensions": {"type": "boolean"},
+        "continuity": {"type": "boolean"},
+        "lettering": {"type": "boolean"},
+        "publish_slices": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "code", "message"],
+        "properties": {
+          "severity": {"enum": ["info", "warning", "error"]},
+          "code": {"type": "string"},
+          "message": {"type": "string"},
+          "path": {"type": "string"},
+          "shot_id": {"type": "string"}
+        }
+      }
+    }
+  }
+}

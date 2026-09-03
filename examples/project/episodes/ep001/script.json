@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "episode_script",
+  "episode_id": "ep001",
+  "title": "빈 병",
+  "summary": "전학 첫날 방과 후, 해은은 잠기지 않은 옥상에서 자기 이름이 적힌 빈 기억 병을 발견한다.",
+  "continuity_in": ["해은은 오늘 처음 해명고에 왔다", "오후부터 약한 비가 내린다"],
+  "beats": [
+    {
+      "id": "beat-001",
+      "purpose": "일상의 학교와 고립된 해은을 보여 준다.",
+      "location_id": "school-rooftop",
+      "time": "비 오는 방과 후",
+      "characters": ["haeun"],
+      "action": "해은이 투명 우산을 접고 열린 옥상문 너머를 살핀다.",
+      "emotion": "경계하면서도 비밀 공간에 끌린다.",
+      "text": [
+        {"kind": "thought", "speaker": "haeun", "content": "분명 출입 금지라고 했는데.", "delivery": "작고 건조하게"}
+      ]
+    },
+    {
+      "id": "beat-002",
+      "purpose": "해은의 개인적 미스터리를 시작한다.",
+      "location_id": "school-rooftop",
+      "time": "직후",
+      "characters": ["haeun"],
+      "action": "동쪽 선반의 빈 유리병에서 윤해은이라고 적힌 낡은 꼬리표가 흔들린다.",
+      "emotion": "호기심이 즉시 공포로 바뀐다.",
+      "text": [
+        {"kind": "dialogue", "speaker": "haeun", "content": "왜 내 이름이…", "delivery": "숨을 삼키며"}
+      ]
+    }
+  ],
+  "cliffhanger": "빈 병 안쪽에서 누군가 손가락으로 두드리는 소리가 난다.",
+  "continuity_out": ["해은은 자기 이름의 빈 병을 발견했다", "해은의 우산은 닫힌 채 옥상문 옆에 있다", "병은 아직 선반 위에 있고 열리지 않았다"]
+}

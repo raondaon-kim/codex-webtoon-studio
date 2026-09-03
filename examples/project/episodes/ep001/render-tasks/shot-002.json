@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-002",
+  "source_brief": "episodes/ep001/briefs/shot-002.json",
+  "source_hash": "46612188af055ef1218c450a350a0671f1b91568c1b706d7bcb2cd07086dd145",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: Reveal Haeun's own name on the empty bottle and turn curiosity into personal fear.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: close_up shot, over_shoulder angle, portrait lens feel, camera position just behind Haeun's left shoulder at bottle-shelf height, movement push_in, focus on the empty bottle and its worn name tag, with Haeun's shocked eye still readable. empty bottle dominates the center-right; Haeun's partial face and hovering hand form a visual triangle\nSubjects:\n- haeun at left 0%, top 34%, width 46%, height 66%, foreground; pose left shoulder and partial profile leaning toward the shelf; expression eye widened in sudden recognition and fear; gaze fixed on the empty bottle in frame center-right; action raises her left hand but stops before touching the bottle. Preserve: chin-length navy bob, left-eye beauty mark visible, pale-blue short jacket, navy cord on raised left wrist.\nBackground: location school-rooftop; close section of the fixed east-wall wooden bottle shelves, rain tracking down the wall behind them. Use source crop left 52%, top 18%, width 42%, height 68%; perspective shelf lines recede gently toward frame right without warping the bottle; depth layers: Haeun's shoulder and raised hand, empty bottle with dangling tag, rows of softly blurred filled bottles and wet wall; lighting cool diffuse rain light with a small amber reflection inside the empty glass.\nVisual treatment: line controlled clean webtoon linework with sharper detail on the eye, hand, glass rim, and tag; color cool restrained palette, amber tag and reflection as the only warm accent; rendering polished 2D cel shading, realistic glass edges, shallow depth of field; mood personal recognition turning into dread.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: Haeun has crossed the rooftop, umbrella remains by the door, empty bottle stays on shelf; state leaving: Haeun has recognized her name tag, her left hand hovers without touching, bottle remains unopened.\nLettering: leave visually quiet negative space in these regions: left 4%, top 4%, width 40%, height 23%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, extra fingers, opaque bottle, legible generated tag text, changing shelf construction.",
+  "references": [
+    {
+      "path": "visual-bible/characters/haeun-canonical-sheet.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-002.png",
+    "result_metadata_path": "episodes/ep001/art/shot-002.result.json"
+  }
+}

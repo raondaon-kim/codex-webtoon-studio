@@ -1,0 +1,8 @@
+{
+  "template_id": "webtoon-shot-v1",
+  "section_order": ["purpose", "canvas", "composition", "subjects", "background", "lighting_and_rendering", "references", "continuity", "exclusions"],
+  "coordinate_language": "Express normalized boxes as approximate left/top/width/height percentages, while retaining normalized values in task metadata.",
+  "lettering_rule": "When text.mode is deterministic_lettering, reserve declared regions but generate no speech balloons, captions, or readable text.",
+  "reference_rule": "Name every reference by index and role; the first approved character identity reference is authoritative for that character.",
+  "continuity_rule": "Repeat identity and state invariants explicitly; do not rely on the model inferring them from earlier tasks."
+}

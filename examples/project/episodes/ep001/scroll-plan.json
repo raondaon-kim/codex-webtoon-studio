@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "scroll_plan",
+  "episode_id": "ep001",
+  "target_master_width_px": 1080,
+  "sequences": [
+    {
+      "id": "seq-001",
+      "beat_refs": ["beat-001"],
+      "rhythm": "expanded",
+      "reveal": "긴 여백 뒤 작은 해은과 넓은 옥상을 보여 고립감을 만든다.",
+      "whitespace_before_px": 180,
+      "whitespace_after_px": 220,
+      "estimated_height_px": 1800,
+      "shot_ids": ["shot-001"]
+    },
+    {
+      "id": "seq-002",
+      "beat_refs": ["beat-002"],
+      "rhythm": "splash",
+      "reveal": "병의 꼬리표가 화면을 채우며 이름이 드러난다.",
+      "whitespace_before_px": 320,
+      "whitespace_after_px": 420,
+      "estimated_height_px": 2300,
+      "shot_ids": ["shot-002"]
+    }
+  ]
+}

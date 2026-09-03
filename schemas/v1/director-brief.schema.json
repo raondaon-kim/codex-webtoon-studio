@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex-webtoon.dev/schemas/v1/director-brief.schema.json",
+  "title": "Webtoon Shot Director Brief",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "episode_id", "sequence_id", "shot_id", "source", "canvas", "scroll", "camera", "subjects", "background", "art_direction", "text", "continuity", "output"],
+  "$defs": {
+    "normalizedBox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": {"type": "number", "minimum": 0, "maximum": 1},
+        "y": {"type": "number", "minimum": 0, "maximum": 1},
+        "width": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "height": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "role"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "role": {"enum": ["character_identity", "outfit", "expression", "background_space", "prop", "composition"]},
+        "asset_id": {"type": "string"}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_type": {"const": "director_brief"},
+    "episode_id": {"type": "string", "pattern": "^ep[0-9]{3,}$"},
+    "sequence_id": {"type": "string", "pattern": "^seq-[0-9]{3,}$"},
+    "shot_id": {"type": "string", "pattern": "^shot-[0-9]{3,}$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["beat_refs", "dramatic_purpose"],
+      "properties": {
+        "beat_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "dramatic_purpose": {"type": "string", "minLength": 3}
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width_px", "height_px", "safe_margin_norm"],
+      "properties": {
+        "width_px": {"type": "integer", "minimum": 16, "maximum": 3840, "multipleOf": 16},
+        "height_px": {"type": "integer", "minimum": 16, "maximum": 3840, "multipleOf": 16},
+        "safe_margin_norm": {"type": "number", "minimum": 0, "maximum": 0.25}
+      }
+    },
+    "scroll": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["display_width_ratio", "whitespace_before_px", "whitespace_after_px", "transition_in", "transition_out"],
+      "properties": {
+        "display_width_ratio": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "whitespace_before_px": {"type": "integer", "minimum": 0},
+        "whitespace_after_px": {"type": "integer", "minimum": 0},
+        "transition_in": {"enum": ["cut", "gutter", "fade", "overlap", "continuous"]},
+        "transition_out": {"enum": ["cut", "gutter", "fade", "overlap", "continuous"]}
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shot_size", "angle", "lens_feel", "position", "movement", "focus"],
+      "properties": {
+        "shot_size": {"enum": ["extreme_wide", "wide", "full", "medium_full", "medium", "medium_close_up", "close_up", "extreme_close_up", "insert"]},
+        "angle": {"enum": ["eye_level", "high", "low", "top_down", "dutch", "over_shoulder", "pov"]},
+        "lens_feel": {"enum": ["ultra_wide", "wide", "normal", "portrait", "telephoto"]},
+        "position": {"type": "string", "minLength": 1},
+        "movement": {"enum": ["locked", "pan", "tilt", "push_in", "pull_out", "tracking", "handheld_feel"]},
+        "focus": {"type": "string", "minLength": 1}
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["character_id", "bbox_norm", "depth", "pose", "expression", "gaze", "action", "identity_invariants", "references"],
+        "properties": {
+          "character_id": {"type": "string"},
+          "bbox_norm": {"$ref": "#/$defs/normalizedBox"},
+          "depth": {"enum": ["foreground", "midground", "background"]},
+          "pose": {"type": "string"},
+          "expression": {"type": "string"},
+          "gaze": {"type": "string"},
+          "action": {"type": "string"},
+          "identity_invariants": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "references": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"$ref": "#/$defs/reference"}}
+        }
+      }
+    },
+    "background": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["location_id", "description", "source_crop_norm", "perspective", "depth_layers", "lighting", "references"],
+      "properties": {
+        "location_id": {"type": "string"},
+        "description": {"type": "string"},
+        "source_crop_norm": {"$ref": "#/$defs/normalizedBox"},
+        "perspective": {"type": "string"},
+        "depth_layers": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "lighting": {"type": "string"},
+        "references": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/reference"}}
+      }
+    },
+    "art_direction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line", "color", "rendering", "mood", "composition", "must_avoid"],
+      "properties": {
+        "line": {"type": "string"},
+        "color": {"type": "string"},
+        "rendering": {"type": "string"},
+        "mood": {"type": "string"},
+        "composition": {"type": "string"},
+        "must_avoid": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "items", "reserved_regions"],
+      "properties": {
+        "mode": {"enum": ["deterministic_lettering", "embedded", "none"]},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "content", "anchor_norm"],
+            "properties": {
+              "kind": {"enum": ["dialogue", "caption", "thought", "sfx"]},
+              "speaker": {"type": ["string", "null"]},
+              "content": {"type": "string"},
+              "anchor_norm": {"$ref": "#/$defs/normalizedBox"}
+            }
+          }
+        },
+        "reserved_regions": {"type": "array", "items": {"$ref": "#/$defs/normalizedBox"}}
+      }
+    },
+    "continuity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["previous_shot_id", "screen_direction", "state_in", "state_out"],
+      "properties": {
+        "previous_shot_id": {"type": ["string", "null"]},
+        "screen_direction": {"enum": ["left_to_right", "right_to_left", "neutral"]},
+        "state_in": {"type": "array", "items": {"type": "string"}},
+        "state_out": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "format", "quality"],
+      "properties": {
+        "path": {"type": "string"},
+        "format": {"enum": ["png", "jpeg", "webp"]},
+        "quality": {"enum": ["high", "medium", "low", "auto"]}
+      }
+    }
+  }
+}

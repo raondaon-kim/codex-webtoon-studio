@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "visual-school-rooftop-canonical-sheet",
+  "source_brief": "visual-bible/backgrounds/school-rooftop.json",
+  "source_hash": "a181bf01b529819dab301a2e08999c05eeeb022e38e8e802ab9a0a1e137e7f91",
+  "template_id": "background-reference-sheet-v1",
+  "provider": "codex",
+  "operation": "generate",
+  "prompt": "Create a reusable spatial reference sheet for one original webtoon location.\nTemplate: background-reference-sheet-v1. Create reusable spatial canon for an original webtoon location.\nAsset ID: school-rooftop-canonical-sheet.\nLayout: wide establishing view above, reverse angle and simplified plan-like inset below, plus fixed landmark details.\nRequired views: north-facing wide establishing view, south-facing reverse angle, greenhouse entrance detail, east-wall bottle shelves, simple spatial plan, rainy dusk lighting variant.\nSheet background: neutral presentation board. Labels: deterministic_overlay.\nPreserve exactly: greenhouse door on the south side, rain gutter and bottle shelves fixed to the east wall, low concrete wall overlooking the gray-blue sea, rust-red service stairs entering from the west.\nReferences: none; establish an original design from the declared visual canon.\nStandard sheet invariants: fixed entrances, windows, landmarks, circulation paths, horizon, and scale anchors, consistent architecture and material palette across views, clear foreground, midground, and background layers.\nPalette swatches: #6f8794, #9ca9aa, #b54e3c, #d6c28e.\nAvoid: moving doors between views, impossible stair connection, changing bottle shelf count without story reason, impossible topology, moving landmarks, fisheye unless requested, readable text, watermark, signature.",
+  "references": [],
+  "request": {
+    "size": "2048x1152",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.png",
+    "result_metadata_path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.result.json"
+  }
+}

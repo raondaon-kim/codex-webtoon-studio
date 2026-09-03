@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex-webtoon.dev/schemas/v1/render-task.schema.json",
+  "title": "Image Render Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "task_id", "source_brief", "source_hash", "template_id", "provider", "operation", "prompt", "references", "request", "output"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_type": {"const": "render_task"},
+    "task_id": {"type": "string", "minLength": 1},
+    "source_brief": {"type": "string"},
+    "source_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "template_id": {"type": "string", "minLength": 3},
+    "provider": {"enum": ["codex", "openai", "auto"]},
+    "operation": {"enum": ["generate", "edit"]},
+    "prompt": {"type": "string", "minLength": 30},
+    "references": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "role", "index"],
+        "properties": {
+          "path": {"type": "string"},
+          "role": {"type": "string"},
+          "index": {"type": "integer", "minimum": 1, "maximum": 16}
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["size", "quality", "format"],
+      "properties": {
+        "size": {"type": "string", "pattern": "^[0-9]+x[0-9]+$"},
+        "quality": {"enum": ["high", "medium", "low", "auto"]},
+        "format": {"enum": ["png", "jpeg", "webp"]},
+        "compression": {"type": "integer", "minimum": 0, "maximum": 100}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path"],
+      "properties": {"path": {"type": "string"}, "result_metadata_path": {"type": "string"}}
+    }
+  }
+}

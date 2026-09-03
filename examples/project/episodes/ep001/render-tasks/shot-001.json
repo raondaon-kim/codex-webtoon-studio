@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-001",
+  "source_brief": "episodes/ep001/briefs/shot-001.json",
+  "source_hash": "e61f4a20a29e030865cfae05157ec2fffc90bd8f5bee8686c55d65a0feeaf83a",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: Show Haeun as a small cautious figure entering a vast secret rooftop space.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: extreme_wide shot, high angle, wide lens feel, camera position above the west service stairs looking diagonally toward the greenhouse and sea, movement locked, focus on Haeun paused at the threshold and the distant bottle shelves. use large negative space above and around Haeun; make the bottle shelves visible but not yet dominant\nSubjects:\n- haeun at left 12%, top 54%, width 20%, height 38%, midground; pose half turned toward the rooftop, one hand still on the door; expression guarded curiosity; gaze toward the bottle shelves on frame right; action steps through the open rooftop door after folding her umbrella. Preserve: chin-length navy bob, left-eye beauty mark, pale-blue short jacket, navy cord on left wrist.\nBackground: location school-rooftop; rain-dark school rooftop, glass greenhouse to the south, bottle shelves and gutter along the east wall, gray-blue sea beyond the parapet. Use source crop left 0%, top 5%, width 100%, height 85%; perspective strong diagonal lines pull from the west stairs to the east bottle shelves; depth layers: wet stair railing and doorway, Haeun and reflective rooftop, greenhouse and bottle wall, soft sea horizon; lighting cool rainy dusk with warm weak greenhouse spill.\nVisual treatment: line controlled clean webtoon linework with delicate rain accents; color cool desaturated blue-gray scene with small amber focal accents; rendering polished 2D cel shading with soft atmospheric depth; mood quiet, curious, and slightly uncanny.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: umbrella has just been folded, rooftop door is open; state leaving: Haeun stands inside the rooftop, umbrella remains by the door, she looks toward the east shelf.\nLettering: leave visually quiet negative space in these regions: left 50%, top 6%, width 42%, height 22%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, fisheye distortion, extra people, moving the fixed rooftop landmarks.",
+  "references": [
+    {
+      "path": "visual-bible/characters/haeun-canonical-sheet.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-001.png",
+    "result_metadata_path": "episodes/ep001/art/shot-001.result.json"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-001",
+  "shot_id": "shot-001",
+  "source": {
+    "beat_refs": ["beat-001"],
+    "dramatic_purpose": "Show Haeun as a small cautious figure entering a vast secret rooftop space."
+  },
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
+  "scroll": {
+    "display_width_ratio": 1.0,
+    "whitespace_before_px": 180,
+    "whitespace_after_px": 220,
+    "transition_in": "gutter",
+    "transition_out": "gutter"
+  },
+  "camera": {
+    "shot_size": "extreme_wide",
+    "angle": "high",
+    "lens_feel": "wide",
+    "position": "above the west service stairs looking diagonally toward the greenhouse and sea",
+    "movement": "locked",
+    "focus": "Haeun paused at the threshold and the distant bottle shelves"
+  },
+  "subjects": [
+    {
+      "character_id": "haeun",
+      "bbox_norm": {"x": 0.12, "y": 0.54, "width": 0.2, "height": 0.38},
+      "depth": "midground",
+      "pose": "half turned toward the rooftop, one hand still on the door",
+      "expression": "guarded curiosity",
+      "gaze": "toward the bottle shelves on frame right",
+      "action": "steps through the open rooftop door after folding her umbrella",
+      "identity_invariants": ["chin-length navy bob", "left-eye beauty mark", "pale-blue short jacket", "navy cord on left wrist"],
+      "references": [
+        {"path": "visual-bible/characters/haeun-canonical-sheet.png", "role": "character_identity", "asset_id": "haeun-canonical-sheet"}
+      ]
+    }
+  ],
+  "background": {
+    "location_id": "school-rooftop",
+    "description": "rain-dark school rooftop, glass greenhouse to the south, bottle shelves and gutter along the east wall, gray-blue sea beyond the parapet",
+    "source_crop_norm": {"x": 0.0, "y": 0.05, "width": 1.0, "height": 0.85},
+    "perspective": "strong diagonal lines pull from the west stairs to the east bottle shelves",
+    "depth_layers": ["wet stair railing and doorway", "Haeun and reflective rooftop", "greenhouse and bottle wall", "soft sea horizon"],
+    "lighting": "cool rainy dusk with warm weak greenhouse spill",
+    "references": [
+      {"path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.png", "role": "background_space", "asset_id": "school-rooftop-canonical-sheet"}
+    ]
+  },
+  "art_direction": {
+    "line": "controlled clean webtoon linework with delicate rain accents",
+    "color": "cool desaturated blue-gray scene with small amber focal accents",
+    "rendering": "polished 2D cel shading with soft atmospheric depth",
+    "mood": "quiet, curious, and slightly uncanny",
+    "composition": "use large negative space above and around Haeun; make the bottle shelves visible but not yet dominant",
+    "must_avoid": ["fisheye distortion", "extra people", "moving the fixed rooftop landmarks"]
+  },
+  "text": {
+    "mode": "deterministic_lettering",
+    "items": [
+      {"kind": "thought", "speaker": "haeun", "content": "분명 출입 금지라고 했는데.", "anchor_norm": {"x": 0.56, "y": 0.1, "width": 0.32, "height": 0.12}}
+    ],
+    "reserved_regions": [
+      {"x": 0.5, "y": 0.06, "width": 0.42, "height": 0.22}
+    ]
+  },
+  "continuity": {
+    "previous_shot_id": null,
+    "screen_direction": "left_to_right",
+    "state_in": ["umbrella has just been folded", "rooftop door is open"],
+    "state_out": ["Haeun stands inside the rooftop", "umbrella remains by the door", "she looks toward the east shelf"]
+  },
+  "output": {"path": "episodes/ep001/art/shot-001.png", "format": "png", "quality": "high"}
+}

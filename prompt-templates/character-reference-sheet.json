@@ -1,0 +1,18 @@
+{
+  "template_id": "character-reference-sheet-v1",
+  "purpose": "Create the first canonical identity sheet for an original webtoon character.",
+  "layout": [
+    "clean orthographic gallery layout",
+    "front, profile, and back full-body views at equal scale",
+    "expression row with neutral, joy, anger, fear, and sorrow",
+    "separate close details for clothing, equipment, and signature items",
+    "small palette swatches"
+  ],
+  "invariants": [
+    "same face geometry, hairstyle, body proportion, outfit construction, and palette in every view",
+    "unobstructed silhouette and complete limbs",
+    "plain neutral background with generous separation"
+  ],
+  "text_policy": "No generated labels; add labels with deterministic overlay after generation.",
+  "avoid": ["dramatic scene composition", "perspective distortion", "cropped feet", "duplicate views", "readable text", "watermark"]
+}

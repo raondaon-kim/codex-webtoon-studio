@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-webtoon-studio"
+version = "0.1.0"
+description = "A repository-native Codex workflow for vertical-scroll webtoon production"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "jsonschema>=4.22",
+  "Pillow>=10.0"
+]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=5.0"]
+
+[tool.setuptools]
+packages = ["webtoon_studio"]

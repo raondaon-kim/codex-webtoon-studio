@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "visual-haeun-canonical-sheet",
+  "source_brief": "visual-bible/characters/haeun.json",
+  "source_hash": "5be048957be796076f89248038f866dc82b0c5a01aea0a38999947e1ec143ced",
+  "template_id": "character-reference-sheet-v1",
+  "provider": "codex",
+  "operation": "generate",
+  "prompt": "Create a clean canonical reference sheet for one original webtoon character.\nTemplate: character-reference-sheet-v1. Create the first canonical identity sheet for an original webtoon character.\nAsset ID: haeun-canonical-sheet.\nLayout: front, left profile, and back full-body turnaround in the upper two-thirds; five expression headshots and equipment details below.\nRequired views: front full body, left profile full body, back full body, neutral expression, small smile, anger, fear, sorrow, umbrella detail, left wrist cord detail.\nSheet background: clean warm-white studio sheet with generous gutters. Labels: deterministic_overlay.\nPreserve exactly: soft inverted-triangle face and straight eyebrows, large dark-brown eyes and a small beauty mark below the left eye, chin-length dark navy bob with bangs parted to the right, slender adolescent proportions, short pale-blue school jacket, navy wrist cord on the left wrist, transparent umbrella with a yellow handle.\nReferences: none; establish an original design from the declared visual canon.\nStandard sheet invariants: same face geometry, hairstyle, body proportion, outfit construction, and palette in every view, unobstructed silhouette and complete limbs, plain neutral background with generous separation.\nPalette swatches: #18253d, #d8e5ef, #f2c4b2, #d9aa43.\nAvoid: adult proportions, long hair, beauty mark on the wrong side, different costume between views, dramatic scene composition, perspective distortion, cropped feet, duplicate views, readable text, watermark, signature.",
+  "references": [],
+  "request": {
+    "size": "2048x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "visual-bible/characters/haeun-canonical-sheet.png",
+    "result_metadata_path": "visual-bible/characters/haeun-canonical-sheet.result.json"
+  }
+}

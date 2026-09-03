@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-002",
+  "shot_id": "shot-002",
+  "source": {
+    "beat_refs": ["beat-002"],
+    "dramatic_purpose": "Reveal Haeun's own name on the empty bottle and turn curiosity into personal fear."
+  },
+  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
+  "scroll": {
+    "display_width_ratio": 1.0,
+    "whitespace_before_px": 320,
+    "whitespace_after_px": 420,
+    "transition_in": "gutter",
+    "transition_out": "gutter"
+  },
+  "camera": {
+    "shot_size": "close_up",
+    "angle": "over_shoulder",
+    "lens_feel": "portrait",
+    "position": "just behind Haeun's left shoulder at bottle-shelf height",
+    "movement": "push_in",
+    "focus": "the empty bottle and its worn name tag, with Haeun's shocked eye still readable"
+  },
+  "subjects": [
+    {
+      "character_id": "haeun",
+      "bbox_norm": {"x": 0.0, "y": 0.34, "width": 0.46, "height": 0.66},
+      "depth": "foreground",
+      "pose": "left shoulder and partial profile leaning toward the shelf",
+      "expression": "eye widened in sudden recognition and fear",
+      "gaze": "fixed on the empty bottle in frame center-right",
+      "action": "raises her left hand but stops before touching the bottle",
+      "identity_invariants": ["chin-length navy bob", "left-eye beauty mark visible", "pale-blue short jacket", "navy cord on raised left wrist"],
+      "references": [
+        {"path": "visual-bible/characters/haeun-canonical-sheet.png", "role": "character_identity", "asset_id": "haeun-canonical-sheet"}
+      ]
+    }
+  ],
+  "background": {
+    "location_id": "school-rooftop",
+    "description": "close section of the fixed east-wall wooden bottle shelves, rain tracking down the wall behind them",
+    "source_crop_norm": {"x": 0.52, "y": 0.18, "width": 0.42, "height": 0.68},
+    "perspective": "shelf lines recede gently toward frame right without warping the bottle",
+    "depth_layers": ["Haeun's shoulder and raised hand", "empty bottle with dangling tag", "rows of softly blurred filled bottles and wet wall"],
+    "lighting": "cool diffuse rain light with a small amber reflection inside the empty glass",
+    "references": [
+      {"path": "visual-bible/backgrounds/school-rooftop-canonical-sheet.png", "role": "background_space", "asset_id": "school-rooftop-canonical-sheet"}
+    ]
+  },
+  "art_direction": {
+    "line": "controlled clean webtoon linework with sharper detail on the eye, hand, glass rim, and tag",
+    "color": "cool restrained palette, amber tag and reflection as the only warm accent",
+    "rendering": "polished 2D cel shading, realistic glass edges, shallow depth of field",
+    "mood": "personal recognition turning into dread",
+    "composition": "empty bottle dominates the center-right; Haeun's partial face and hovering hand form a visual triangle",
+    "must_avoid": ["extra fingers", "opaque bottle", "legible generated tag text", "changing shelf construction"]
+  },
+  "text": {
+    "mode": "deterministic_lettering",
+    "items": [
+      {"kind": "dialogue", "speaker": "haeun", "content": "왜 내 이름이…", "anchor_norm": {"x": 0.08, "y": 0.08, "width": 0.3, "height": 0.13}}
+    ],
+    "reserved_regions": [
+      {"x": 0.04, "y": 0.04, "width": 0.4, "height": 0.23}
+    ]
+  },
+  "continuity": {
+    "previous_shot_id": "shot-001",
+    "screen_direction": "left_to_right",
+    "state_in": ["Haeun has crossed the rooftop", "umbrella remains by the door", "empty bottle stays on shelf"],
+    "state_out": ["Haeun has recognized her name tag", "her left hand hovers without touching", "bottle remains unopened"]
+  },
+  "output": {"path": "episodes/ep001/art/shot-002.png", "format": "png", "quality": "high"}
+}

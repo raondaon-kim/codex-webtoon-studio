@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "generic-webtoon",
+  "description": "Platform-neutral export profile; confirm the target platform's current limits before publishing.",
+  "width_px": 1080,
+  "slice_height_px": 3200,
+  "format": "jpeg",
+  "quality": 92,
+  "background": "#ffffff"
+}

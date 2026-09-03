@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "project_id": "rain-memory",
+  "title": "비를 보관하는 옥상",
+  "language": "ko-KR",
+  "art_generation": {
+    "default_size": "1536x2048",
+    "default_quality": "high",
+    "default_format": "png",
+    "negative_defaults": ["speech bubbles", "captions", "readable text", "watermark", "signature", "duplicate character"]
+  },
+  "scroll_master": {
+    "width_px": 1080,
+    "default_gutter_px": 160,
+    "background": "#f4f6fa"
+  },
+  "workflow": {
+    "require_user_approval_for_image_execution": true,
+    "canonical_format": "json",
+    "content_hash_algorithm": "sha256"
+  }
+}

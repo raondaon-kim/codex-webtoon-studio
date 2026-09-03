@@ -1,0 +1,17 @@
+{
+  "template_id": "background-reference-sheet-v1",
+  "purpose": "Create reusable spatial canon for an original webtoon location.",
+  "layout": [
+    "wide establishing view",
+    "reverse angle",
+    "key landmark details",
+    "simple plan-like spatial inset without readable labels",
+    "day and night lighting variants when relevant"
+  ],
+  "invariants": [
+    "fixed entrances, windows, landmarks, circulation paths, horizon, and scale anchors",
+    "consistent architecture and material palette across views",
+    "clear foreground, midground, and background layers"
+  ],
+  "avoid": ["impossible topology", "moving landmarks", "fisheye unless requested", "readable text", "watermark"]
+}

@@ -1,0 +1,12 @@
+{
+  "template_id": "character-reference-edit-v1",
+  "purpose": "Derive a new approved character view from a canonical reference image.",
+  "reference_order": ["character_identity", "outfit", "expression_or_pose", "optional_composition"],
+  "instructions": [
+    "Identify every reference by 1-based index and role.",
+    "State the requested change in one section.",
+    "State all identity invariants to preserve in a separate section.",
+    "Preserve facial geometry, hair construction, proportions, signature items, and palette unless explicitly changed.",
+    "Do not import unrelated identity traits from pose or composition references."
+  ]
+}

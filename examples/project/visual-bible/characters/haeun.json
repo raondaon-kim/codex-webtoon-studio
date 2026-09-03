@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "visual_asset",
+  "asset_id": "haeun-canonical-sheet",
+  "asset_kind": "character",
+  "status": "draft",
+  "identity_or_space_lock": {
+    "must_preserve": [
+      "soft inverted-triangle face and straight eyebrows",
+      "large dark-brown eyes and a small beauty mark below the left eye",
+      "chin-length dark navy bob with bangs parted to the right",
+      "slender adolescent proportions",
+      "short pale-blue school jacket, navy wrist cord on the left wrist, transparent umbrella with a yellow handle"
+    ],
+    "must_avoid": ["adult proportions", "long hair", "beauty mark on the wrong side", "different costume between views"]
+  },
+  "sheet_plan": {
+    "layout": "front, left profile, and back full-body turnaround in the upper two-thirds; five expression headshots and equipment details below",
+    "views": ["front full body", "left profile full body", "back full body", "neutral expression", "small smile", "anger", "fear", "sorrow", "umbrella detail", "left wrist cord detail"],
+    "background": "clean warm-white studio sheet with generous gutters",
+    "labels": "deterministic_overlay",
+    "palette_swatches": ["#18253d", "#d8e5ef", "#f2c4b2", "#d9aa43"]
+  },
+  "references": [],
+  "output": {
+    "path": "visual-bible/characters/haeun-canonical-sheet.png",
+    "size": "2048x2048"
+  }
+}

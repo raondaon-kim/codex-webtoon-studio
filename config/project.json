@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "project_id": "yong-webtoon",
+  "title": "Untitled Webtoon",
+  "language": "ko-KR",
+  "art_generation": {
+    "default_size": "1536x2048",
+    "default_quality": "high",
+    "default_format": "png",
+    "negative_defaults": [
+      "speech bubbles",
+      "captions",
+      "readable text",
+      "watermark",
+      "signature",
+      "duplicate character"
+    ]
+  },
+  "scroll_master": {
+    "width_px": 1080,
+    "default_gutter_px": 160,
+    "background": "#ffffff"
+  },
+  "workflow": {
+    "require_user_approval_for_image_execution": true,
+    "canonical_format": "json",
+    "content_hash_algorithm": "sha256"
+  }
+}

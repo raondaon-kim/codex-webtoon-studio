@@ -1,0 +1,15 @@
+{
+  "template_id": "prop-reference-sheet-v1",
+  "purpose": "Create reusable design canon for one original webtoon prop.",
+  "layout": [
+    "front, side, back, and three-quarter views at consistent scale",
+    "open, closed, or transformed states when mechanically relevant",
+    "material and wear details",
+    "small palette swatches"
+  ],
+  "invariants": [
+    "consistent dimensions, construction, materials, markings, and wear across every view",
+    "plain background and complete unobstructed silhouette"
+  ],
+  "avoid": ["changing mechanism between views", "decorative scene composition", "cropped object", "readable text", "watermark"]
+}

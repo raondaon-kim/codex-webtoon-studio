@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex-webtoon.dev/schemas/v1/visual-asset.schema.json",
+  "title": "Visual Bible Asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "asset_id", "asset_kind", "status", "identity_or_space_lock", "sheet_plan", "references", "output"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_type": {"const": "visual_asset"},
+    "asset_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "asset_kind": {"enum": ["character", "background", "prop"]},
+    "status": {"enum": ["draft", "approved", "deprecated"]},
+    "identity_or_space_lock": {
+      "type": "object",
+      "required": ["must_preserve", "must_avoid"],
+      "properties": {
+        "must_preserve": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "must_avoid": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "sheet_plan": {
+      "type": "object",
+      "required": ["layout", "views", "background", "labels"],
+      "properties": {
+        "layout": {"type": "string"},
+        "views": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "background": {"type": "string"},
+        "labels": {"enum": ["none", "minimal", "deterministic_overlay"]},
+        "palette_swatches": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "references": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "role"],
+        "properties": {"path": {"type": "string"}, "role": {"type": "string"}, "approved": {"type": "boolean"}}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "size"],
+      "properties": {"path": {"type": "string"}, "size": {"type": "string", "pattern": "^[0-9]+x[0-9]+$"}}
+    }
+  }
+}

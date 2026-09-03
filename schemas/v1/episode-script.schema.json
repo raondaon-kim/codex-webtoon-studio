@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex-webtoon.dev/schemas/v1/episode-script.schema.json",
+  "title": "Episode Script",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "episode_id", "title", "summary", "continuity_in", "beats", "cliffhanger", "continuity_out"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "artifact_type": {"const": "episode_script"},
+    "episode_id": {"type": "string", "pattern": "^ep[0-9]{3,}$"},
+    "title": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 10},
+    "continuity_in": {"type": "array", "items": {"type": "string"}},
+    "beats": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "purpose", "location_id", "time", "characters", "action", "emotion", "text"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^beat-[0-9]{3,}$"},
+          "purpose": {"type": "string"},
+          "location_id": {"type": "string"},
+          "time": {"type": "string"},
+          "characters": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "action": {"type": "string"},
+          "emotion": {"type": "string"},
+          "text": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "content"],
+              "properties": {
+                "kind": {"enum": ["dialogue", "caption", "thought", "sfx"]},
+                "speaker": {"type": ["string", "null"]},
+                "content": {"type": "string", "minLength": 1},
+                "delivery": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "cliffhanger": {"type": "string"},
+    "continuity_out": {"type": "array", "items": {"type": "string"}}
+  }
+}

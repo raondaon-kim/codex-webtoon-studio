@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "runtime": {
+    "command": ["gpt-image-2-skill"],
+    "json_output": true,
+    "json_events": true
+  },
+  "provider": "codex",
+  "fallback_provider": "openai",
+  "allow_automatic_fallback": false,
+  "model_by_provider": {
+    "codex": null,
+    "openai": "gpt-image-2",
+    "auto": null
+  },
+  "defaults": {
+    "quality": "high",
+    "format": "png"
+  },
+  "authentication": {
+    "strategy": "runtime_managed",
+    "codex_auth_location": "$CODEX_HOME/auth.json",
+    "copy_credentials_into_project": false,
+    "redact_credentials_in_logs": true
+  }
+}
