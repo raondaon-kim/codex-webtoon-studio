@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-005",
+  "source_hash": "fe59397644f4732620870b303b1b79ee6927a2c25638dafb9ff999d579e8e353",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 23
+    },
+    "history": {
+      "job_id": "job-1788434697982216900-162356"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2344574,
+      "files": [
+        {
+          "bytes": 2344574,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-005.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-005.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_020e09be9c882530016a9958e543bc87d08311525d6fb8ace9"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_020e09be9c882530016a9958e2bacc87d08465e8f1bab11804",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x2048 pixels with 6% safe margin. Extreme close-up, top-down angle, normal lens feel. Camera positioned between Theo’s fingertips and the falling crumbs, with a subtle tilt movement. Focus on the boundary where white bread crumbs break down into fine cool gray ash. Leave a long empty upper space to build anticipation for the scene below.\n\nSubject: Theo Waldhart only, using reference 1 strictly for character identity. Show only a small child’s hand entering from the lower-left area, around left 9%, top 67%, width 42%, height 25%, foreground. Preserve: small child hand, blue-gray sleeve cuff, no face visible. Action: the hand has just released crumbs, and the crumbs drift upward and outward into ash as the current dining table memory fades away.\n\nBackground: use reference 2 strictly for background-space inspiration. Arken-fall-memory transition: an ivory-gray paper-like void emphasizing vertical fall, abstract top-down memory space. Use the feeling of a cropped memory transition from crumbs to ash, not literal panel layout. Depth layers: small hand, scattering crumbs and ash, paper-toned memory void. Lighting is cold, flat gray, no sunbeams.\n\nVisual treatment: only the ash particles are rendered with delicate fine line detail; everything else restrained and minimal. Color transitions from soft white crumbs to cold charcoal gray ash. Clean 2D disintegration effect, quiet falling mood, no magic symbols, no explosions.\n\nContinuity: Theo was looking at the crumbs; now the crumbs fully become ash and the present tabletop disappears. Neutral screen direction. Keep a quiet negative space in upper-left region for lettering, but generate no speech balloons, captions, or readable text.\n\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, flames, magic circles, adult face, any readable letters."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

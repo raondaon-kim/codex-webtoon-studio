@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-005",
+  "source_brief": "episodes/ep001/briefs/shot-005.json",
+  "source_hash": "fe59397644f4732620870b303b1b79ee6927a2c25638dafb9ff999d579e8e353",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 흰 빵 부스러기가 차가운 재로 바뀌는 긴 낙하로 전생 회상을 시작한다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: extreme_close_up shot, top_down angle, normal lens feel, camera position 테오 손끝과 공중의 부스러기 사이, movement tilt, focus on 흰 부스러기가 고운 회색 재로 분해되는 경계. 상단의 긴 빈 공간으로 아래 장면을 기다리게 한다\nSubjects:\n- theo-waldhart at left 9%, top 67%, width 42%, height 25%, foreground; pose 하단에서 사라지는 작은 손; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 부스러기를 놓아 재가 위로 흩어진다. Preserve: 작은 아이 손, 푸른 회색 소매 끝, 얼굴 없음.\nBackground: location arken-fall-memory; 아이보리 회색 공백 위에서 빵 부스러기가 재가 되는 기억 전환. Use source crop left 3%, top 19%, width 94%, height 34%; perspective 수직 낙하를 강조하는 추상적 탑뷰; depth layers: 작은 손, 흩어지는 부스러기와 재, 종이빛 기억 공백; lighting 차갑고 평평한 회색빛, 햇살 기둥 없음.\nVisual treatment: line 재 입자만 섬세하게, 나머지는 절제; color 흰색에서 차가운 숯회색으로; rendering 맑은 2D 분해 효과; mood 조용한 추락.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 테오의 눈이 부스러기를 보고 있다; state leaving: 부스러기가 모두 재가 된다, 현재의 식탁이 지워진다.\nLettering: leave visually quiet negative space in these regions: left 45%, top 8%, width 42%, height 22%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 불꽃 폭발, 마법 문양, 성인 얼굴, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-005.png",
+    "result_metadata_path": "episodes/ep001/art/shot-005.result.json"
+  }
+}

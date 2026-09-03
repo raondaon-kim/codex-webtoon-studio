@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-001",
+  "source_hash": "886d599f49cb23f1ea7a776a47c129e2dc4aa02bc7708e3589a4021a7a627dfb",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788434462050433500-115528"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2186139,
+      "files": [
+        {
+          "bytes": 2186139,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-001.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-001.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 4,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_06f0b86dadbc98b4016a9957cb6abc87d0a566fea94cfbbbfc"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_06f0b86dadbc98b4016a9957c7211487d0a5a91bc6ec44dd85",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x2048 pixels, keep 5% safe margin. Korean fantasy webtoon style, refined line art, soft 2D digital painting, ivory and dark oak and restrained blue-gray palette.\n\nScene purpose: introduce a small but cared-for dining table and the emotional distance within a family of three in a single shot.\n\nComposition/camera: wide shot, eye-level, normal lens feel, camera near the east door looking toward the west window and dining table, locked camera, focus on the three people at the central table and the west window. Leave quiet negative space near the upper window area for a future location caption: left 52%, top 4%, width 42%, height 20%. No text.\n\nBackground space: a modest family dining hall in Walt Fort. Use the look of a simple timber room with a deep west window, north fireplace, heavy oak table, sideboard, door, wooden beams, blurred riverside outside. Perspective from the east door toward the west window with a low eye-level. Depth layers: doorframe and table corner foreground, family and meal midground, fireplace and west window and overcast riverbank background. Soft thaw-season evening indoor light, no dramatic backlight. Mood: poor but caring evening.\n\nSubjects:\n1) Bram Waldhart at left 11%, top 28%, width 25%, height 55%, midground. A 39-year-old father with broad shoulders, brown hair threaded with gray, short beard, tired but warm face. He sits at the far side of the table, weary but upright. One hand rests at the still-unfastened buttons of his dark forest-green doublet, no cloak. Expression: silently watching with tired warmth. Gaze toward his two sons.\n\n2) Kyle Waldhart at left 63%, top 31%, width 26%, height 53%, midground. A 14-year-old boy with long limbs, short reddish-brown hair, blue quilted jerkin without crest, short blue cape. He lounges slightly sideways on his chair and stretches one arm across the table with an easy smile, gently sliding a small piece of cheese toward Theo. Gaze at Theo.\n\n3) Theo Waldhart at left 39%, top 52%, width 20%, height 31%, midground. A 7-year-old small boy with messy dark brown hair, blue-gray tunic with silver three-leaf crest. He sits very straight on a small chair, both hands near the table edge. Expression: quiet caution. Gaze toward Kyle’s hand and the cheese being offered.\n\nMeal props: simple soup bowls, bread, a small cheese piece being offered, modest tableware. Keep table small but managed and neat.\n\nContinuity: dinner has just begun; Kyle’s cheese is arriving in front of Theo; Bram watches both sons.\n\nStrictly avoid: speech bubbles, captions, readable text, watermark, signature, duplicate characters, luxurious banquet hall, ragged aristocratic clothing."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

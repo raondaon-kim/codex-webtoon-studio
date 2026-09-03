@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-015",
+  "source_hash": "61480ae53cfd3c2358ae9cebb31b15b3de037cc114f0575775a04a07f5721c5b",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435417615303800-104968"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2455530,
+      "files": [
+        {
+          "bytes": 2455530,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-015.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-015.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0f4c14f93105eb48016a995b91524c87d083eabff079f576b8"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0f4c14f93105eb48016a995b8edf9487d0bfe96c7e81db83c6",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template: webtoon-shot-v1. 1536x2048 pixels, keep a 6% safe margin. Single close-up shot, high angle, portrait-lens feel, camera positioned between Theo’s line of sight and Bram’s hand over the dining table, with a subtle push-in feeling. Focus tightly on Bram’s hand holding an old sealed letter and his stiff fingers. Leave quiet negative space in the upper left for dialogue.\n\nScene purpose: visually show Bram’s tiny hiding motion and, through the worn seal, imply the estate’s debt.\n\nComposition: \n- Bram Waldhart at left 46%, top 33%, width 42%, height 50%, foreground. Only his strong middle-aged hand and forest-green doublet sleeve are prominently visible; face out of frame. Action: lifting the letter and pulling it inward toward his body to hide it. Preserve: sturdy weathered hand, forest-green sleeve, no decorative ring, no heraldry.\n- Theo Waldhart at left 4%, top 62%, width 22%, height 22%, foreground. Only small fingertips and part of brown hair / side of head visible, with partial questioning expression. Gaze fixed on the letter’s edge. Preserve: small hand, chestnut-brown hair, blue-gray sleeve.\n\nBackground/location: Walt-fort dining hall table close crop only, based on the dining hall reference. Use a high, intimate close composition centered on the letter seal. Show bread piece and soup bowl on the table nearby. Depth layers: Theo’s fingertips in near layer, Bram’s hand and letter in primary focus, table food slightly behind. Calm indoor light; only the wax seal catches a low reflection.\n\nVisual treatment: refined 2D webtoon close-up, line emphasis on letter edges and fingers, faded paper / browns / deep forest green palette, tactile unreadable document texture, mood of hidden burden. No readable writing on the letter whatsoever.\n\nContinuity: screen direction right-to-left. Entering state: Bram has just picked up the dropped letter. Leaving state: Bram hides the letter, Theo catches onto the wordless idea of debt.\n\nNegative space regions must remain visually quiet: upper left area and lower right area. Generate no speech balloons, captions, readable text, watermark, or signature.\n\nAvoid: speech bubbles, captions, readable text, modern mail, exaggerated debt wording, duplicate characters, visible full faces, watermark, signature."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

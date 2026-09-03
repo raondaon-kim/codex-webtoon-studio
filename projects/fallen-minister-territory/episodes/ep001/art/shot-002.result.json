@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-002",
+  "source_hash": "838c39e4b5f3fd1cf96c0ac851e61e63c4ed2e08ee9f826852ee95785385a350",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788434547062147500-67080"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2275311,
+      "files": [
+        {
+          "bytes": 2275311,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-002.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-002.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0af26d40b797ff01016a995823136c87d09d9634f09dcde450"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0af26d40b797ff01016a99581fc13487d09940a9f43c68cb45",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template: webtoon-shot-v1. 1536x2048 pixels, keep a 5% safe margin. Clean character-focused webtoon line art, calm blue-gray palette with warm beige food accents, crisp 2D coloring with highest clarity on faces and hands, light comedic sibling mood.\n\nScene purpose: show Kyle’s natural caretaking and Theo’s mature rebuttal in a comic brotherly relationship.\n\nComposition/camera: medium shot, eye-level, portrait-lens feel, camera positioned over Theo’s right shoulder toward Kyle, movement locked. Focus on the cheese piece and the expressions of the two brothers facing each other. Reserve quiet negative space at top center and bottom right area equivalent to: region 1 left 52%, top 3%, width 36%, height 18%; region 2 left 4%, top 74%, width 38%, height 18%. No speech balloons, no captions, no readable text.\n\nSubjects:\n- Theo Waldhart in foreground at left side, only small shoulder and partial side profile visible, about left 5%, top 46%, width 36%, height 47%. Small build, dark brown hair, blue-gray tunic. Serious protesting expression, looking at Kyle. Action: gently pushing a piece of cheese back with his hand. Preserve childlike proportions.\n- Kyle Waldhart in midground at right/center, about left 52%, top 20%, width 34%, height 62%. Fourteen-year-old with longer limbs, reddish-brown hair, plain blue jerkin with no crest, not overly mature. Relaxed posture with elbow on dining table, playful smile, looking at Theo. Action: sliding the cheese back toward Theo.\n\nBackground: intimate close crop of a medieval dining hall inspired by a wooden room with table, soup, bread, and a slightly blurred window behind. Use the feel of a close dining-hall crop: table and nearby window visible, ordinary eye-level table horizon connecting the brothers. Depth layers: Theo’s shoulder in foreground, cheese and Kyle in focal plane, table and window behind. Soft quiet evening indoor lighting.\n\nContinuity: screen direction left-to-right. Starting state: cheese is in front of Theo. Leaving state: Theo’s hand moves toward the cheese and bread crumbs.\n\nImportant visual constraints: no duplicate characters, no watermark, no signature, no speech bubbles, no captions, no readable text, no Kyle brooch. Focus on natural sibling teasing. Original image only."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-014",
+  "source_hash": "d8fc597ff4ff20f55b091d0ff681c7382cfb63ec306d78eb56281c4190fd1a0f",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435339660213600-173144"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2427766,
+      "files": [
+        {
+          "bytes": 2427766,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-014.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-014.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0222e62c2ff3f1e3016a995b3ed08887d0b2d15a0df10d169e"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0222e62c2ff3f1e3016a995b3b89dc87d0b774889148673721",
+      "revised_prompts": [
+        "webtoon-shot-v1, one finished original vertical-scroll webtoon art shot, 1536x2048, keep 5% safe margin. Wide shot, eye-level, normal lens feel, camera positioned from the west-window-side table looking toward the east door, movement locked. Focus on the open door, a strip of tablecloth fluttering in the wind, and a sealed letter falling to the floor. Leave empty space around the letter at floor center. Do not define any figure outside the door, not even as a silhouette.\n\nScene: medieval rustic dining hall interior matching the referenced background space only: warm wooden room, west window, central table, fireplace, east iron-banded oak door open, diagonal perspective from table toward door, dark corridor beyond door. Warm indoor firelight mixed with cold gray wind-light from the doorway. Mood: the instant everyday warmth is interrupted by harsh reality.\n\nCharacters:\n- Bram Waldhart in midground at left 56%, top 28%, width 27%, height 52%. Preserve identity only: forest-green doublet without cloak, brown hair with gray mixed in, short beard. He has just risen from a chair and taken a half-step toward the door. Expression: suddenly frozen alertness. Gaze: toward the door and the falling letter. Action: one hand reaching toward the letter.\n- Theo Waldhart in midground at left 18%, top 52%, width 16%, height 25%. Preserve identity only: small seven-year-old build, blue-gray tunic. He has lifted his head from the chair, small full body visible. Expression: observant tension. Gaze: the letter on the floor. Action: one hand stopped on the table.\n\nBackground/action details: on the floor is a sealed envelope dropping near center, with no readable writing. A small piece of tablecloth is pulled and fluttering from the wind. Foreground layer includes a table corner. Mid layers: Theo, letter, Bram. Background layers: open door and dark corridor. Screen direction right-to-left. Continuity: Theo has just turned from looking at the portrait; door is now open; sealed letter has fallen; Bram moves toward it.\n\nVisual treatment: polished 2D webtoon action frame, clean linework with sharper lines only on the letter’s fall and the wind motion, warm dining colors contrasted by cold gray draft, no storm effects. No speech balloons, no captions, no readable text, no watermark, no signature, no duplicate characters, no visible messenger face or exterior character design."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-004",
+  "source_brief": "episodes/ep001/briefs/shot-004.json",
+  "source_hash": "a4fc35ade3f50a4d3cf800ad945b17af0dcd0c65050326d1e4d450f3c60db88c",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 테오의 시선이 멈추며 식탁의 평온에서 내면의 기억으로 들어가는 문턱을 만든다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: close_up shot, eye_level angle, portrait lens feel, camera position 테오 앞의 낮은 식탁 높이, movement push_in, focus on 부스러기를 내려다본 뒤 멀어지는 테오의 회색 눈. 상단 오른쪽은 재 입자가 들어올 빈 공간으로 둔다\nSubjects:\n- theo-waldhart at left 21%, top 20%, width 54%, height 64%, foreground; pose 턱을 조금 내린 정면 반신; expression 순간적으로 굳은 죄책감; gaze 프레임 아래의 부스러기; action 손을 식탁 위에 멈춘다. Preserve: 일곱 살 얼굴 비율, 회색 눈, 밤색 헝클어진 머리, 푸른 회색 튜닉.\nBackground: location walt-fort-dining-hall; 뒤의 식당은 옅게 흐려지고, 식탁 위 부스러기만 하단에 남는다. Use source crop left 24%, top 20%, width 52%, height 65%; perspective 테오 눈높이의 얕은 심도; depth layers: 테오의 얼굴, 손과 식탁, 흐린 난로와 벽; lighting 평범한 저녁빛이 천천히 차가운 회색으로 바뀜.\nVisual treatment: line 눈과 손가락 주변만 섬세하게; color 따뜻한 현재색에서 회색 기억색으로 내려감; rendering 깨끗한 2D 채색과 얕은 흐림; mood 말없이 열리는 기억.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 부스러기가 손끝에 모여 있다; state leaving: 식당이 흐려진다, 테오가 기억 속으로 가라앉는다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 눈물 과장, 마법 효과, 극적인 역광, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-004.png",
+    "result_metadata_path": "episodes/ep001/art/shot-004.result.json"
+  }
+}

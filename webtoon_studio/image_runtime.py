@@ -7,6 +7,9 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+from PIL import Image
+
+from .geometry import parse_size
 from .io_utils import content_hash, dump_json, load_json, resolve_project_path
 
 
@@ -25,6 +28,12 @@ _SENSITIVE_KEYS = {
     "cookie",
     "password",
     "secret",
+    "account_id",
+    "auth_file",
+    "chatgpt_user_id",
+    "email",
+    "expires_at",
+    "last_refresh",
 }
 
 
@@ -52,6 +61,57 @@ def runtime_available(provider_config: dict[str, Any]) -> bool:
     command = runtime_command(provider_config)
     executable = command[0]
     return Path(executable).exists() or shutil.which(executable) is not None
+
+
+def runtime_subprocess_command(command: list[str]) -> list[str]:
+    """Use the Node entrypoint behind a Windows npm .cmd shim without invoking a shell."""
+    if os.name != "nt" or not command:
+        return command
+    resolved = Path(command[0])
+    if not resolved.is_file():
+        located = shutil.which(command[0])
+        if not located:
+            return command
+        resolved = Path(located)
+    if resolved.suffix.lower() not in {".cmd", ".bat"}:
+        return command
+    package_entry = resolved.parent / "node_modules" / resolved.stem / "bin" / f"{resolved.stem}.js"
+    node = shutil.which("node")
+    if package_entry.is_file() and node:
+        return [node, str(package_entry), *command[1:]]
+    return command
+
+
+def normalize_render_output(output_path: str | Path, requested_size: str) -> dict[str, Any]:
+    """Normalize a provider image only when its aspect ratio matches the requested canvas."""
+    path = Path(output_path)
+    expected_size = parse_size(requested_size)
+    with Image.open(path) as opened:
+        actual_size = opened.size
+        if actual_size == expected_size:
+            return {
+                "source_dimensions": list(actual_size),
+                "output_dimensions": list(actual_size),
+                "normalized": False,
+            }
+        if actual_size[0] * expected_size[1] != actual_size[1] * expected_size[0]:
+            raise RuntimeErrorWithEnvelope(
+                f"image runtime returned {actual_size}, which cannot be normalized to requested {expected_size} without distortion"
+            )
+        normalized = opened.copy().resize(expected_size, Image.Resampling.LANCZOS)
+
+    temporary_path = path.with_name(f"{path.stem}.normalized{path.suffix}")
+    try:
+        normalized.save(temporary_path, format="PNG")
+        temporary_path.replace(path)
+    finally:
+        if temporary_path.exists():
+            temporary_path.unlink()
+    return {
+        "source_dimensions": list(actual_size),
+        "output_dimensions": list(expected_size),
+        "normalized": True,
+    }
 
 
 def build_task_command(task: dict[str, Any], project_root: str | Path, provider_config: dict[str, Any]) -> list[str]:
@@ -159,7 +219,7 @@ def _parse_envelope(stdout: str) -> dict[str, Any]:
 def run_preflight(provider_config: dict[str, Any], command_parts: list[str]) -> dict[str, Any]:
     if not runtime_available(provider_config):
         raise RuntimeErrorWithEnvelope("gpt-image-2-skill runtime is not installed or not on PATH")
-    command = runtime_command(provider_config) + ["--json", *command_parts]
+    command = runtime_subprocess_command(runtime_command(provider_config) + ["--json", *command_parts])
     completed = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
     envelope = _parse_envelope(completed.stdout)
     if completed.returncode != 0 or not envelope.get("ok"):
@@ -175,16 +235,18 @@ def execute_task(task: dict[str, Any], project_root: str | Path, provider_config
         raise RuntimeErrorWithEnvelope("gpt-image-2-skill runtime is not installed or not on PATH")
     output_path = resolve_project_path(project_root, task["output"]["path"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    command = build_task_command(task, project_root, provider_config)
+    command = runtime_subprocess_command(build_task_command(task, project_root, provider_config))
     completed = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
     envelope = _parse_envelope(completed.stdout)
     if completed.returncode != 0 or not envelope.get("ok"):
         raise RuntimeErrorWithEnvelope("image generation failed", envelope)
+    output_normalization = normalize_render_output(output_path, task["request"]["size"])
     metadata = {
         "schema_version": "1.0",
         "task_id": task["task_id"],
         "source_hash": task["source_hash"],
         "provider": envelope.get("provider_selection", {}).get("resolved", task["provider"]),
+        "output_normalization": output_normalization,
         "runtime_result": redact_sensitive(envelope),
     }
     dump_json(resolve_project_path(project_root, task["output"]["result_metadata_path"]), metadata)

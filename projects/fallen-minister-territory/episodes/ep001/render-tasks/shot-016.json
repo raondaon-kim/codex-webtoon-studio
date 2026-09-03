@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-016",
+  "source_brief": "episodes/ep001/briefs/shot-016.json",
+  "source_hash": "441d36a3a3ca6c928ce6be8db5776a8a1b43365c78e9c500671b533f5a4b1d3a",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 테오의 너무 정확한 질문을 카일의 조심스러운 제지가 받으며, 어린 몸과 재상의 사고가 어긋남을 보여준다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: medium shot, eye_level angle, portrait lens feel, camera position 브람 자리 쪽에서 테오와 카일을 향해, movement locked, focus on 테오의 진지한 표정과 카일의 걱정스러운 옆눈. 상단 양쪽에 서로 다른 크기의 말풍선 여백\nSubjects:\n- theo-waldhart at left 25%, top 35%, width 28%, height 48%, midground; pose 똑바로 앉아 두 손을 모은다; expression 순진한 얼굴의 계산; gaze 브람 쪽 프레임 밖; action 빚이 매일 붙는지 묻는다. Preserve: 작은 일곱 살 체격, 회색 눈, 푸른 회색 튜닉.\n- kyle-waldhart at left 58%, top 28%, width 28%, height 54%, midground; pose 테오 쪽으로 몸을 기울여 낮게 말한다; expression 걱정과 어이없음이 섞인 표정; gaze 테오; action 동생의 말을 조심스럽게 말린다. Preserve: 열네 살 소년, 붉은 갈색 머리, 문장 없는 푸른 저킨.\nBackground: location walt-fort-dining-hall; 식탁 위의 식사가 식어 가고, 뒤로 브람의 숲색 소매가 흐리게만 남은 구도. Use source crop left 28%, top 24%, width 62%, height 58%; perspective 테오와 카일을 같은 높이에 둔 가까운 식탁 구도; depth layers: 식탁 가장자리, 테오와 카일, 흐린 브람 자리와 벽; lighting 따뜻함이 조금 식은 평면 실내광.\nVisual treatment: line 테오의 눈과 카일의 옆눈에 선명도; color 푸른 저킨 둘과 식탁 갈색의 절제된 대비; rendering 표정 중심의 깨끗한 2D 채색; mood 웃음이 멎은 어린 질문.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 브람이 편지를 감췄다, 식탁의 웃음이 멎었다; state leaving: 테오는 빚을 숫자로 보기 시작한다, 창가 쪽의 풍경으로 시선이 이동한다.\nLettering: leave visually quiet negative space in these regions: left 7%, top 3%, width 36%, height 20%; left 58%, top 3%, width 35%, height 21%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 성인 같은 테오 체격, 과장된 공포 표정, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 3
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-016.png",
+    "result_metadata_path": "episodes/ep001/art/shot-016.result.json"
+  }
+}

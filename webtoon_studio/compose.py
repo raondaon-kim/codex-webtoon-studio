@@ -4,7 +4,7 @@ import math
 from pathlib import Path
 from typing import Any
 
-from PIL import Image
+from PIL import Image, ImageChops
 
 from .io_utils import load_json, resolve_project_path
 from .lettering import apply_lettering
@@ -87,11 +87,18 @@ def slice_master(master_path: str | Path, output_dir: str | Path, profile: dict[
     slice_height = int(profile["slice_height_px"])
     count = math.ceil(master.height / slice_height)
     extension = "jpg" if profile["format"] == "jpeg" else profile["format"]
+    background = _hex_color(profile.get("background", "#ffffff"))
+    for stale_slice in target_dir.glob("slice-*.*"):
+        if stale_slice.is_file():
+            stale_slice.unlink()
     outputs: list[Path] = []
     for index in range(count):
         top = index * slice_height
         bottom = min(master.height, top + slice_height)
         crop = master.crop((0, top, master.width, bottom))
+        empty_slice = Image.new("RGB", crop.size, background)
+        if ImageChops.difference(crop, empty_slice).getbbox() is None:
+            continue
         target = target_dir / f"slice-{index + 1:03d}.{extension}"
         save_args: dict[str, Any] = {"format": profile["format"].upper()}
         if profile["format"] in {"jpeg", "webp"}:

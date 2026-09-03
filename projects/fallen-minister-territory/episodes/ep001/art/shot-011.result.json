@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-011",
+  "source_hash": "d45feccbe531d3ecdeb43a05c24cc345a5d69a6b01561486225f97606014ad81",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435044684551700-142476"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2049341,
+      "files": [
+        {
+          "bytes": 2049341,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-011.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-011.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0063cfe366f3377d016a995a1cfa4887d096733634d654b0da"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0063cfe366f3377d016a995a19aaa487d0a25a2479820a74d7",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048 pixels with 5% safe margin. Medium close-up, eye-level, portrait-lens feel. Camera is from the opposite side of Kyle’s dining table facing Bram, locked-off shot. Focus on Bram’s dry expression while holding a soup spoon. Leave quiet empty space in the upper right for a speech balloon, and also preserve visually quiet negative space at left 54%, top 4%, width 37%, height 22%. No text.\n\nSubject: Bram Waldhart occupies left 25%, top 18%, width 48%, height 67%, foreground. He is seated at the table in front of a soup bowl, broad middle-aged build, brown hair with gray at the temples, short beard, no cloak, forest-green doublet. Pose: seated before soup, one eyebrow slightly raised. Expression: deadpan realistic joke, understated humor. Gaze toward Kyle off-camera. Action: answers while pausing mid-motion with the spoon. Preserve rugged fatherly presence, restrained beard detail and subtle eye wrinkles.\n\nBackground: Walt Fort dining hall, using the provided room only as background-space reference. Behind Bram are a low fireplace and dark wall, with the dining table and soup bowl in foreground. Stable horizontal table perspective. Depth layers: soup bowl foreground, Bram midground, fireplace and stone wall background. Lighting is soft indoor evening light, not dramatic firelight. Palette: forest green, wood browns, gray stone. Clean organized 2D character acting, polished webtoon illustration.\n\nMood: sparse, fatherly deadpan humor that punctures Kyle’s boast with a realistic joke. Continuity: screen direction right-to-left; Kyle has just finished boasting, and Bram’s joke is landing. Avoid speech bubbles, captions, readable text, watermark, signature, duplicate character, cloak, overly luxurious noble clothing, and any readable letters."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

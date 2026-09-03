@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-010",
+  "source_hash": "c37d6a8b0bc94fa2f0526da916de412d33276216b5fb31593463777bdc693506",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788434967973770900-173720"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2186532,
+      "files": [
+        {
+          "bytes": 2186532,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-010.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-010.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0e6c2cbbf282e950016a9959d4dae087d0b06b722b89cdc51c"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0e6c2cbbf282e950016a9959d2fe9c87d090adbc8548b41976",
+      "revised_prompts": [
+        "webtoon-shot-v1, one finished original vertical-scroll webtoon art shot, 1536x2048 px. Medium close-up, eye-level, portrait-lens feel, camera positioned from Theo’s point of view across the dining table, movement locked. Focus on Kyle proudly holding up two fingers and boasting. Leave quiet negative space at upper left for a future speech balloon: left 4%, top 4%, width 35%, height 20%, with no text or balloons rendered.\n\nSubject: Kyle Waldhart, 14-year-old boy, slim adolescent build, short reddish-brown tousled hair, expressive brown eyes, no facial hair, no armor, no brooch, no heraldry. Wear a plain blue quilted jerkin over a light gray shirt, youthful fantasy style. Place him at left 28%, top 20%, width 45%, height 62%, foreground. Pose: half-body while leaning back in a chair, one hand raised with two fingers extended clearly, the other relaxed near the table/chair. Expression: sincerely proud smile, boyish swagger, eager for praise. Gaze directed toward Theo and Bram, across the table. \n\nBackground: Walt Fort dining hall, but only a cropped simple dining-room wall and edge of table visible behind him; use a restrained crop feeling from the provided room reference, showing just table corner in foreground, Kyle, and softly blurred wall/fireplace depth behind. Perspective is natural seated eye-level from Theo’s low seated viewpoint, not looking up dramatically. Depth layers: table edge foreground, Kyle midground, soft wall and fireplace background. Warm calm indoor evening light, gentle fire-lit ambience.\n\nVisual treatment: clean anime-inspired 2D webtoon rendering, crisp linework emphasizing face and raised two fingers, soft painterly shading, light contrast between blue jerkin and brown wood interior. Mood: playful youthful bravado that sharply lightens the heaviness of a recollection. Screen direction left to right. State entering: Theo has returned to the table. State leaving: Kyle still holding up two fingers, waiting for Bram’s reaction.\n\nDo not include speech bubbles, captions, readable text, watermark, signature, duplicate character, armor, brooch, or any extra accessories not in reference. Single character only."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-003",
+  "source_hash": "6e1e711b0ecd96ef762e15784bdc933ac47a60b3fa4c56b39f0fc4f8af3454d7",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 23
+    },
+    "history": {
+      "job_id": "job-1788434585226395200-76680"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 1869401,
+      "files": [
+        {
+          "bytes": 1869401,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-003.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-003.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_07bfc666296ddc95016a995876a48487d0ac11dd25573626eb"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_07bfc666296ddc95016a99587474d887d098475548e91a9b66",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x2048 pixels with 6% safe margin. Insert shot, top-down angle, normal lens feel, camera positioned directly above Theo’s right hand, subtle push-in feeling. Focus tightly on tiny fingertips gathering white bread crumbs into a single point. Leave a large empty area of dark oak tabletop in the upper portion so the next scene’s ash can overlap later.\n\nSubject: Theo Waldhart, only partial body visible. Show only a seven-year-old child’s small right hand and a bit of forearm/sleeve, no face, no full body. Place hand around left 18%, top 45%, occupying about 52% width and 36% height in foreground. Pose: fingers slightly curled, close-up of hand pinching and nudging crumbs together. Preserve childlike proportions, very small hand, blue-gray sleeve from the reference outfit with simple cuff detail. Face not visible.\n\nBackground: Walt Fort dining hall, but reduce it to an abstract meal close-up showing only dark oak table surface and white bread crumbs. Use the dining hall reference only for wood tone/material mood, not wide room view. Perfect vertical top view with no perspective distortion. Visible layers: Theo’s fingertips, crumbs, deep wood grain. Soft indoor lighting.\n\nVisual treatment: clear crisp linework around fingers and crumbs; warm brown wood with neutral white crumbs; simple clean 2D material rendering; calm moment where stillness breaks. Webtoon panel polish, painterly-anime hybrid consistent with references.\n\nContinuity: Theo has pushed aside the cheese already; now crumbs gather at fingertips, and present sounds feel distant. No speech balloons, no captions, no readable text, no watermark, no signature, no duplicate character, no adult hand, no face exposure."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

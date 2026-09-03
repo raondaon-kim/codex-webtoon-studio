@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-020",
+  "source_brief": "episodes/ep001/briefs/shot-020.json",
+  "source_hash": "8e360d8e46c977a83b9daf7a694f3f5bdab46874bb5582fa430ec1caecfc36d1",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 빈 복도 쪽에서 들리는 두 번의 노크로 아직 보이지 않는 위기를 먼저 도착시킨다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: insert shot, eye_level angle, portrait lens feel, camera position 식당 안에서 닫힌 동쪽 문을 정면으로, movement locked, focus on 철띠 참나무 문과 문을 두드린 쪽의 미세한 진동. 문 위쪽을 SFX 오버레이용으로 비워 둔다\nSubjects:\n- theo-waldhart at left 6%, top 74%, width 16%, height 16%, foreground; pose 식탁 가장자리 너머의 작은 손만 보인다; expression 얼굴은 보이지 않음; gaze 문; action 손가락이 부스러기 위에서 멈춘다. Preserve: 작은 손, 푸른 회색 소매, 얼굴 없음.\nBackground: location walt-fort-dining-hall; 철띠를 두른 동쪽 참나무 문, 그 아래 실내 바닥과 멈춘 빵 부스러기. Use source crop left 59%, top 10%, width 31%, height 75%; perspective 문을 정면으로 둔 정적인 수직 구도; depth layers: 테오의 손과 부스러기, 닫힌 문, 문틀과 어두운 복도 틈; lighting 실내의 고른 빛, 문틈은 차갑고 어둡다.\nVisual treatment: line 문 철띠와 손끝만 또렷하게; color 목재 갈색과 차가운 회색 그림자; rendering 간결한 2D 긴장; mood 소리가 먼저 도착한 불안.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction right_to_left; state entering: 카일과 테오가 창가에 있다; state leaving: 첫 노크가 모든 시선을 문으로 돌린다, 테오 손이 부스러기 위에서 멈춘다.\nLettering: leave visually quiet negative space in these regions: left 35%, top 10%, width 32%, height 18%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 문밖 인물 노출, 공포 효과, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-020.png",
+    "result_metadata_path": "episodes/ep001/art/shot-020.result.json"
+  }
+}

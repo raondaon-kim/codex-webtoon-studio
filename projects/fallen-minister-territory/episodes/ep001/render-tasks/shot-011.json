@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-011",
+  "source_brief": "episodes/ep001/briefs/shot-011.json",
+  "source_hash": "d45feccbe531d3ecdeb43a05c24cc345a5d69a6b01561486225f97606014ad81",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 브람의 무덤덤한 한마디가 카일의 자랑을 현실적인 농담으로 뒤집는다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: medium_close_up shot, eye_level angle, portrait lens feel, camera position 카일 반대편의 식탁가에서 브람을 향해, movement locked, focus on 수프 숟가락을 든 브람의 건조한 표정. 상단 오른쪽의 말풍선 여백을 비운다\nSubjects:\n- bram-waldhart at left 25%, top 18%, width 48%, height 67%, foreground; pose 수프 그릇 앞에 앉아 한쪽 눈썹만 든다; expression 무덤덤한 농담; gaze 카일; action 숟가락을 멈춘 채 답한다. Preserve: 넓은 중년 체격, 회색이 섞인 밤색 머리, 짧은 수염, 망토 없는 숲색 더블릿.\nBackground: location walt-fort-dining-hall; 브람 뒤의 낮은 난로와 어두운 벽, 식탁의 수프 그릇. Use source crop left 5%, top 16%, width 44%, height 60%; perspective 식탁 수평선을 안정적으로 유지한 인물 구도; depth layers: 수프 그릇, 브람, 난로와 석벽; lighting 난로가 아닌 부드러운 실내 저녁빛.\nVisual treatment: line 수염과 눈가 주름은 절제해 표현; color 숲색·목재·회색 석벽; rendering 정돈된 2D 캐릭터 연기; mood 말수 적은 아버지의 농담.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction right_to_left; state entering: 카일이 자랑을 마쳤다; state leaving: 브람의 농담이 카일에게 닿는다.\nLettering: leave visually quiet negative space in these regions: left 54%, top 4%, width 37%, height 22%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 망토, 과도하게 사치스러운 귀족 복장, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-011.png",
+    "result_metadata_path": "episodes/ep001/art/shot-011.result.json"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-009",
+  "source_hash": "09af042b49487c6f9b05a818bff5fe47f929133b96e21462605c90ec1d9b624a",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788434897400662700-81400"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2453499,
+      "files": [
+        {
+          "bytes": 2453499,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-009.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-009.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0d1e421a7e705a05016a9959a42ec087d09194a74a7546f45b"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0d1e421a7e705a05016a9959a1203087d09fc8f851c8e0cb42",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048 with 6% safe margin. Extreme close-up, top-down angle, normal lens feel, camera positioned just above Theo’s fingertips, subtle pull-out feeling. Focus on the exact moment gray ash returning through a paper-like blank space becomes warm bread crumbs beside his finger. Leave a long vertical negative space below so the dining-table atmosphere can quietly return.\n\nSubject: Theo Waldhart as a 7-year-old, only a small child’s left hand visible in foreground at left 20%, top 48%, width 50%, height 35%. Loose relaxed small hand, blue-gray sleeve matching reference character outfit, no face, no body. One fingertip gently touches a single warm crumb. Preserve child-sized proportions and the soft blue-gray cuff.\n\nBackground/location: Arken-fall-memory transition into present dining table. Use the visual idea from the lower crop of the second reference: dark oak tabletop in stable top view. Layers: Theo’s hand, bread crumbs and last traces of ash, dark oak table. A paper-toned blank transitional space above and through the center where cool gray ash fades into warm beige crumbs. Lighting: warm low table light returning softly.\n\nVisual treatment: clean linework on fingertips and crumbs, concise 2D transition rendering, color shift from cool ash gray to warm beige crumb tones, quiet unresolved determination. Neutral screen direction.\n\nContinuity: entering state adult hand and ledger have turned to ash; leaving state Theo has returned to the table, warm bread crumbs remain beside his finger.\n\nDo not include: speech bubbles, captions, readable text, watermark, signature, duplicate character, magic effects, adult hand, face, full body."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

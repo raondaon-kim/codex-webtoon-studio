@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-012",
+  "source_hash": "39c3335c052c03b228a14f6ef97e7dd4331ef407e7f93b7caa4691a749884489",
+  "provider": "codex",
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  },
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788436455007929800-90496"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2039073,
+      "files": [
+        {
+          "bytes": 2039073,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-012.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-012.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 4,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0116f96454119732016a995f9fca1487d0925ca390daa59638"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0116f96454119732016a995f9d253487d09e61c28789036d70",
+      "revised_prompts": [
+        "Template: webtoon-shot-v1. Create one finished original vertical-scroll webtoon art shot, 1536x2048 px, with 5% safe margin. Medium shot, eye-level, normal lens feel, camera from the south corner of the dining table looking diagonally across three family members, movement locked. Focus on Kyle’s aggrieved expression and Theo’s small smile. Leave quiet negative space for small balloon areas at top center and bottom right, and especially empty quiet space at left 58%, top 4%, width 35%, height 20%. No speech balloons, no captions, no readable text.\n\nScene purpose: Theo briefly smiles and feels family warmth between Kyle’s exaggerated laugh/defense and Bram’s dry comeback.\n\nCharacters, authoritative identities only from references implied by order:\n- Theo Waldhart on left 40%, top 52%, width 20%, height 30%, midground. Small build, dark brown hair, blue-gray tunic. Holding a soup bowl with one hand, shoulders relaxing. Expression: restrained small laugh, head dipped just slightly, gaze toward Kyle.\n- Kyle Waldhart at left 63%, top 31%, width 25%, height 48%, midground. Teen boy build, reddish brown hair, plain blue jerkin with no crest. Sitting but bouncing up slightly from chair, both hands lightly spread as if defending himself. Expression: wronged, protesting, a little theatrical but not gag-like. Gaze toward Bram.\n- Bram Waldhart at left 10%, top 31%, width 25%, height 48%, midground. Broad middle-aged build, short beard, forest-green doublet. Seated, head tilted slightly, looking at Kyle with reluctant amusement, silent and dry.\n\nBackground: Walt-fort dining hall based on rustic interior. Show small dining table with soup, bread, cheese; wall with blurred oval portrait; cozy timber room and hint of window area. Use a gentle diagonal perspective wrapping the three figures. Depth layers: table and food foreground, three family members midground, wall + small portrait + window area background. Soft, understated evening indoor light.\n\nVisual treatment: clean 2D webtoon character acting, light rhythmic line in expressions and hand gestures, warm meal tones with calm blue-grays, emotionally subtle, memory-like brief family laughter. Maintain continuity: after Bram’s joke, a brief pause; leaving state suggests Theo will calm his smile and look toward the wall portrait next. Screen direction left to right.\n\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate characters, exaggerated comedy faces, detailed face in wall portrait."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-013",
+  "source_hash": "0db76c7b1c61c65e0566afadaf807b0102df5669c19a7ea8d20fda1c3ff18bc9",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435257921890200-117688"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 1870566,
+      "files": [
+        {
+          "bytes": 1870566,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-013.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-013.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_004b3545601ed00d016a995af3975487d0aa6e89b3c1f77c0c"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_004b3545601ed00d016a995af1ab3c87d0aca65c8591ef9b2e",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048 px with 5% safe margin. Korean webtoon style, clean 2D rendering, shallow depth of field, portrait lens feel, movement locked.\n\nScene purpose: after the family laughter fades, quietly leave the feeling of the mother’s absence and Theo’s emerging sense of a new family through a small wall portrait.\n\nComposition/camera: medium close-up, over-shoulder angle from behind Theo, facing the south wall portrait. Focus on Theo’s paused side profile and the distant small oval portrait. Keep open narration space at upper right; portrait remains small.\n\nCharacter: Theo Waldhart, age 7, left side foreground occupying about left 10%, top 35%, width 40%, height 52%. Seated at the dining table, slightly turned in half-profile. Expression: quiet thought lingering after laughter. Gaze toward the small portrait on the wall. Action: one hand pauses while holding a soup spoon. Preserve childlike 7-year-old face proportions, chestnut brown messy hair, blue-gray tunic, no exaggerated adult-like expression.\n\nBackground: Walt Fort dining hall based on the reference room: warm wooden dining room, south wall cabinet, small blurred oval portrait hung above the cabinet. The portrait should show only a soft unidentified silhouette, never a defined face or outfit. Use a shallow diagonal perspective from Theo’s shoulder toward the portrait. Depth layers: Theo’s shoulder and hand in foreground, small oval portrait midground, cabinet and softly blurred wall behind. Warm but restrained indoor dining light.\n\nVisual treatment: Theo’s eye line delicate and expressive; portrait intentionally blurred. Warm wood tones and muted blue-gray palette. Mood: understated absence, a quiet empty place within family warmth.\n\nContinuity: screen direction left to right. Entering state: family laughter has just died down. Leaving state: Theo looks at the small portrait on the dining room wall, and the wind outside feels closer. No speech bubbles, captions, readable text, watermark, or signature. No duplicate character. No explicit mother identity. No tears or melodrama.\n\nKeep visually quiet negative space around left 52%, top 4%, width 40%, height 23%."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

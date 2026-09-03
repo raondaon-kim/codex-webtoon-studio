@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-006",
+  "source_hash": "82e542909c3ef4c2034119d88d8ba4efd9e64a38576fdba8cdb1ed3488a4bf9f",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788434754628359500-74792"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2431518,
+      "files": [
+        {
+          "bytes": 2431518,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-006.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-006.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0d898669c68bdda6016a99590e7b6487d08cb2016ea39327cb"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0d898669c68bdda6016a99590bada887d0bb28df2a1b5a5327",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x2048 pixels, keep a 6% safe margin. Korean webtoon style, clean linework, restrained 2D depth, no text.\n\nScene purpose: compress the sense of survival disappearing behind numbers by showing an empty grain store with no people present.\n\nComposition/camera: wide shot, eye-level, wide-lens feel, camera placed at the entrance of a small stone grain storage room looking inward toward empty shelves. Locked camera. The frame is dominated by empty shelving, bare floor, and flattened grain sacks rather than any character. Neutral screen direction.\n\nBackground space: a small stone granary memory fragment. Use the feeling of a narrow storage room with shelves on left and right converging toward an empty central floor. Include only empty shelves and a few flattened grain sacks on the floor. Stone walls, dusty gray diffuse light, faded paper beige, charcoal gray, and small brown accents. Mood: emptiness that feels heavier because it is quiet.\n\nForeground subject: at the far left edge near lower-left area, only a tiny child hand silhouette partially entering frame, about 14% width and 16% height overall, no face, no body, no adult features. The hand is disappearing at the frame edge as if from a remembered scene. A single speck of ash falls from the fingertips toward the storage floor. Keep it subtle.\n\nDepth layers: falling ash and fingertips in foreground; empty floor and flattened grain sacks in midground; stone walls and bare shelves in background.\n\nVisual treatment: clean webtoon lines, not rough realism. Muted, desaturated palette; faded paper color, soot gray, soft brown. Dusty gray ambient light. Memory-like stillness.\n\nImportant constraints: no speech balloons, no captions, no readable text, no watermark, no signature, no duplicate character, no visible full person, no corpse, no war scene, no cityscape. Only the small child hand may appear at the edge; the granary must remain otherwise empty."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-004",
+  "source_hash": "a4fc35ade3f50a4d3cf800ad945b17af0dcd0c65050326d1e4d450f3c60db88c",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788434657314688100-113656"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 1962925,
+      "files": [
+        {
+          "bytes": 1962925,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-004.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-004.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_069ba6ed6a403a71016a99589d2a3c87d08da195652c8fe52c"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_069ba6ed6a403a71016a99589a98a887d089e9ecb18626e757",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1, 1536x2048 px. Korean fantasy webtoon style, clean 2D painting, subtle linework, shallow depth of field, portrait lens feel.\n\nScene purpose: a threshold moment where Theo’s gaze stops and the calm dining table shifts into inner memory. Mood: silent memory opening.\n\nComposition/camera: close-up shot, eye level, camera at low dining-table height in front of Theo, slight push-in feeling. Keep 5% safe margin. Leave empty space in the upper right for drifting ash particles. Focus starts on table crumbs at the bottom and leads up to Theo’s distant gray eyes.\n\nSubject: Theo Waldhart, shown as a 7-year-old boy, half-body frontal pose, placed left side around 21% from left, 20% from top, occupying about 54% width and 64% height, foreground. Preserve identity: childlike face proportions, gray eyes, messy dark brown hair, blue-gray tunic with modest medieval styling. Expression: momentary frozen guilt. Pose: chin slightly lowered, looking down toward crumbs below frame. Action: one hand paused on the dining table, fingertips near gathered crumbs.\n\nBackground: use a cozy medieval dining hall inspired by the reference space: wooden interior, table, fireplace, wall, soft evening room. Crop feel from the left-middle area of the room. But the background must be softly blurred and receding. Only crumbs remain visible at the bottom edge of the table in focus with Theo’s hand. Depth layers: Theo’s face sharpest, then hand and table, then blurred fireplace and wall. Perspective at Theo eye level with shallow depth of field.\n\nLighting/color: start with ordinary warm evening light and subtly transition into cold gray memory tones across the frame, as if the warmth is draining away. No dramatic backlight, no magic effects. Gentle ash motes may drift only in the upper-right empty space.\n\nVisual treatment: detailed lines only around eyes and fingers; elsewhere soft and economical. Clean anime-inspired webtoon rendering, polished original illustration.\n\nContinuity: entering state is crumbs gathered at fingertips; leaving state is the dining hall blurring and Theo sinking into memory.\n\nDo not include speech balloons, captions, readable text, watermark, signature, duplicate character, exaggerated tears, or readable insignia text."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

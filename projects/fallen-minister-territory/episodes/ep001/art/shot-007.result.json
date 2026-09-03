@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-007",
+  "source_hash": "3a327a36634278bfc0e36827cf9e2dfd7b33684a59dc08c0cf69bc41ed621059",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788434802213846100-88240"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2846224,
+      "files": [
+        {
+          "bytes": 2846224,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-007.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-007.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0d67e91d97a0c20d016a995946dce087d08d137dcb6e4253a5"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0d67e91d97a0c20d016a99594493ac87d0b4db622cf6228275",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048 with 6% safe margin. A single insert shot in a top-down angle with a normal lens feel, subtle push-in. Camera is directly above an old ledger and torn war map, focused on blurred spilled ink and the ragged torn edge of the map. Separate the upper-left negative space from the ledger composition.\n\nScene purpose: show through the torn map and ledger surface that the kingdom’s collapse was also an administrative failure.\n\nComposition: mostly a quiet parchment-and-dark-wood tabletop scene. Upper-left area kept visually quiet and empty for lettering: left 4%, top 4%, width 44%, height 22%, with no balloons or text. Main objects centered to lower-middle: a worn final ledger on dark aged wood, beside and partly under torn battle-map fragments with only unreadable lines, symbols, and geometric marks. Ink is smeared and bloomed across the paper, no readable writing anywhere. Ash dust drifts over the map from above.\n\nCharacter element: at left 4%, top 78%, width 12%, height 14%, foreground, show only Theo Waldhart’s small child hand and fingertips at the frame edge, lightly dusted with ash, reaching toward the remembered ledger but stopping short. No face, no adult transformation, no full body.\n\nBackground/location: Arken-fall-memory, based on a dim storage/record-room mood translated into this tabletop insert. Use low-distortion vertical top view. Depth layers: child fingertips and ash in foreground, torn map edge midground, ledger and dark wood beneath. Lighting is muted paper-beige and charcoal gray, desaturated, soft and somber.\n\nVisual treatment: webtoon-ready polished 2D illustration, refined painterly anime style. Fine sharpness only on the hand and ledger corners. Faded vellum tones, dark wood, soot-gray ash. Keep map markings unreadable, abstract symbols only. Mood: what calculation failed to preserve.\n\nContinuity: entering state, warehouse ash flowing over the map; leaving state, the final ledger remains at screen center. Avoid speech bubbles, captions, readable text, watermark, signature, duplicate character, modern documents, battle figures, any readable map labels."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

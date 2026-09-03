@@ -44,6 +44,22 @@ class ComposeQcTests(unittest.TestCase):
             self.assertEqual("pass", report["status"])
             self.assertTrue(all(report["checks"].values()))
 
+    def test_slice_master_skips_uniform_trailing_slice(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            master = root / "master.png"
+            image = Image.new("RGB", (320, 850), "white")
+            image.paste((50, 75, 100), (0, 0, 320, 700))
+            image.save(master)
+
+            slices = slice_master(
+                master,
+                root / "publish",
+                {"width_px": 320, "slice_height_px": 400, "format": "jpeg", "quality": 85},
+            )
+
+            self.assertEqual(["slice-001.jpg", "slice-002.jpg"], [path.name for path in slices])
+
 
 if __name__ == "__main__":
     unittest.main()

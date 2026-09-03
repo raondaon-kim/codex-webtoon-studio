@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-006",
+  "source_brief": "episodes/ep001/briefs/shot-006.json",
+  "source_hash": "82e542909c3ef4c2034119d88d8ba4efd9e64a38576fdba8cdb1ed3488a4bf9f",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 사람 없는 빈 곡물창으로 숫자 뒤에 사라진 생존을 압축해 보인다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: wide shot, eye_level angle, wide lens feel, camera position 작은 석조 곡물창 입구에서 빈 선반을 향해, movement locked, focus on 비어 있는 선반과 납작하게 꺼진 곡물 자루. 인물보다 빈 선반과 바닥이 화면을 지배하게 한다\nSubjects:\n- theo-waldhart at left 4%, top 77%, width 14%, height 16%, foreground; pose 프레임 가장자리의 사라지는 어린 손 실루엣; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 재 한 점이 손끝에서 창고 바닥으로 떨어진다. Preserve: 작은 손만 보임, 성인 모습이나 얼굴 없음, 현재의 테오가 기억을 보는 구도.\nBackground: location arken-fall-memory; 비어 있는 선반과 납작한 자루만 남은 작은 석조 곡물창의 단편. Use source crop left 3%, top 43%, width 94%, height 22%; perspective 좁은 창고의 선반이 좌우에서 중앙의 빈 바닥으로 향함; depth layers: 재와 손끝, 빈 바닥과 곡물 자루, 석벽과 비어 있는 선반; lighting 먼지 낀 회색 확산광.\nVisual treatment: line 거친 사실화가 아닌 깨끗한 웹툰 선; color 바랜 종이색·숯회색·작은 갈색; rendering 절제된 2D 공간감; mood 비어 있어 더 무거운 기억.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 재가 아래로 흩어진다; state leaving: 재가 장부 장면으로 이어진다, 곡물창은 사람이 없는 상태로 남는다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 사람, 시체, 전쟁 장면, 수도 전경, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-006.png",
+    "result_metadata_path": "episodes/ep001/art/shot-006.result.json"
+  }
+}

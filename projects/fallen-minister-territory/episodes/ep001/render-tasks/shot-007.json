@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-007",
+  "source_brief": "episodes/ep001/briefs/shot-007.json",
+  "source_hash": "3a327a36634278bfc0e36827cf9e2dfd7b33684a59dc08c0cf69bc41ed621059",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 찢긴 지도와 장부의 표면으로 왕국 붕괴가 행정의 실패이기도 했음을 보여준다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: insert shot, top_down angle, normal lens feel, camera position 낡은 장부와 찢긴 지도 바로 위, movement push_in, focus on 번진 잉크와 찢긴 지도 가장자리. 상단 왼쪽의 말풍선 여백과 장부를 분리한다\nSubjects:\n- theo-waldhart at left 4%, top 78%, width 12%, height 14%, foreground; pose 재가 묻은 어린 손끝만 프레임 가장자리에 둔다; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 기억 속 장부를 향해 닿지 못하고 멈춘다. Preserve: 작은 아이 손, 성인 테오로 변형하지 않음, 얼굴 없음.\nBackground: location arken-fall-memory; 읽을 수 없는 선과 도형만 있는 찢긴 전황 지도, 번진 잉크와 닳은 마지막 장부. Use source crop left 3%, top 66%, width 56%, height 22%; perspective 낮은 왜곡의 수직 탑뷰; depth layers: 어린 손끝과 재, 지도 가장자리, 장부와 짙은 목재; lighting 색을 낮춘 종이빛과 숯회색.\nVisual treatment: line 손과 장부 모서리에만 미세한 선명도; color 바랜 양피지와 어두운 목재; rendering 읽을 수 없는 기호만 남긴 2D 재질; mood 계산이 남기지 못한 것.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 창고의 재가 지도 위로 흐른다; state leaving: 마지막 장부가 화면 중심으로 남는다.\nLettering: leave visually quiet negative space in these regions: left 4%, top 4%, width 44%, height 22%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 읽을 수 있는 지도 글자, 현대 문서, 전투 인물, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-007.png",
+    "result_metadata_path": "episodes/ep001/art/shot-007.result.json"
+  }
+}

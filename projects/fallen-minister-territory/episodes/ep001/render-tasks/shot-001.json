@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-001",
+  "source_brief": "episodes/ep001/briefs/shot-001.json",
+  "source_hash": "886d599f49cb23f1ea7a776a47c129e2dc4aa02bc7708e3589a4021a7a627dfb",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 작지만 관리된 식탁과 세 가족의 거리를 한 컷에 소개한다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: wide shot, eye_level angle, normal lens feel, camera position 식당 동쪽 문 가까이에서 서쪽 창과 식탁을 향해, movement locked, focus on 중앙 식탁의 세 사람과 서쪽 창가. 상단 창가 쪽에 장소 캡션을 둘 조용한 여백을 남긴다\nSubjects:\n- theo-waldhart at left 39%, top 52%, width 20%, height 31%, midground; pose 작은 의자에 반듯이 앉아 손을 식탁 가장자리에 둔다; expression 조용한 경계; gaze 카일 쪽; action 치즈를 건네는 손을 바라본다. Preserve: 일곱 살의 작은 체격, 짙은 밤색 헝클어진 머리, 푸른 회색 튜닉과 은색 세 잎 문장.\n- kyle-waldhart at left 63%, top 31%, width 26%, height 53%, midground; pose 의자에 옆으로 기대어 팔을 식탁 위로 뻗는다; expression 천연덕스러운 미소; gaze 테오; action 작은 치즈 조각을 테오 쪽으로 민다. Preserve: 열네 살의 긴 팔다리, 짧은 붉은 갈색 머리, 문장 없는 푸른 누빔 저킨과 짧은 망토.\n- bram-waldhart at left 11%, top 28%, width 25%, height 55%, midground; pose 식탁 반대편에 피곤하지만 곧게 앉는다; expression 말없이 지켜보는 피곤한 온기; gaze 두 아들; action 아직 풀지 못한 더블릿 단추에 손을 둔다. Preserve: 서른아홉의 넓은 어깨, 회색이 섞인 밤색 머리와 짧은 수염, 망토 없는 짙은 숲색 더블릿.\nBackground: location walt-fort-dining-hall; 진한 참나무 식탁, 소박한 수프·빵·치즈, 서쪽의 깊은 창과 북쪽 난로가 있는 월트 요새 가족 식당. Use source crop left 2%, top 4%, width 96%, height 86%; perspective 동쪽 문에서 서쪽 창으로 이어지는 낮은 시선; depth layers: 문틀과 식탁 모서리, 세 가족과 식사, 난로·서쪽 창·흐린 강변; lighting 해빙기 저녁의 부드러운 실내광, 극적인 역광 없음.\nVisual treatment: line 정제된 한국 판타지 웹툰 선화; color 아이보리·짙은 목재·절제된 청회색; rendering 부드러운 2D 디지털 채색; mood 가난하지만 서로 챙기는 저녁.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: character_identity; use only for that declared role.\n- Image 4: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 저녁 식사가 막 시작됐다; state leaving: 카일의 치즈가 테오 앞에 놓인다, 브람은 두 아들을 지켜본다.\nLettering: leave visually quiet negative space in these regions: left 52%, top 4%, width 42%, height 20%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 호화로운 연회장, 낡아 해진 귀족 복장, 말풍선이나 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 3
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 4
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-001.png",
+    "result_metadata_path": "episodes/ep001/art/shot-001.result.json"
+  }
+}

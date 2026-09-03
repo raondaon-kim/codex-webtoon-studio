@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-020",
+  "source_hash": "8e360d8e46c977a83b9daf7a694f3f5bdab46874bb5582fa430ec1caecfc36d1",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 23
+    },
+    "history": {
+      "job_id": "job-1788435838247903500-133428"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2014511,
+      "files": [
+        {
+          "bytes": 2014511,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-020.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-020.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_003d54b5492ff2d5016a995d572f3087d0b9fd445ad461b29c"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_003d54b5492ff2d5016a995d55761087d0a32c2592974b59f0",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. 1536x2048 pixels, keep a 6% safe margin. Korean webtoon style, clean polished 2D suspense panel.\n\nPurpose: the unseen threat arrives first through two knocks from the empty corridor.\n\nComposition / camera: insert shot, eye-level, portrait-lens feel, camera locked. View from inside the dining room straight toward the closed east door. Focus on the iron-banded oak door and the subtle vibration from the side being knocked. Leave the upper area above the door empty for SFX overlay. Static vertical composition.\n\nBackground space: use the dining hall setting from reference 2 only for environment identity. Show the iron-banded east oak door centered, surrounding doorframe, a thin dark cold seam of corridor at the edges, and the interior wooden floor beneath it. Include part of the dining room edge in foreground. Lighting is even interior light; the door seam feels colder and darker.\n\nForeground subject: use reference 1 only for character identity. Theo Waldhart appears only as a partial presence: at left lower area, only a small child’s hand and blue-gray sleeve visible beyond the table edge, no face. Tiny hand stopped over bread crumbs on the table edge/floor edge area, fingers frozen mid-motion. Preserve: small hand, blue-gray sleeve, no face. Gaze implied toward the door.\n\nPlacement: Theo hand at approximately left 6%, top 74%, width 16%, height 16%, foreground.\n\nDepth layers: Theo’s hand and crumbs in foreground, closed door in midground, frame and dark corridor seam behind. Emphasize the crumbs stopped in place.\n\nVisual treatment: crisp line only on the iron straps of the door and Theo’s fingertips; wood browns with cool gray shadows; concise 2D tension; mood is anxious because sound arrives before danger is seen. Subtle micro-vibration on door hardware/wood, but no exaggerated horror effect.\n\nContinuity: screen direction right-to-left. State entering: Kyle and Theo were by the window; state leaving: the first knock turns every gaze to the door, Theo’s hand freezes over crumbs.\n\nLettering/layout: leave quiet negative space in region left 35%, top 10%, width 32%, height 18%. No speech balloons, no captions, no readable text, no watermark, no signature.\n\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, any person visible outside the door, horror effects, legible writing."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

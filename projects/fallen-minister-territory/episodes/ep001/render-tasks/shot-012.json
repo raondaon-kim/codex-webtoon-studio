@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-012",
+  "source_brief": "episodes/ep001/briefs/shot-012.json",
+  "source_hash": "39c3335c052c03b228a14f6ef97e7dd4331ef407e7f93b7caa4691a749884489",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 카일의 과장된 웃음과 브람의 받아침 사이에서 테오가 잠깐 웃으며 가족의 온기를 느낀다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: medium shot, eye_level angle, normal lens feel, camera position 식탁 남쪽 모서리에서 세 사람을 대각선으로, movement locked, focus on 카일의 억울한 표정과 테오의 작은 웃음. 상단 중앙과 하단 오른쪽에 작은 말풍선 영역\nSubjects:\n- theo-waldhart at left 40%, top 52%, width 20%, height 30%, midground; pose 한 손으로 수프 그릇을 잡고 어깨가 풀린다; expression 참지 못한 작은 웃음; gaze 카일; action 고개를 아주 조금 숙여 웃는다. Preserve: 작은 체격, 밤색 머리, 푸른 회색 튜닉.\n- kyle-waldhart at left 63%, top 31%, width 25%, height 48%, midground; pose 두 손을 가볍게 펼친 채 의자에서 들썩인다; expression 억울한 항변; gaze 브람; action 훈련비라고 둘러댄다. Preserve: 소년 체형, 붉은 갈색 머리, 문장 없는 푸른 저킨.\n- bram-waldhart at left 10%, top 31%, width 25%, height 48%, midground; pose 고개를 조금 기울인 채 앉는다; expression 마지못해 웃음; gaze 카일; action 말없이 카일을 바라본다. Preserve: 넓은 중년 체격, 짧은 수염, 숲색 더블릿.\nBackground: location walt-fort-dining-hall; 작은 식탁과 수프·빵·치즈, 벽의 흐린 초상화가 함께 보이는 가족 구도. Use source crop left 5%, top 12%, width 90%, height 75%; perspective 세 인물을 감싸는 완만한 대각선; depth layers: 식탁과 음식, 세 가족, 벽·작은 초상화·창가; lighting 부드럽고 과장 없는 저녁 실내광.\nVisual treatment: line 표정과 손짓에 가벼운 리듬; color 따뜻한 식사색과 차분한 청회색; rendering 맑은 2D 인물 연기; mood 기억 뒤에 찾아온 짧은 가족의 웃음.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: character_identity; use only for that declared role.\n- Image 4: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 브람의 농담 뒤 잠깐 정적; state leaving: 테오가 웃음을 가라앉히고 벽의 초상화를 본다.\nLettering: leave visually quiet negative space in these regions: left 58%, top 4%, width 35%, height 20%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 과장된 개그 얼굴, 말풍선이나 읽을 수 있는 글자, 벽 초상화의 얼굴을 구체화.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 3
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 4
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-012.png",
+    "result_metadata_path": "episodes/ep001/art/shot-012.result.json"
+  }
+}

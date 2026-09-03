@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-003",
+  "source_brief": "episodes/ep001/briefs/shot-003.json",
+  "source_hash": "6e1e711b0ecd96ef762e15784bdc933ac47a60b3fa4c56b39f0fc4f8af3454d7",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 테오의 아주 작은 손과 빵 부스러기를 다음 회상의 발화점으로 고정한다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: insert shot, top_down angle, normal lens feel, camera position 테오 오른손 바로 위, movement push_in, focus on 작은 손끝에 모이는 흰 빵 부스러기. 상단에 큰 빈 식탁 면을 남겨 다음 장면의 재가 겹칠 수 있게 한다\nSubjects:\n- theo-waldhart at left 18%, top 45%, width 52%, height 36%, foreground; pose 손가락을 오므린 손 클로즈업; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 빵 부스러기를 한 점으로 모은다. Preserve: 일곱 살에 맞는 작은 손, 푸른 회색 소매, 얼굴과 전신을 보이지 않음.\nBackground: location walt-fort-dining-hall; 어두운 참나무 식탁 면과 흰 빵 부스러기만 보이는 추상적인 식사 클로즈업. Use source crop left 32%, top 48%, width 42%, height 28%; perspective 수평 왜곡 없는 수직 탑뷰; depth layers: 테오의 손끝, 빵 부스러기, 짙은 목재 결; lighting 부드러운 실내광.\nVisual treatment: line 손가락과 부스러기 윤곽을 또렷하게; color 따뜻한 목재 갈색 위의 무채색 흰 부스러기; rendering 단순하고 깨끗한 2D 재질; mood 평온이 멈추는 순간.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 테오가 치즈를 밀어두었다; state leaving: 부스러기가 손끝에 모인다, 현재의 소리가 멀어진다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 성인 손, 얼굴 노출, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-003.png",
+    "result_metadata_path": "episodes/ep001/art/shot-003.result.json"
+  }
+}

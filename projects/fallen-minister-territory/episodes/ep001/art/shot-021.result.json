@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-021",
+  "source_hash": "e9c4f9e3ce43acff739e27ba7904477a996be374d8a821b0ef823e0446ec1fc5",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435928787574100-145448"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2271138,
+      "files": [
+        {
+          "bytes": 2271138,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-021.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-021.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_09f0d9d62a55456d016a995d837a7887d080236307d4ae7499"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_09f0d9d62a55456d016a995d80706087d0a595eb1422cbee6d",
+      "revised_prompts": [
+        "Template: webtoon-shot-v1. Create one finished original vertical-scroll webtoon art shot, 1536x2048 px, with 5% safe margin. Medium_full shot, over_shoulder angle, normal lens feel, subtle push-in. Camera is just inside the doorway area of the dining hall, looking past Bram’s back toward the hallway, with focus on Bram opening the door and a bowed anonymous messenger silhouette at the far end of the dark corridor. Keep the lower outside-door area clear for dialogue overlay; the messenger’s face must be unreadable in every way.\n\nScene: the instant urgent news enters a family meal. Warm dining hall light meets cold bluish-gray corridor light at the threshold. Mood tense, restrained, not heroic.\n\nUse the medieval dining hall space from the reference as the environment: timber interior, dining table and chairs, hearth glow, eastern door open, corridor beyond dark and cool-toned. Perspective layers: foreground Bram’s shoulder/back, midground doorframe and Kyle, background dark corridor with indistinct messenger silhouette.\n\nCharacter 1: Bram Waldhart in foreground left, about 22% from left, 20% from top, occupying about 32% width and 66% height. Preserve identity cues from reference only: broad middle-aged shoulders, short beard outline, forest-green doublet without cape. Pose: back and slight half-profile at the open door. Expression: only a hardened jawline visible. Gaze angled downward outside the door. Action: opening the door and listening to urgent report.\n\nCharacter 2: Kyle Waldhart in midground right, about 66% from left, 42% from top, occupying about 17% width and 36% height. Preserve identity cues from reference only: 14-year-old boy build, reddish-brown hair, plain blue jerkin with no crest. Pose: half-risen from chair, turning sharply toward the door. Expression: immediate alertness. Gaze toward outside door. Action: pushing up from chair, one hand moving toward his waist.\n\nMessenger: outside the door / down the corridor, only a hurried bowed silhouette, no readable face, no distinct costume design, no defining features.\n\nComposition: open door centered, Bram’s shoulder prominent in foreground, Kyle partially framed by table/chair, corridor receding behind threshold. Screen direction right-to-left. State continuity: the first knock has just ended; now the door is open and the information that the river water level is rising abnormally has just been delivered, but show this only through staging, not text.\n\nVisual treatment: clean 2D webtoon rendering, crisp line emphasis on Bram’s tense shoulders and Kyle’s reaction, low-contrast cool corridor against warm room, painterly-soft but anime-influenced medieval fantasy style matching provided references. Leave visually quiet negative space at upper-right region roughly left 51%, top 3%, width 41%, height 26%. No speech balloons, no captions, no readable text, no watermark, no signature, no duplicate characters, no finalized messenger character design."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

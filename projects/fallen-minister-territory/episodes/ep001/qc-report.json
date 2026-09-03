@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "qc_report",
+  "episode_id": "ep001",
+  "generated_at": "2026-09-03T12:00:16.087443+00:00",
+  "status": "warn",
+  "checks": {
+    "schema": true,
+    "files": true,
+    "dimensions": true,
+    "continuity": true,
+    "lettering": true,
+    "publish_slices": true
+  },
+  "issues": [
+    {
+      "severity": "info",
+      "code": "human_visual_review_required",
+      "message": "Review identity, hands, background geography, screen direction, emotional clarity, and reading order in the assembled scroll."
+    },
+    {
+      "severity": "warning",
+      "code": "visual_canonical_outfit_drift",
+      "message": "Kyle is rendered with a blue mantle/hood despite the approved v2 character sheet and director brief forbidding a cloak. Re-render from the Kyle v2 reference with the mantle removed before final publication.",
+      "path": "episodes/ep001/art/shot-001.png",
+      "shot_id": "shot-001"
+    },
+    {
+      "severity": "warning",
+      "code": "visual_canonical_outfit_drift",
+      "message": "Kyle is rendered with a blue hooded mantle despite the approved v2 character sheet and director brief forbidding a cloak. Re-render from the Kyle v2 reference with the mantle removed before final publication.",
+      "path": "episodes/ep001/art/shot-019.png",
+      "shot_id": "shot-019"
+    }
+  ]
+}

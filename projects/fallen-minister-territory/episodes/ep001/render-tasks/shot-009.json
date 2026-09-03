@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-009",
+  "source_brief": "episodes/ep001/briefs/shot-009.json",
+  "source_hash": "09af042b49487c6f9b05a818bff5fe47f929133b96e21462605c90ec1d9b624a",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 재가 따뜻한 부스러기로 돌아오며 테오가 다시 일곱 살의 식탁에 있음을 조용히 확인한다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: extreme_close_up shot, top_down angle, normal lens feel, camera position 테오 손끝 바로 위, movement pull_out, focus on 재가 빵 부스러기로 바뀌어 손가락 옆에 남는 순간. 아래로 긴 여백을 둬 식탁의 대화가 다시 들어오게 한다\nSubjects:\n- theo-waldhart at left 20%, top 48%, width 50%, height 35%, foreground; pose 느슨하게 펴진 작은 손; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 손끝으로 따뜻한 부스러기 하나를 만진다. Preserve: 일곱 살의 작은 손, 푸른 회색 소매, 얼굴과 전신 없음.\nBackground: location arken-fall-memory; 종이빛 공백을 통과한 회색 재가 현재 식탁의 따뜻한 빵 부스러기로 되돌아오는 전환. Use source crop left 5%, top 76%, width 90%, height 20%; perspective 안정된 탑뷰; depth layers: 테오의 손, 부스러기와 마지막 재, 어두운 참나무 식탁; lighting 따뜻한 식탁 빛이 낮게 돌아온다.\nVisual treatment: line 손끝과 부스러기를 깨끗하게; color 차가운 재색에서 따뜻한 베이지로 복귀; rendering 간결한 2D 전환; mood 아직 말하지 않은 결심.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 성인 손과 장부가 재가 된다; state leaving: 테오는 식탁으로 돌아왔다, 빵 부스러기가 손가락 옆에 남는다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 마법 효과, 성인 손, 얼굴, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-009.png",
+    "result_metadata_path": "episodes/ep001/art/shot-009.result.json"
+  }
+}

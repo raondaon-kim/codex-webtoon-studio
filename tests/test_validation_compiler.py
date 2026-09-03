@@ -1,12 +1,22 @@
 from __future__ import annotations
 
 import copy
+import tempfile
 import unittest
 from pathlib import Path
 
+from PIL import Image
+
 from webtoon_studio.compiler import compile_brief, compile_visual_asset, load_configs
 from webtoon_studio.geometry import validate_generation_size
-from webtoon_studio.image_runtime import build_task_command, order_render_tasks, redact_sensitive, verify_task_inputs
+from webtoon_studio.image_runtime import (
+    RuntimeErrorWithEnvelope,
+    build_task_command,
+    normalize_render_output,
+    order_render_tasks,
+    redact_sensitive,
+    verify_task_inputs,
+)
 from webtoon_studio.io_utils import load_json
 from webtoon_studio.validation import validate_data, validate_file
 
@@ -95,11 +105,37 @@ class ValidationCompilerTests(unittest.TestCase):
         self.assertNotIn("--retries", command)
 
     def test_sensitive_runtime_fields_are_redacted(self) -> None:
-        value = {"access_token": "secret-token", "nested": {"refresh_token": "refresh", "ready": True}}
+        value = {
+            "access_token": "secret-token",
+            "email": "artist@example.com",
+            "nested": {"refresh_token": "refresh", "account_id": "account-123", "ready": True},
+        }
         redacted = redact_sensitive(value)
         self.assertEqual("<redacted>", redacted["access_token"])
+        self.assertEqual("<redacted>", redacted["email"])
         self.assertEqual("<redacted>", redacted["nested"]["refresh_token"])
+        self.assertEqual("<redacted>", redacted["nested"]["account_id"])
         self.assertTrue(redacted["nested"]["ready"])
+
+    def test_runtime_normalizes_same_aspect_provider_output(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory) / "shot.png"
+            Image.new("RGB", (1086, 1448), (33, 66, 99)).save(output)
+
+            result = normalize_render_output(output, "1536x2048")
+
+            with Image.open(output) as image:
+                self.assertEqual((1536, 2048), image.size)
+        self.assertTrue(result["normalized"])
+        self.assertEqual([1086, 1448], result["source_dimensions"])
+
+    def test_runtime_rejects_provider_output_with_wrong_aspect(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output = Path(temporary_directory) / "shot.png"
+            Image.new("RGB", (887, 1774), (33, 66, 99)).save(output)
+
+            with self.assertRaises(RuntimeErrorWithEnvelope):
+                normalize_render_output(output, "1536x2048")
 
     def test_runtime_rejects_path_escape(self) -> None:
         source = PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"

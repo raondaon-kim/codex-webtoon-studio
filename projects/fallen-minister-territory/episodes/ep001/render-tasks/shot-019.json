@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-019",
+  "source_brief": "episodes/ep001/briefs/shot-019.json",
+  "source_hash": "fc51314edeee1707b67679f053b350660d6617a35bb79ef3e74311cbacd53340",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 카일의 밝은 내일 제안과 테오의 즉답이 형제 역할의 출발점을 코믹하게 보여준다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: medium shot, eye_level angle, portrait lens feel, camera position 창가 안쪽에서 테오와 카일을 서로 마주 보게, movement locked, focus on 몸을 숙여 제안하는 카일과 망설임 없이 답하는 테오. 상단 좌우에 짧은 말풍선 두 개가 들어갈 여백\nSubjects:\n- theo-waldhart at left 22%, top 42%, width 27%, height 42%, midground; pose 창턱에서 돌아서 팔짱을 가볍게 낀다; expression 지극히 진지한 즉답; gaze 카일; action 먼저 창고를 보자고 말한다. Preserve: 작은 체격, 회색 눈, 푸른 회색 튜닉.\n- kyle-waldhart at left 57%, top 26%, width 29%, height 55%, midground; pose 창틀에 한 손을 대고 몸을 앞으로 기울인다; expression 밝고 기대에 찬 미소; gaze 테오; action 내일 훈련이 끝나면 나루까지 함께 가자고 제안한다. Preserve: 열네 살의 긴 팔다리, 붉은 갈색 머리, 문장 없는 푸른 저킨.\nBackground: location walt-fort-dining-hall; 서쪽 창과 창턱, 멀리 강의 흐린 줄기가 보이는 식당 창가. Use source crop left 4%, top 12%, width 52%, height 68%; perspective 창틀의 수직선 안에서 두 형제가 좌우로 마주 보는 구도; depth layers: 창턱, 테오와 카일, 창밖 강과 갈대; lighting 차분한 해빙기 낮빛이 실내에 낮게 든다.\nVisual treatment: line 두 형제의 시선과 손짓을 선명하게; color 청회색 의상 둘과 흐린 강의 같은 계열; rendering 가볍고 단정한 2D 연기; mood 서로 다른 방식으로 영지를 바라보는 형제.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: background_space; use only for that declared role.\nContinuity: screen direction right_to_left; state entering: 영지의 취약한 풍경이 보였다; state leaving: 카일과 테오는 창가에 함께 선다, 멀리서 첫 노크가 시작된다.\nLettering: leave visually quiet negative space in these regions: left 57%, top 3%, width 36%, height 22%; left 5%, top 4%, width 34%, height 20%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 카일의 브로치, 테오의 성인 체격, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 3
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-019.png",
+    "result_metadata_path": "episodes/ep001/art/shot-019.result.json"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-014",
+  "source_brief": "episodes/ep001/briefs/shot-014.json",
+  "source_hash": "d8fc597ff4ff20f55b091d0ff681c7382cfb63ec306d78eb56281c4190fd1a0f",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 문이 열리며 식당의 온기를 끊고, 바람과 함께 들어온 빚 독촉장을 먼저 보여준다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: wide shot, eye_level angle, normal lens feel, camera position 서쪽 창 쪽 식탁에서 동쪽 문을 향해, movement locked, focus on 열린 문, 바람에 날리는 식탁 천 조각, 바닥으로 떨어지는 봉인 편지. 바닥 중앙의 편지 주위는 빈 공간으로 두고, 문밖 인물은 실루엣으로도 확정하지 않는다\nSubjects:\n- bram-waldhart at left 56%, top 28%, width 27%, height 52%, midground; pose 의자에서 막 일어나 문을 향해 반걸음; expression 순간 굳은 경계; gaze 문과 떨어지는 편지; action 한 손을 편지 쪽으로 뻗는다. Preserve: 망토 없는 숲색 더블릿, 회색이 섞인 밤색 머리, 짧은 수염.\n- theo-waldhart at left 18%, top 52%, width 16%, height 25%, midground; pose 의자에서 고개를 든 작은 전신; expression 관찰하는 긴장; gaze 바닥의 편지; action 손을 식탁 위에 멈춘다. Preserve: 작은 일곱 살 체격, 푸른 회색 튜닉.\nBackground: location walt-fort-dining-hall; 동쪽의 철띠 두른 참나무 문이 열린 식당, 바닥 위의 봉인 편지와 밀린 식탁 천 조각. Use source crop left 58%, top 8%, width 35%, height 82%; perspective 식탁에서 문까지 이어지는 대각선, 편지가 바닥 중앙에 떨어진다; depth layers: 식탁 모서리, 테오·편지·브람, 열린 문과 바깥의 어두운 복도; lighting 실내의 따뜻함에 문틈의 차가운 바람빛이 섞임.\nVisual treatment: line 편지의 낙하와 바람에만 날카로운 선; color 따뜻한 식당색에 차가운 회색 바람; rendering 정돈된 2D 동작; mood 일상이 현실에 끊기는 순간.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: background_space; use only for that declared role.\nContinuity: screen direction right_to_left; state entering: 테오는 초상화에서 시선을 거두지 않았다; state leaving: 문이 열려 있다, 봉인 편지가 바닥에 떨어진다, 브람이 편지로 향한다.\nLettering: generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 새 전령 캐릭터의 얼굴 디자인, 폭풍 연출, 읽을 수 있는 편지 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 3
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-014.png",
+    "result_metadata_path": "episodes/ep001/art/shot-014.result.json"
+  }
+}

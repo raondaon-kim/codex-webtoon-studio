@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-008",
+  "source_brief": "episodes/ep001/briefs/shot-008.json",
+  "source_hash": "91bb810ed58020f367665883065ca849ff9caf74d10fd36ffeb54d26ce6b2ca4",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 성인 에드릭의 얼굴을 보이지 않은 채 마지막 장부를 붙든 손만으로 망국의 책임을 압축한다.\nCanvas: 1536x2048 pixels; keep a 6% safe margin.\nComposition and camera: close_up shot, top_down angle, portrait lens feel, camera position 어두운 소매와 마지막 장부 바로 위, movement push_in, focus on 장부를 세게 쥔 중년 남성의 손과 닳은 표지. 상단 중앙을 마지막 독백을 위한 조용한 공간으로 둔다\nSubjects:\n- theo-waldhart at left 2%, top 83%, width 10%, height 10%, foreground; pose 하단에서 사라지는 작은 손의 재 실루엣; expression 얼굴은 보이지 않음; gaze 프레임 밖; action 현재의 어린 기억이 마지막 장부 위에서 끊어진다. Preserve: 어린 테오의 존재는 손끝과 재로만 암시, 성인 에드릭의 얼굴·전신 없음, 왕관이나 무기 없음.\nBackground: location arken-fall-memory; 어두운 소매를 입은 중년 남성의 손만이 낡은 마지막 장부를 쥐고 있는 기억 단편. Use source crop left 42%, top 64%, width 55%, height 26%; perspective 장부 모서리에서 손등으로 향하는 긴 사선; depth layers: 재와 어린 손의 흔적, 장부와 성인 손, 찢긴 지도·목재 탁자; lighting 무딘 회색과 바랜 갈색, 불꽃은 없음.\nVisual treatment: line 손등 주름과 장부 끈은 선명하되 과도한 사실화 금지; color 숯회색·바랜 종이·어두운 갈색; rendering 절제된 2D 질감; mood 이름 없는 패배의 무게.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: background_space; use only for that declared role.\nContinuity: screen direction neutral; state entering: 지도와 장부가 기억의 전부가 된다; state leaving: 성인 손이 재로 무너진다, 현재의 테오 손으로 돌아갈 준비가 된다.\nLettering: leave visually quiet negative space in these regions: left 27%, top 3%, width 46%, height 20%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 성인 얼굴, 왕관, 전투, 불타는 수도, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/backgrounds/arken-fall-memory-montage-v1.png",
+      "role": "background_space",
+      "index": 2
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-008.png",
+    "result_metadata_path": "episodes/ep001/art/shot-008.result.json"
+  }
+}

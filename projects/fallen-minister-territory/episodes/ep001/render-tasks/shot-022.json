@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "ep001-shot-022",
+  "source_brief": "episodes/ep001/briefs/shot-022.json",
+  "source_hash": "fd50614357da5f258b5c9559767c8e2908f519f7cf3d7e48d11b500211826dcc",
+  "template_id": "webtoon-shot-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create one finished original vertical-scroll webtoon art shot. Template: webtoon-shot-v1.\nPurpose: 브람의 짧은 명령과 카일의 즉각적인 움직임으로 가족의 역할 분담을 행동으로 보여준다.\nCanvas: 1536x2048 pixels; keep a 5% safe margin.\nComposition and camera: medium_full shot, low angle, normal lens feel, camera position 식탁 남쪽에서 문 방향의 브람과 카일을 향해, movement tracking, focus on 명령을 내리는 브람과 의자에서 일어나 검 연습용 목검으로 손을 옮기는 카일. 상단 두 곳에 짧은 명령 대사를 둘 여백\nSubjects:\n- bram-waldhart at left 18%, top 22%, width 31%, height 62%, midground; pose 문 앞에서 몸을 곧게 세운 반신; expression 침착한 즉시 판단; gaze 카일; action 사람을 데려오라고 짧게 명령한다. Preserve: 망토 없음, 숲색 더블릿, 넓은 중년 체격, 짧은 수염.\n- kyle-waldhart at left 57%, top 26%, width 28%, height 60%, midground; pose 의자를 뒤로 밀며 반쯤 일어선 전신; expression 가벼움이 사라진 집중; gaze 문과 브람 사이; action 허리의 목검 손잡이를 잡고 출발할 준비를 한다. Preserve: 열네 살 소년 체형, 붉은 갈색 머리, 문장 없는 푸른 저킨, 나무 결이 보이는 연습용 목검.\nBackground: location walt-fort-dining-hall; 문이 열린 채인 식당, 뒤로 남겨진 작은 식탁과 식지 않은 수프. Use source crop left 30%, top 10%, width 62%, height 82%; perspective 식탁에서 문으로 뻗는 대각선이 두 사람의 움직임을 향한다; depth layers: 식탁과 의자, 브람과 카일, 열린 문·복도; lighting 실내광은 유지하되 문 쪽은 차갑다.\nVisual treatment: line 카일의 몸이 일어나는 동작과 브람의 손짓을 명료하게; color 숲색·푸른 저킨·차가운 문틈의 대비; rendering 과장하지 않은 2D 긴장; mood 일상에서 즉시 대응으로 전환.\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\n- Image 2: character_identity; use only for that declared role.\n- Image 3: background_space; use only for that declared role.\nContinuity: screen direction left_to_right; state entering: 급보가 전달됐다, 카일은 의자에 앉아 있다; state leaving: 브람이 상황을 지휘한다, 카일은 출발할 준비를 마친다, 테오는 식탁에 남는다.\nLettering: leave visually quiet negative space in these regions: left 4%, top 3%, width 36%, height 20%. Generate no speech balloons, captions, or readable text.\nAvoid: speech bubbles, captions, readable text, watermark, signature, duplicate character, 실전 전투, 과도한 갑옷, 카일의 브로치, 읽을 수 있는 글자.",
+  "references": [
+    {
+      "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 1
+    },
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+      "role": "character_identity",
+      "index": 2
+    },
+    {
+      "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+      "role": "background_space",
+      "index": 3
+    }
+  ],
+  "request": {
+    "size": "1536x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-022.png",
+    "result_metadata_path": "episodes/ep001/art/shot-022.result.json"
+  }
+}

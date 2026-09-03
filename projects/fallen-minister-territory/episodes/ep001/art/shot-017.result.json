@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-017",
+  "source_hash": "14ff85df86d6c601f4196aef80a27a87d1ef64f3416c656f9ddb77aa403870e7",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 24
+    },
+    "history": {
+      "job_id": "job-1788435644459282100-163260"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2463555,
+      "files": [
+        {
+          "bytes": 2463555,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-017.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-017.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 2,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_015555433d70e59f016a995c90477c87d0bd5b28170affd2d1"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_015555433d70e59f016a995c8da10087d0841239dc162549cc",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048, keep 5% safe margin. Medium_full shot, over_shoulder angle, normal lens feel, camera behind Theo toward the west window, subtle push-in feeling. Focus on small Theo placing one hand on the stone window ledge and looking down/out toward the distant river. Leave quiet monologue negative space in the sky and far landscape area at left 52%, top 4%, width 40%, height 23%. No text.\n\nSubject: Theo Waldhart in left 28%, top 35%, width 30%, height 52%, midground. Back view standing before a low stone window ledge, only slight side profile visible, thoughtful. One hand on the window sill, scanning below. Preserve identity: seven-year-old small build, messy dark brown hair, blue-gray tunic with a small silver three-leaf crest, child proportions.\n\nBackground: interior of a modest stone-and-wood fortress room west window, using the provided room only as background-space reference. Foreground window frame and stone sill. Outside through the deep west window: dry Marden River, reed wetlands, an old wooden sluice gate, and distant hazy Grayford ferry. Compose so the river runs from lower left toward far right. Depth layers: Theo’s hand and stone sill; window frame, dry river, sluice gate; reeds and hazy ferry. Overcast early-thaw daylight, no dramatic sun rays.\n\nVisual treatment: crisp linework on Theo silhouette and window frame, simplified distant river forms, cool blue-gray water, reed tan, cold stone palette, 2D webtoon depth, calm observational mood, a child’s first administrative insight. Screen direction left to right. No speech bubbles, captions, readable text, watermark, signature, duplicate character, fantasy giant castle, modern facilities."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

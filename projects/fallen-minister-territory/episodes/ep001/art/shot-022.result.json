@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-022",
+  "source_hash": "fd50614357da5f258b5c9559767c8e2908f519f7cf3d7e48d11b500211826dcc",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788436013126215000-99552"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2367279,
+      "files": [
+        {
+          "bytes": 2367279,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-022.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-022.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0069d90ca52b3398016a995ddf63c487d0b48a66a31b24fca5"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0069d90ca52b3398016a995ddaa22887d0951ab3e6e494fa3d",
+      "revised_prompts": [
+        "Create one finished original vertical-scroll webtoon art shot, template webtoon-shot-v1. Canvas 1536x2048, keep 5% safe margin. Korean webtoon-style polished 2D scene, no text.\n\nScene purpose: show family role division through Bram’s short command and Kyle’s immediate movement.\n\nComposition/camera: medium_full shot, low angle, normal lens feel, camera positioned from the south side of the dining table toward the door, facing Bram and Kyle; subtle movement-tracking feel. Focus on Bram giving the order and Kyle rising from a chair and moving his hand to a wooden training sword. Leave quiet empty space at top for two short command lines.\n\nCharacters:\n1) Bram Waldhart on left side, around left 18% top 22%, width 31% height 62%, midground. Middle-aged broad-built man, short beard, short brown hair with some gray, forest-green doublet under dark sleeveless outer layer, no cloak. Pose: upright half-body near the open door, calm instant judgment, looking at Kyle. Action: giving a short sharp command to bring someone. Preserve mature rugged fantasy-medieval look from reference.\n2) Kyle Waldhart on right side, around left 57% top 26%, width 28% height 60%, midground. Fourteen-year-old boy, reddish-brown tousled hair, slim teen build, plain blue jerkin with no emblem, no brooch, simple shirt, boots. Pose: pushing the chair back and half-rising to full body, expression changed from lightness to concentration, gaze between door and Bram. Action: gripping the hilt of a wooden practice sword at his waist, ready to depart. Wooden grain visible on the practice sword.\n\nBackground: Walt-fort dining hall based on rustic timber medieval room. Open door, small dining table left behind with still-warm soup and bread, chairs, fireplace, sideboards, window. Use a perspective where diagonal lines from table to door guide motion toward the two characters. Depth layers: table and chair in foreground, Bram and Kyle in midground, open door and corridor in background. Interior warm light remains, but cooler light spills from the doorway.\n\nVisual treatment: clear linework emphasizing Kyle’s rising motion and Bram’s hand gesture. Color contrast of forest green, blue jerkin, and cool doorway light. Understated, non-exaggerated 2D tension, mood shifting from daily life to immediate response.\n\nContinuity: screen direction left to right. State entering: urgent news just arrived, Kyle had been seated. State leaving: Bram is directing the situation, Kyle is ready to go, Theo remains at the table offscreen. No combat, no extra armor.\n\nImportant: no speech balloons, no captions, no readable text, no watermark, no signature, no duplicate characters."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

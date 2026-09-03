@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-018",
+  "source_hash": "515ca21d8ba2ea02dc36d10fdef502274446ac94cc503f7025db53efd05e1257",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 23
+    },
+    "history": {
+      "job_id": "job-1788435718426437700-69152"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2694930,
+      "files": [
+        {
+          "bytes": 2694930,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-018.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-018.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 1,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_049bf7fbc885eed1016a995cc0716087d0a14fc81561339e3f"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_049bf7fbc885eed1016a995cbe05e487d09eb200d0ef20ca51",
+      "revised_prompts": [
+        "Template: webtoon-shot-v1. Create one finished original vertical-scroll webtoon art shot, 1536x2048 pixels, keep 5% safe margin. Extreme wide shot, high angle, wide lens feel, slight tilt movement. Camera from a stone window of Wald fortress looking down southeast over the riverside. Compose the winding Marden River, old wooden sluice gate, reed marsh, and misty distant Grayford ferry as one vulnerable lifeline. Arrange the waterway vertically through the frame so the sluice and ferry connect in one gaze line.\n\nForeground: at left 6%, top 68%, width 13%, height 22%, show theo-waldhart only as a very small 7-year-old back silhouette standing by one side of the stone window frame, hand on the sill, looking down at the river. Preserve from reference only character identity: tiny child silhouette, blue-gray tunic, not enlarged to adult proportions, face not visible.\n\nBackground location: Rowend March. Show the dry winding Marden River bend, muddy embankments, leaning worn wooden sluice gate, reed wetlands, and far mist-softened Grayford ferry in late thaw season. Perspective: gentle vertical depth from high window down to river. Depth layers: sharp stone window and Theo silhouette; embankment, sluice, river; reed marsh, misty ferry, low sky. Lighting: overcast cold thaw-season daylight, no dramatic backlight, no heavy fog, no storm, no flood.\n\nVisual treatment: polished 2D webtoon environment perspective. Clean line on near stone window, simpler lines in distance. Color palette blue-gray, reed tan, mud brown. Mood: broad vulnerability carried by a small domain’s fragile lifeline. Screen direction left to right. No speech balloons, captions, readable text, watermark, signature, duplicate character, big city view, fantasy castle emphasis, signboards."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}

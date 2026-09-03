@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "task_id": "ep001-shot-019",
+  "source_hash": "fc51314edeee1707b67679f053b350660d6617a35bb79ef3e74311cbacd53340",
+  "provider": "codex",
+  "runtime_result": {
+    "auth": {
+      "account_id": "<redacted>",
+      "auth_file": "<redacted>",
+      "refreshed": false,
+      "source": "auth.json"
+    },
+    "command": "images edit",
+    "events": {
+      "count": 25
+    },
+    "history": {
+      "job_id": "job-1788435795971236400-157284"
+    },
+    "ok": true,
+    "output": {
+      "bytes": 2409528,
+      "files": [
+        {
+          "bytes": 2409528,
+          "index": 0,
+          "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-019.png"
+        }
+      ],
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\art\\shot-019.png"
+    },
+    "provider": "codex",
+    "provider_selection": {
+      "edit_region_mode": "reference-hint",
+      "kind": "codex",
+      "reason": "explicit",
+      "requested": "codex",
+      "resolved": "codex",
+      "supports_n": false
+    },
+    "request": {
+      "background": "auto",
+      "delegated_image_model": "gpt-image-2",
+      "format": "png",
+      "model": "gpt-5.4",
+      "operation": "edit",
+      "provider": "codex",
+      "quality": "high",
+      "ref_image_count": 3,
+      "size": "1536x2048"
+    },
+    "response": {
+      "image_count": 1,
+      "item_ids": [
+        "ig_0ffc8e0cf6578f91016a995d0c3b0087d09ae37bc1c9e65365"
+      ],
+      "model": "gpt-5.4",
+      "response_id": "resp_0ffc8e0cf6578f91016a995d082e5887d083ebb9f9a980371f",
+      "revised_prompts": [
+        "webtoon-shot-v1, one finished original vertical-scroll webtoon art shot, 1536x2048 px. Clean 5% safe margin. Medium shot, eye-level, portrait lens feel, camera from inside the window area so Theo and Kyle face each other left-right, movement locked. Focus on Kyle bending forward with a proposal and Theo answering immediately with dead-serious sincerity. Leave quiet negative space for two short speech balloons at upper left and upper right, but generate no balloons or text.\n\nScene: walt-fort-dining-hall window side, based only on the background role reference: west window and stone windowsill, dining hall interior, blurred river line and reeds outside. Use a crop feel focused on the left window area, framing the brothers within the vertical window lines. Depth layers: windowsill foreground, Theo and Kyle midground, river and reeds outside background. Calm thaw-season daylight entering low into the room.\n\nCharacters, preserve identities from references only for character roles:\n- Theo Waldhart on left side, around 22% from left and 42% from top, about 27% width and 42% height, midground. Small build, gray eyes, tousled dark brown hair, blue-gray tunic, child proportions. Pose: turned from the windowsill, lightly folding his arms. Expression: extremely serious instant answer. Gaze at Kyle. Action feeling: he bluntly says they should check the storage first.\n- Kyle Waldhart on right side, around 57% from left and 26% from top, about 29% width and 55% height, midground. Fourteen-year-old with long limbs, reddish-brown hair, plain blue jerkin with no crest, cheerful and hopeful smile. Pose: one hand on the window frame, body leaning forward toward Theo. Gaze at Theo. Action feeling: he brightly suggests going together to the ferry/river landing after training tomorrow.\n\nVisual treatment: crisp line emphasis on their eye lines and hand gestures; color harmony of blue-gray clothing and pale river tones; neat light 2D acting, polished webtoon panel finish; mood is comedic start of their brotherly roles, showing they care about the estate in different ways. Screen direction right-to-left continuity. State feeling entering: they had just seen the vulnerable landscape. State leaving: they end up standing together by the window, with the sense that a distant first knock is starting.\n\nAvoid speech bubbles, captions, readable text, watermark, signature, duplicate characters, Kyle brooch, adult-sized Theo, unreadable insignias, extra props that distract."
+      ],
+      "service_tier": "default",
+      "status": "completed"
+    },
+    "retry": {
+      "count": 0,
+      "max_retries": 3
+    }
+  },
+  "output_normalization": {
+    "source_dimensions": [
+      1086,
+      1448
+    ],
+    "output_dimensions": [
+      1536,
+      2048
+    ],
+    "normalized": true
+  }
+}
