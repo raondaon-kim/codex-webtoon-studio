@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "visual-bram-waldhart-canonical-v1",
+  "source_brief": "visual-bible/characters/bram-waldhart.json",
+  "source_hash": "f8c7269ce850905ec4fe1559512c0f0ced5fb41910a2b9fdda87bbef8f42e30e",
+  "template_id": "character-reference-edit-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create a clean canonical reference sheet for one original webtoon character.\nTemplate: character-reference-edit-v1. Derive a new approved character view from a canonical reference image.\nAsset ID: bram-waldhart-canonical-v1.\nLayout: 같은 비율의 전신 정면·좌측면·후면을 중앙에 나란히 두고, 하단에 네 가지 표정과 인장 반지·철제 상자 열쇠·한손검·더블릿 재단 디테일을 작은 칸으로 배치한 중립 캐릭터 시트.\nRequired views: 정면 전신, 단정한 녹색 더블릿과 실용 검을 갖춘 변방 영주 복장, 좌측면 전신, 한손검 손잡이와 넓은 어깨·중년 체형 확인, 후면 전신, 겉조끼와 더블릿 재단, 짧은 머리 실루엣 확인, 표정: 아들들에게 보이는 낮은 웃음, 빚 문서를 읽을 때의 피로, 즉시 명령하는 굳은 표정, 가족을 보며 잠시 누그러진 눈빛, 소품: 기운 금속 인장 반지, 철제 상자 열쇠와 문장 없는 접힌 편지, 실용적인 한손검, 더블릿의 단정한 옷깃·소맷단·재단 디테일.\nSheet background: 옅은 아이보리 회색의 비장식적 스튜디오 배경, 정면에서 고르게 비추는 중립 조명과 발밑의 아주 옅은 그림자만 둔다.. Labels: none.\nPreserve exactly: 브람 발트하르트는 서른아홉 살의 로웬드 소영주이자 테오와 카일의 아버지다., 오랜 순찰과 행정 피로가 남은 넓은 어깨의 강건한 중년 체형이다. 군인처럼 단단하지만 과장된 영웅 체형은 아니다., 짙은 수염, 눈가의 깊은 주름, 아들들과 닮은 회색 눈. 가족 앞에서는 낮게 웃지만 위기에는 빠르게 굳는 표정., 관자놀이부터 희끗해지는 짧은 밤색 머리와 정돈된 짧은 수염., 짙은 숲빛 회녹색의 몸에 잘 맞는 모직 더블릿, 먹회색 겉조끼, 고운 은회색 린넨 셔츠, 실용적인 갈색 가죽 벨트·장화를 갖춘다. 장식은 절제하지만 원단과 재단이 좋은 소영주의 관리된 복장이다., 실용적인 한손검을 허리에 차며, 손에는 군데군데 기운 금속 가족 인장 반지를 낀다. 인장의 문양은 가까이 보이더라도 읽을 수 없게 단순하게 처리한다., 소품은 빚 문서가 든 철제 상자 열쇠, 접혀 있는 문장 없는 편지, 실용적인 한손검, 더블릿의 단정한 옷깃과 소맷단 디테일이다., 정제된 중세 판타지 웹툰 일러스트, 섬세한 선화와 절제된 디지털 채색, 비장한 초상화가 아니라 가족용 기준 시트의 중립적 표현..\nReferences, in authoritative input order:\n- Image 1: family_style_reference; use only for that declared role.\nRequested change: produce only the declared new views while retaining the authoritative identity or spatial layout from the references.\nEdit discipline: Identify every reference by 1-based index and role. State the requested change in one section. State all identity invariants to preserve in a separate section. Preserve facial geometry, hair construction, proportions, signature items, and palette unless explicitly changed. Do not import unrelated identity traits from pose or composition references.\nPalette swatches: #384237, #6e5039, #c3b28c, #2f343d.\nAvoid: 스무 살대의 젊은 얼굴, 매끈한 턱, 긴 수염, 과장된 노인 체형, 왕관, 금빛 과장 장식, 화려한 궁정 예복, 전신 판금 갑옷, 거대한 양손검, 누더기나 거지처럼 보이는 의상, 피나 전투 상처, 현대 물품, 망토, 후드, 마법 지팡이, 읽을 수 있는 편지·장부·인장 글자, 다른 인물, 말, 전장 배경, 말풍선, 워터마크, 서명, 참고 이미지의 인물·의상·구도 복제, readable text, watermark, signature.",
+  "references": [
+    {
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "family_style_reference",
+      "index": 1
+    }
+  ],
+  "request": {
+    "size": "2048x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "visual-bible/characters/bram-waldhart-canonical-v1.png",
+    "result_metadata_path": "visual-bible/characters/bram-waldhart-canonical-v1.result.json"
+  }
+}
