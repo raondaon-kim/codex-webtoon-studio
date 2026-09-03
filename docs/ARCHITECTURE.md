@@ -15,7 +15,7 @@ Bible → Episode Script → Director Brief → Render/Assemble → QC
 ```text
 source
   ↓
-story bible ─────→ visual bible/reference sheets
+story bible + territory profile ─────→ visual bible/reference sheets
   ↓                         ↓
 episode script → scroll plan → shot director briefs
                                   ↓
@@ -32,7 +32,10 @@ episode script → scroll plan → shot director briefs
 
 기준(canonical):
 
+각 작품은 `projects/<project-id>/`를 독립된 작품 루트로 삼는다. 아래 경로는 그 작품 루트 기준이다.
+
 - `story-bible/story-bible.json`
+- `territory/*-profile.json` (영지물인 경우)
 - `visual-bible/**/*.json`과 승인된 기준 이미지
 - `episodes/<id>/script.json`
 - `episodes/<id>/scroll-plan.json`

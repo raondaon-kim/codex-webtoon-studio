@@ -32,9 +32,9 @@ provider는 자동 fallback하지 않는다. 어느 계정/과금 경로를 썼�
 ## 실행 순서
 
 ```powershell
-python tools/compile_render_tasks.py episodes/ep001/briefs --project-root .
-python tools/run_image_tasks.py episodes/ep001/render-tasks --project-root .
-python tools/run_image_tasks.py episodes/ep001/render-tasks --project-root . --execute
+python tools/compile_render_tasks.py projects/<project-id>/episodes/ep001/briefs --project-root projects/<project-id>
+python tools/run_image_tasks.py projects/<project-id>/episodes/ep001/render-tasks --project-root projects/<project-id>
+python tools/run_image_tasks.py projects/<project-id>/episodes/ep001/render-tasks --project-root projects/<project-id> --execute
 ```
 
 두 번째 줄은 명령과 preflight warning만 보여 준다. 세 번째 줄만 외부 호출을 수행한다. 실행 직전에 다음을 검사한다.

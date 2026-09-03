@@ -1,6 +1,6 @@
 # Codex Webtoon Studio
 
-Codex와 대화하며 **바이블 → 영지/세계 기반 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다. 영지물에서는 개별 재난보다 지리·자원·인프라·고질적 문제를 먼저 JSON으로 확정합니다.
+Codex와 대화하며 **바이블 → 영지/세계 기반 → 에피소드 스크립트 → 세로 스크롤 연출 → 컷 디렉터 브리프 → 이미지 생성 → 레터링/조립 → QC**를 반복하는 저장소형 웹툰 제작 스튜디오입니다. 영지물에서는 개별 재난보다 지리·자원·인프라·고질적 문제를 먼저 JSON으로 확정합니다. 작품별 자료는 `projects/<project-id>/`에 독립적으로 보관합니다.
 
 ## 무엇이 가능한가
 
@@ -43,13 +43,17 @@ Codex가 읽는 단계별 절차는 [`.agents/skills`](.agents/skills)에, 데�
 .agents/skills/          Codex 단계별 제작 skill
 config/                  프로젝트·이미지 실행기·출판 프로필
 schemas/v1/              기준 JSON Schema
-territory/               영지의 지리·환경·인프라·고질 문제 프로필
+projects/                작품별 기준 산출물·소스·회차·승인·로그
 prompt-templates/        캐릭터/배경/컷 프롬프트 구성요소
 webtoon_studio/          검증·컴파일·실행·조립·QC 라이브러리
 tools/                   사람이 직접 실행할 CLI
 examples/project/        비용 없이 검증 가능한 예제
 third_party/             가져온 설계/코드의 출처와 라이선스
 ```
+
+## 작품 관리
+
+새 작품은 `projects/<project-id>/`를 작품 루트로 사용합니다. 그 안에 `config/`, `source/`, `story-bible/`, `territory/`, `visual-bible/`, `episodes/`, `approvals/`, `logs/`를 둡니다. 공통 이미지 실행기 설정과 플랫폼 프로필은 저장소 루트의 `config/`에 둡니다.
 
 ## 핵심 원칙
 

@@ -9,7 +9,7 @@ Coordinate the project without collapsing all stages into one opaque prompt.
 
 ## Workflow
 
-1. Read `AGENTS.md`, `config/project.json`, and existing canonical artifacts.
+1. Identify the target project root, normally `projects/<project-id>/`; then read `AGENTS.md`, `<project-root>/config/project.json`, and existing canonical artifacts.
 2. Run `python tools/check_state.py <project-root>` to identify the earliest missing or stale stage.
 3. State which artifact will be created or revised and which upstream artifacts constrain it.
 4. Follow the matching focused skill:

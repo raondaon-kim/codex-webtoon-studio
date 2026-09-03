@@ -13,7 +13,8 @@ from webtoon_studio.validation import validate_data, validate_file
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "examples" / "project"
-TERRITORY_PROFILE = ROOT / "territory" / "rowend-march-profile.json"
+CURRENT_PROJECT = ROOT / "projects" / "fallen-minister-territory"
+TERRITORY_PROFILE = CURRENT_PROJECT / "territory" / "rowend-march-profile.json"
 
 
 class ValidationCompilerTests(unittest.TestCase):
@@ -57,6 +58,10 @@ class ValidationCompilerTests(unittest.TestCase):
         self.assertEqual([], validate_file(TERRITORY_PROFILE).errors)
         self.assertTrue(territory["chronic_problems"])
         self.assertTrue(all(item["scenario_not_scheduled"] for item in territory["disaster_exposure"]))
+
+    def test_current_project_keeps_its_own_project_config(self) -> None:
+        project_config, _ = load_configs(CURRENT_PROJECT)
+        self.assertEqual("fallen-minister-territory", project_config["project_id"])
 
     def test_brief_compiles_to_reference_edit_task(self) -> None:
         source = PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"
