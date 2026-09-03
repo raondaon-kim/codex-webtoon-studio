@@ -1,9 +1,17 @@
 {
   "schema_version": "1.0",
-  "stage": "visual-bible",
-  "approved_at": "2026-09-03T09:42:58.950608+00:00",
-  "fingerprint": "82f35a51af3a62673ca4db1f23def8b73c695822f22dd86e1958058c3790cdc5",
+  "stage": "bible",
+  "approved_at": "2026-09-03T09:43:31.921188+00:00",
+  "fingerprint": "6e9ae70e6f37208923a63960ada046f12e5582e46c1e1b4eff27b5c9db17a4e0",
   "artifacts": [
+    {
+      "path": "story-bible/story-bible.json",
+      "hash": "7cf38c574aecb0ca7982a7bfbae2dc74ad2bb3a38269841d26adb341859cd4b9"
+    },
+    {
+      "path": "territory/rowend-march-profile.json",
+      "hash": "4ea39be4028f3119576659b361e9bed3d09d3de92fa5057c76b13d0cc3651127"
+    },
     {
       "path": "visual-bible/backgrounds/arken-fall-memory-montage.json",
       "hash": "0ffd5ff43abcbd1ebc776e7ff0fe71940dcb6b7a4fa63a9fbce23a3cdfa77e3f"
@@ -29,5 +37,5 @@
       "hash": "ee7e8171151f5c2b04ac6984b890da6105016e8d0cc4c32c924f4b2bf95c1f82"
     }
   ],
-  "note": "Approved canonical visual bible: Theo v4, Kyle v2, Bram v1, heraldry v1, dining hall v1, and Arken fall montage v1."
+  "note": "Approved story, territory, and canonical visual bible for episode 1 direction."
 }
