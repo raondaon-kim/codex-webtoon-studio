@@ -13,7 +13,8 @@ Create `scroll-plan.json` and one `briefs/shot-NNN.json` per planned shot.
 2. Choose rhythm per sequence: compressed, normal, expanded, or splash.
 3. Use whitespace deliberately for pause, anticipation, location change, or impact.
 4. Keep each shot ID stable and list it exactly once.
-5. Validate against `schemas/v1/scroll-plan.schema.json`.
+5. For every new or revised sequence, designate one `bridge_shot_id` that belongs to that sequence. A bridge is one generated image, never two or three independently generated shots.
+6. Validate against `schemas/v1/scroll-plan.schema.json`.
 
 ## Director brief
 
@@ -27,6 +28,15 @@ For every shot:
 6. Track screen direction and explicit state in/out.
 7. Select a generation canvas within GPT Image 2 limits. Prefer a normal shot block such as `1536x2048`; use larger dimensions only when composition needs them.
 8. Validate all briefs, including custom geometry checks.
+
+## Bridge composites
+
+Use a bridge composite to make a transition feel continuous without increasing image-generation count.
+
+- Set `bridge.panel_count` to exactly `2` or `3` and `bridge.layout` to `vertical_stack`.
+- Describe a distinct, causally connected micro-beat for each panel in `bridge.panel_beats`, ordered top-to-bottom. Suitable functions are action continuation, reaction, time/location transition, observation, or emotional breath.
+- Keep the same spatial logic, character identity, and screen direction across the mini-panels. Use clean gutters; do not make a collage of alternative poses or repeat the same beat.
+- One `bridge_shot_id` represents this one composite image. Do not create a separate render task for each mini-panel.
 
 ```powershell
 python tools/validate_artifacts.py episodes/<episode-id>/scroll-plan.json episodes/<episode-id>/briefs

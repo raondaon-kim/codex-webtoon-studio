@@ -60,6 +60,23 @@ class ComposeQcTests(unittest.TestCase):
 
             self.assertEqual(["slice-001.jpg", "slice-002.jpg"], [path.name for path in slices])
 
+    def test_qc_rejects_bridge_outside_its_sequence(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            project = Path(raw) / "project"
+            shutil.copytree(SOURCE_PROJECT, project)
+            episode = project / "episodes" / "ep001"
+            scroll_plan = load_json(episode / "scroll-plan.json")
+            scroll_plan["sequences"][0]["bridge_shot_id"] = "shot-002"
+            dump_json(episode / "scroll-plan.json", scroll_plan)
+
+            report = inspect_episode(
+                episode,
+                project,
+                {"width_px": 320, "slice_height_px": 400, "format": "jpeg", "quality": 85},
+            )
+
+            self.assertTrue(any(issue["code"] == "bridge_sequence_link" for issue in report["issues"]))
+
 
 if __name__ == "__main__":
     unittest.main()

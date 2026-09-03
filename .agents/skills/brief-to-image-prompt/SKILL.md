@@ -21,12 +21,15 @@ Keep this stage mechanical. Do not invent new plot, costume, layout, or characte
    - visual treatment and lighting
    - reference roles and invariants
    - deterministic lettering exclusions and negative constraints
+   - when `bridge` is declared, its exact 2- or 3-panel vertical composite instruction and ordered micro-beats
 6. Save `source_hash` from the canonical source JSON.
 7. Compile and verify idempotence:
 
 ```powershell
 python tools/compile_render_tasks.py <brief-file-or-directory> --project-root <project-root> --check
 ```
+
+A bridge composite remains one render task and one output image. Never expand its mini-panels into separate image calls during compilation.
 
 ## Provider boundary
 

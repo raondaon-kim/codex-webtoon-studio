@@ -42,6 +42,23 @@ def _reference_lines(references: list[dict[str, Any]]) -> list[str]:
     return lines
 
 
+def _bridge_lines(bridge: dict[str, Any] | None) -> list[str]:
+    if bridge is None:
+        return []
+    panel_count = bridge["panel_count"]
+    panel_beats = "; ".join(
+        f"panel {index + 1}: {description}" for index, description in enumerate(bridge["panel_beats"])
+    )
+    return [
+        (
+            f"Bridge composition: this single generated image contains exactly {panel_count} connected full-width mini-panels "
+            "stacked vertically, separated by clean gutters. Read them top-to-bottom as one continuous transition, not as "
+            "duplicate variants of the same pose."
+        ),
+        f"Bridge function: {bridge['function']}. Ordered micro-beats: {panel_beats}.",
+    ]
+
+
 def _brief_prompt(brief: dict[str, Any], references: list[dict[str, Any]], project: dict[str, Any]) -> str:
     template = _load_prompt_template("webtoon-shot.json")
     camera = brief["camera"]
@@ -59,6 +76,7 @@ def _brief_prompt(brief: dict[str, Any], references: list[dict[str, Any]], proje
             f"camera position {camera['position']}, movement {camera['movement']}, focus on {camera['focus']}. "
             f"{art['composition']}"
         ),
+        *_bridge_lines(brief.get("bridge")),
         "Subjects:",
     ]
     for subject in brief["subjects"]:

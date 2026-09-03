@@ -14,6 +14,15 @@
     "default_gutter_px": 160,
     "background": "#f4f6fa"
   },
+  "direction_rules": {
+    "bridge_composite": {
+      "required_for_new_or_revised_sequences": true,
+      "render_unit": "single_image",
+      "panel_count": [2, 3],
+      "layout": "vertical_stack",
+      "reading_order": "top_to_bottom"
+    }
+  },
   "workflow": {
     "require_user_approval_for_image_execution": true,
     "canonical_format": "json",

@@ -81,6 +81,34 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
         for value in [load_json(path)]
         if value.get("artifact_type") == "render_task" and "-shot-" in value.get("task_id", "")
     }
+    for sequence in sequence_by_id.values():
+        bridge_shot_id = sequence.get("bridge_shot_id")
+        if bridge_shot_id is None:
+            continue
+        if bridge_shot_id not in sequence["shot_ids"]:
+            checks["continuity"] = False
+            issues.append(
+                _issue(
+                    "error",
+                    "bridge_sequence_link",
+                    "bridge_shot_id must be one of its sequence shot_ids",
+                    scroll_path,
+                    bridge_shot_id,
+                )
+            )
+            continue
+        bridge_entry = briefs.get(bridge_shot_id)
+        if not bridge_entry or not bridge_entry[1].get("bridge"):
+            checks["continuity"] = False
+            issues.append(
+                _issue(
+                    "error",
+                    "bridge_brief_missing",
+                    "bridge_shot_id requires a director brief with a bridge composite definition",
+                    scroll_path,
+                    bridge_shot_id,
+                )
+            )
     previous_id: str | None = None
     for shot_id in shot_ids:
         brief_entry = briefs.get(shot_id)

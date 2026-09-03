@@ -74,6 +74,9 @@ def _custom_checks(data: dict[str, Any]) -> tuple[list[str], list[str]]:
                     )
                 previous_ages[character_id] = age
     elif kind == "director_brief":
+        bridge = data.get("bridge")
+        if bridge is not None and bridge.get("panel_count") != len(bridge.get("panel_beats", [])):
+            errors.append("$.bridge.panel_beats: length must match $.bridge.panel_count")
         canvas = data.get("canvas", {})
         if "width_px" in canvas and "height_px" in canvas:
             errors.extend(

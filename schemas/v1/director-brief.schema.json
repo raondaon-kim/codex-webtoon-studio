@@ -43,6 +43,22 @@
         "dramatic_purpose": {"type": "string", "minLength": 3}
       }
     },
+    "bridge": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["panel_count", "layout", "function", "panel_beats"],
+      "properties": {
+        "panel_count": {"enum": [2, 3]},
+        "layout": {"const": "vertical_stack"},
+        "function": {"enum": ["action_continuation", "reaction", "time_or_location_transition", "observation", "emotional_breath"]},
+        "panel_beats": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {"type": "string", "minLength": 3}
+        }
+      }
+    },
     "canvas": {
       "type": "object",
       "additionalProperties": false,

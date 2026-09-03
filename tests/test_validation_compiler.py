@@ -86,6 +86,36 @@ class ValidationCompilerTests(unittest.TestCase):
         self.assertIn("left 12%", first["prompt"])
         self.assertIn("Generate no speech balloons", first["prompt"])
 
+    def test_bridge_brief_compiles_to_one_multi_panel_image_prompt(self) -> None:
+        source = PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"
+        brief = copy.deepcopy(load_json(source))
+        brief["bridge"] = {
+            "panel_count": 2,
+            "layout": "vertical_stack",
+            "function": "reaction",
+            "panel_beats": ["Haeun notices the wet notebook.", "She quietly pulls it closer."],
+        }
+        project_config, provider_config = load_configs(PROJECT)
+
+        task = compile_brief(brief, source, PROJECT, project_config, provider_config)
+
+        self.assertIn("single generated image contains exactly 2", task["prompt"])
+        self.assertIn("stacked vertically", task["prompt"])
+        self.assertIn("panel 1: Haeun notices the wet notebook.", task["prompt"])
+
+    def test_bridge_panel_count_must_match_declared_micro_beats(self) -> None:
+        brief = copy.deepcopy(load_json(PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"))
+        brief["bridge"] = {
+            "panel_count": 2,
+            "layout": "vertical_stack",
+            "function": "reaction",
+            "panel_beats": ["Haeun notices the wet notebook.", "She pauses.", "She pulls it closer."],
+        }
+
+        report = validate_data(brief)
+
+        self.assertTrue(any("length must match" in error for error in report.errors))
+
     def test_visual_asset_without_reference_is_generate(self) -> None:
         source = PROJECT / "visual-bible" / "characters" / "haeun.json"
         asset = load_json(source)
