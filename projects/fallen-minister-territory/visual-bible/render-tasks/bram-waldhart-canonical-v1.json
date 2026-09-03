@@ -3,7 +3,7 @@
   "artifact_type": "render_task",
   "task_id": "visual-bram-waldhart-canonical-v1",
   "source_brief": "visual-bible/characters/bram-waldhart.json",
-  "source_hash": "f8c7269ce850905ec4fe1559512c0f0ced5fb41910a2b9fdda87bbef8f42e30e",
+  "source_hash": "c625220c35cd1fb82788c0ad4a29225aa504caab3e254103a3928ec033a33027",
   "template_id": "character-reference-edit-v1",
   "provider": "codex",
   "operation": "edit",
