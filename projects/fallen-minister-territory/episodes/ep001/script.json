@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "episode_script",
+  "episode_id": "ep001",
+  "title": "일곱 살의 저녁 식탁",
+  "summary": "망국의 재상 에드릭의 기억을 지닌 테오는 발트 요새의 빠듯하지만 따뜻한 저녁 식탁에서 새 가족을 바라보고, 해빙기를 앞둔 로웬드의 위험을 처음 알아챈다.",
+  "timeline": {
+    "story_year": 673,
+    "season": "초봄",
+    "elapsed_days_since_previous": 0,
+    "age_by_character": {
+      "theo-waldhart": 7,
+      "kyle-waldhart": 14,
+      "bram-waldhart": 39
+    }
+  },
+  "continuity_in": [
+    "테오는 전생의 재상 에드릭 아르켄의 기억을 가족에게 밝히지 않은 일곱 살 차남이다.",
+    "발트 요새에서는 초봄 저녁 식사가 막 시작되며, 로웬드의 해빙기 위기는 아직 발생하지 않았다.",
+    "카일은 견습 기사 훈련을 마쳤고, 브람은 나루 빚과 영지 장부를 혼자 감당하고 있다."
+  ],
+  "beats": [
+    {
+      "id": "beat-001",
+      "purpose": "빠듯하지만 따뜻한 발트하르트 가족의 저녁 식탁으로 현재의 일상을 연다.",
+      "location_id": "rowend-march",
+      "time": "초봄의 해 지기 직전, 발트 요새 식당",
+      "characters": ["theo-waldhart", "kyle-waldhart", "bram-waldhart"],
+      "action": "얇은 순무 수프, 검은 빵 세 조각, 작은 치즈 한 조각이 놓인 식탁. 카일은 자신의 치즈를 테오 접시 쪽으로 밀고, 테오는 들키지 않게 다시 돌려놓으려 한다. 브람은 낡은 사냥 망토를 벗지도 못한 채 그 모습을 지켜본다.",
+      "emotion": "궁핍이 느껴지지만 서로를 챙기는 습관에서 가족의 온기가 보인다.",
+      "text": [
+        {"kind": "caption", "speaker": null, "content": "대륙력 673년, 초봄. 로웬드 변경백령의 발트 요새.", "delivery": "차분하게"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "작은애는 더 먹어야지.", "delivery": "천연덕스럽게"},
+        {"kind": "dialogue", "speaker": "theo-waldhart", "content": "저 안 작아요. 일곱 살이에요.", "delivery": "발끈해서"},
+        {"kind": "dialogue", "speaker": "bram-waldhart", "content": "카일. 네 검만큼 큰 손부터 치워라.", "delivery": "낮게 웃으며"}
+      ]
+    },
+    {
+      "id": "beat-002",
+      "purpose": "수프의 김과 식탁 위 곡물 부스러기에서 테오의 망국 기억을 짧고 강하게 겹친다.",
+      "location_id": "rowend-march",
+      "time": "식사 중, 테오의 기억",
+      "characters": ["theo-waldhart"],
+      "action": "테오가 빵 부스러기를 손끝에 모으는 순간, 하얀 부스러기는 불타는 수도의 재가 된다. 빈 곡물창, 찢긴 전황 지도, 마지막 장부를 붙든 중년 재상의 손이 빠르게 스친 뒤 다시 어린 테오의 손으로 돌아온다.",
+      "emotion": "현재의 소박한 식탁이 전생의 상실과 맞부딪치며 테오의 죄책감을 드러낸다.",
+      "text": [
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "전생의 나는 아르켄 왕국의 재상이었다.", "delivery": "담담하게"},
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "장부에는 늘 숫자가 남았다. 굶은 사람은 남지 못했다.", "delivery": "짧게 끊어"},
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "그래서 마지막에는 왕국도 잃었다.", "delivery": "무겁게"}
+      ]
+    },
+    {
+      "id": "beat-003",
+      "purpose": "카일과 브람을 테오의 시선으로 소개하고, 세 사람의 관계를 코미디로 보여 준다.",
+      "location_id": "rowend-march",
+      "time": "식사 중, 기억에서 돌아온 직후",
+      "characters": ["theo-waldhart", "kyle-waldhart", "bram-waldhart"],
+      "action": "카일이 훈련 중 목검으로 열 번 막아 냈다고 자랑한다. 브람은 열 번 맞았다는 뜻 아니냐고 받아친다. 테오는 웃음을 참다가 수프를 흘리고, 카일은 커다란 손수건으로 동생의 앞섶을 닦아 준다.",
+      "emotion": "테오는 처음으로 이 가족의 평범한 농담에 안도하면서도, 잃고 싶지 않다는 마음을 자각한다.",
+      "text": [
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "카일 발트하르트. 열네 살. 몸이 먼저 자라서 의자가 좁은 내 형이다.", "delivery": "애정을 숨기며"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "열 번은 막았어요.", "delivery": "억울하게"},
+        {"kind": "dialogue", "speaker": "bram-waldhart", "content": "그럼 맞은 횟수는?",
+          "delivery": "무심하게"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "그건 훈련 비밀입니다.", "delivery": "뻔뻔하게"},
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "그리고 브람 발트하르트. 빚이 있어도 식탁에서는 먼저 웃는, 내 아버지다.", "delivery": "조용히"}
+      ]
+    },
+    {
+      "id": "beat-004",
+      "purpose": "나루 빚을 식탁 위의 침묵으로 드러내 영지의 경제적 약점을 심는다.",
+      "location_id": "rowend-march",
+      "time": "식사 말미",
+      "characters": ["theo-waldhart", "kyle-waldhart", "bram-waldhart"],
+      "action": "문틈으로 들어온 바람에 식탁 끝의 봉인 편지가 바닥으로 떨어진다. 브람이 먼저 주워 철제 상자 열쇠와 함께 주머니에 감춘다. 편지의 물결 무늬 봉인에는 그레이포드 나루 상인의 표식이 찍혀 있다.",
+      "emotion": "웃음이 멎고, 테오는 아버지가 감추는 무게를 알아본다.",
+      "text": [
+        {"kind": "dialogue", "speaker": "theo-waldhart", "content": "나루 편지예요?", "delivery": "아무렇지 않은 척"},
+        {"kind": "dialogue", "speaker": "bram-waldhart", "content": "어른 장부다. 수프나 먹어.", "delivery": "짧게"},
+        {"kind": "dialogue", "speaker": "theo-waldhart", "content": "장부는 어른만 굶기나요?", "delivery": "순진한 얼굴로"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "테오, 그 말은 좀 무섭다.", "delivery": "작게"}
+      ]
+    },
+    {
+      "id": "beat-005",
+      "purpose": "발트 요새에서 내려다보이는 로웬드의 지리와 고질 문제를 테오의 결심과 함께 소개한다.",
+      "location_id": "rowend-march",
+      "time": "식사 뒤, 식당 창가",
+      "characters": ["theo-waldhart", "kyle-waldhart", "bram-waldhart"],
+      "action": "테오는 창턱에 올라 요새 아래를 바라본다. 흰 갈대 사이로 마르덴 강이 굽이치고, 오래된 목제 수문과 진흙에 잠긴 제방길 너머로 안개 낀 그레이포드 나루가 보인다. 브람은 내일 카일의 순찰 경로를 말하고, 카일은 동생에게 갈대밭까지 같이 가겠느냐고 묻는다.",
+      "emotion": "작은 영지가 넓고 복잡한 책임으로 보이기 시작하며, 테오는 두려움 대신 관찰을 택한다.",
+      "text": [
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "로웬드. 물은 많고, 길은 적고, 가진 것보다 빚이 먼저 움직이는 땅.", "delivery": "현실을 세듯"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "내일 훈련 끝나면 갈대밭까지 같이 갈래?", "delivery": "밝게"},
+        {"kind": "dialogue", "speaker": "theo-waldhart", "content": "그 전에 창고요.", "delivery": "즉답으로"},
+        {"kind": "dialogue", "speaker": "kyle-waldhart", "content": "밥 먹고 창고를 찾는 일곱 살이 어딨어?", "delivery": "어이없어하며"},
+        {"kind": "dialogue", "speaker": "theo-waldhart", "content": "배고픈 일곱 살이요.", "delivery": "진지하게"}
+      ]
+    },
+    {
+      "id": "beat-006",
+      "purpose": "해빙기의 이상 징후를 알리고 테오가 영지의 문제를 자신의 일로 받아들이는 훅을 만든다.",
+      "location_id": "rowend-march",
+      "time": "같은 밤, 식당 문 앞",
+      "characters": ["theo-waldhart", "kyle-waldhart", "bram-waldhart"],
+      "action": "바깥에서 젖은 장화 소리와 함께 전달자가 급히 문을 두드린다. 그레이포드에서 온 말은 상류 눈이 예상보다 빠르게 녹아 나루의 계류 쇠사슬을 오늘 밤 안에 풀어야 한다는 소식이다. 브람의 표정이 굳고, 카일은 곧장 목검을 집는다. 테오는 식탁 위 빵 부스러기와 숨겨진 편지를 번갈아 본다.",
+      "emotion": "아직 재난은 오지 않았지만, 가족의 평범한 저녁이 끝났다는 불길한 예감이 생긴다.",
+      "text": [
+        {"kind": "sfx", "speaker": null, "content": "쾅! 쾅!", "delivery": "문 두드리는 소리"},
+        {"kind": "dialogue", "speaker": null, "content": "영주님! 그레이포드에서 왔습니다! 강이 너무 빨리 불고 있습니다!", "delivery": "문밖에서 다급하게"},
+        {"kind": "dialogue", "speaker": "bram-waldhart", "content": "카일, 사람부터 데려와라.", "delivery": "즉시 낮아지며"},
+        {"kind": "thought", "speaker": "theo-waldhart", "content": "물이 넘치기 전에, 굶주림부터 시작된다.", "delivery": "결심하며"}
+      ]
+    }
+  ],
+  "cliffhanger": "그레이포드의 나루가 밤새 폐쇄될 수 있다는 소식과 함께, 테오는 해빙기 전에 곡물창과 나루 빚 장부를 확인하기로 결심한다.",
+  "continuity_out": [
+    "테오는 카일과 브람이 자신에게 지켜야 할 가족이라는 사실을 분명히 자각했다.",
+    "브람은 그레이포드 나루 상인의 빚 독촉장을 숨기고 있으며, 테오는 그 존재를 목격했다.",
+    "상류 해빙이 예상보다 빨라 그레이포드 나루의 계류 쇠사슬을 풀어야 할 수 있다는 경보가 들어왔다.",
+    "테오는 다음 날 곡물창과 나루 관련 장부를 확인하려 하며, 실제 수위 상승과 통행 단절은 아직 시작되지 않았다."
+  ]
+}
