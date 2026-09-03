@@ -70,8 +70,9 @@
           "past_life": {
             "type": ["object", "null"],
             "additionalProperties": false,
-            "required": ["role", "age_at_death", "failure", "core_wound"],
+            "required": ["name", "role", "age_at_death", "failure", "core_wound"],
             "properties": {
+              "name": {"type": "string", "minLength": 1},
               "role": {"type": "string"},
               "age_at_death": {"type": "integer", "minimum": 0, "maximum": 200},
               "failure": {"type": "string"},
