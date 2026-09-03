@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "render_task",
+  "task_id": "visual-kyle-waldhart-canonical-v2",
+  "source_brief": "visual-bible/characters/kyle-waldhart.json",
+  "source_hash": "e8f471890a08219630eb8377e000f4b96c54a4fcab94d3990ac478519a97baa3",
+  "template_id": "character-reference-edit-v1",
+  "provider": "codex",
+  "operation": "edit",
+  "prompt": "Create a clean canonical reference sheet for one original webtoon character.\nTemplate: character-reference-edit-v1. Derive a new approved character view from a canonical reference image.\nAsset ID: kyle-waldhart-canonical-v2.\nLayout: 같은 비율의 전신 정면·좌측면·후면을 중앙에 나란히 두고, 하단에 네 가지 표정과 목검·안장 주머니·망토 재단 디테일을 작은 칸으로 배치한 중립 캐릭터 시트.\nRequired views: 정면 전신, 짧은 파란 가문 망토를 여민 단정한 견습 기사 훈련복, 좌측면 전신, 목검을 든 편안한 훈련 뒤 자세와 긴 팔다리 확인, 후면 전신, 망토 길이와 조끼 재단 및 머리 실루엣 확인, 표정: 크게 웃음, 장부를 보고 난감함, 동생을 감싸는 보호적인 경계, 훈련에 진 뒤의 뻔뻔한 미소, 소품: 나무 결이 보이는 목검과 가죽 칼집, 동생의 작은 장부가 든 안장 주머니, 문장 없는 짧은 파란 망토의 재단 디테일.\nSheet background: 옅은 아이보리 회색의 비장식적 스튜디오 배경, 정면에서 고르게 비추는 중립 조명과 발밑의 아주 옅은 그림자만 둔다.. Labels: none.\nPreserve exactly: 카일 발트하르트는 열네 살의 남작가 장남이자 견습 기사로, 아직 성인이 아닌 성장기 소년이다., 긴 팔다리와 넓어지기 시작한 어깨가 먼저 자란 탄탄한 체형이지만, 과장된 성인 근육이나 완성된 기사 체형은 아니다., 햇볕에 그을린 밝은 갈색 피부, 크게 웃는 입, 동생 테오와 닮은 회색 눈., 짧게 자른 적갈색 머리와 훈련 뒤에 자연스럽게 흐트러지는 앞머리., 깨끗하고 잘 맞는 견습 기사 훈련복: 흐린 은회색 린넨 셔츠 위에 푸른색 누빔 조끼와 짙은 갈색 가죽 벨트, 튼튼한 갈색 장화., 후드 없는 짧은 파란 발트하르트 가문 망토를 자연스럽게 걸친다. 망토의 가슴과 어깨에는 가문 브로치·방패 문장·자수 문양이 보이지 않는다., 소품은 나무 결이 보이는 연습용 목검, 가죽 칼집, 동생의 작은 장부를 넣어 다니는 짙은 갈색 안장 주머니이다., 정제된 중세 판타지 웹툰 일러스트, 섬세한 선화와 부드러운 디지털 채색, 비장한 연출보다 가족용 기준 시트에 맞는 중립적 표현..\nReferences, in authoritative input order:\n- Image 1: character_identity; use only for that declared role.\nRequested change: produce only the declared new views while retaining the authoritative identity or spatial layout from the references.\nEdit discipline: Identify every reference by 1-based index and role. State the requested change in one section. State all identity invariants to preserve in a separate section. Preserve facial geometry, hair construction, proportions, signature items, and palette unless explicitly changed. Do not import unrelated identity traits from pose or composition references.\nPalette swatches: #295a84, #a54f36, #d7d1bd, #4a4139.\nAvoid: 스무 살 이상으로 보이는 성인 체형이나 수염, 과장된 근육, 금발 또는 검은 머리, 테오와 같은 짙은 밤색 머리, 전신 판금 갑옷, 피투성이 전투복, 실전용 장검, 왕관이나 과장된 귀족 장식, 낡아 해어진 옷, 거지처럼 보이는 의상, 현대 물품, 후드가 달린 망토, 망토 없이 그린 기본 전신, 가슴 브로치, 방패형 가문 문장, 망토의 자수 문양, 말, 전장 배경, 다른 인물, 읽을 수 있는 글자, 말풍선, 워터마크, 서명, 참고 이미지의 인물·의상·구도 복제, readable text, watermark, signature.",
+  "references": [
+    {
+      "path": "visual-bible/characters/kyle-waldhart-canonical-v1.png",
+      "role": "character_identity",
+      "index": 1
+    }
+  ],
+  "request": {
+    "size": "2048x2048",
+    "quality": "high",
+    "format": "png"
+  },
+  "output": {
+    "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+    "result_metadata_path": "visual-bible/characters/kyle-waldhart-canonical-v2.result.json"
+  }
+}
