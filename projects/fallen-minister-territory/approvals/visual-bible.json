@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "stage": "visual-bible",
+  "approved_at": "2026-09-03T07:46:53.752130+00:00",
+  "fingerprint": "11807d2e297f62fcc4300632185cbf914f28b64ce73f74b7946b236aec51e516",
+  "artifacts": [
+    {
+      "path": "visual-bible/characters/theo-waldhart.json",
+      "hash": "1fe4acd9f844b75695fa52ad3cca5870bb2f51fe57d04beb043628a916fe882c"
+    },
+    {
+      "path": "visual-bible/props/waldhart-heraldry.json",
+      "hash": "ee7e8171151f5c2b04ac6984b890da6105016e8d0cc4c32c924f4b2bf95c1f82"
+    }
+  ],
+  "note": "테오 v4 및 발트하르트 세 잎 새싹 문장 시트를 시각 캐논으로 확정"
+}

@@ -3,7 +3,7 @@
   "artifact_type": "visual_asset",
   "asset_id": "waldhart-heraldry-v1",
   "asset_kind": "prop",
-  "status": "draft",
+  "status": "approved",
   "identity_or_space_lock": {
     "must_preserve": [
       "발트하르트 남작가의 문장은 짙은 청회색 방패 안에 은빛 새싹나무를 둔 단순한 방패형 문장이다.",
@@ -34,9 +34,9 @@
   },
   "references": [
     {
-      "path": "visual-bible/characters/theo-waldhart-canonical-v3.png",
-      "role": "heraldry_reference",
-      "approved": false
+      "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+      "role": "character_identity",
+      "approved": true
     }
   ],
   "output": {

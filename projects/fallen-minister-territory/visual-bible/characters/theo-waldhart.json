@@ -3,7 +3,7 @@
   "artifact_type": "visual_asset",
   "asset_id": "theo-waldhart-canonical-v4",
   "asset_kind": "character",
-  "status": "draft",
+  "status": "approved",
   "identity_or_space_lock": {
     "must_preserve": [
       "테오 발트하르트는 일곱 살의 또래보다 약간 작은 남작가 차남이다.",
@@ -39,18 +39,7 @@
     "labels": "none",
     "palette_swatches": ["#28384a", "#d9c59a", "#8e5f3d", "#b9c7c9"]
   },
-  "references": [
-    {
-      "path": "visual-bible/characters/theo-waldhart-canonical-v3.png",
-      "role": "character_identity",
-      "approved": false
-    },
-    {
-      "path": "visual-bible/props/waldhart-heraldry-v1.png",
-      "role": "house_heraldry",
-      "approved": false
-    }
-  ],
+  "references": [],
   "output": {
     "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
     "size": "2048x2048"
