@@ -28,7 +28,9 @@ The standard is text-first:
 3. Size the balloon from the text block using a consistent glyph-relative
    clearance.
 4. Add the tail last, aiming dialogue at the mouth and thought dots at the
-   head.
+   head. A dialogue tail is a short, broad continuation of the balloon's
+   outer contour: render balloon and tail as one joined silhouette, with no
+   internal outline at their junction. Do not use a long needle-like triangle.
 
 The approved 56-shape pack is vectorized at
 `assets/lettering/reference-balloons-56/vectors/`. It is an explicit special

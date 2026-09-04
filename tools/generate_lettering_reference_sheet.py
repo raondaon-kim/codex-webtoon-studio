@@ -8,8 +8,12 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from webtoon_studio.lettering import _color, _draw_seamless_dialogue_balloon
+
+
 FONT_DIR = ROOT / "assets" / "fonts"
 STANDARD_PATH = ROOT / "assets" / "lettering" / "lettering-standard-v2.json"
 DEFAULT_OUTPUT = ROOT / "assets" / "lettering" / "lettering-standard-sheet.png"
@@ -42,28 +46,16 @@ def cubic_points(start: tuple[float, float], control_one: tuple[float, float], c
     return points
 
 
-def bubble(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], tail: tuple[int, int] | None = None) -> None:
-    left, top, right, bottom = box
-    if tail is not None:
-        center_x = (left + right) // 2
-        center_y = (top + bottom) // 2
-        delta_x, delta_y = tail[0] - center_x, tail[1] - center_y
-        distance = max(1, math.hypot(delta_x, delta_y))
-        normal_x, normal_y = delta_x / distance, delta_y / distance
-        edge_x = center_x + normal_x * (right - left) * 0.44
-        edge_y = center_y + normal_y * (bottom - top) * 0.44
-        tangent_x, tangent_y = -normal_y, normal_x
-        base = min(right - left, bottom - top) * 0.13
-        first = (edge_x + tangent_x * base, edge_y + tangent_y * base)
-        second = (edge_x - tangent_x * base, edge_y - tangent_y * base)
-        tip = (round(edge_x + normal_x * min(distance * 0.52, 112)), round(edge_y + normal_y * min(distance * 0.52, 112)))
-        forward = min(math.dist((edge_x, edge_y), tip) * 0.4, 32)
-        curve_one = cubic_points(first, (first[0] + normal_x * forward, first[1] + normal_y * forward), (tip[0] + tangent_x * 8, tip[1] + tangent_y * 8), tip)
-        curve_two = cubic_points(tip, (tip[0] - tangent_x * 8, tip[1] - tangent_y * 8), (second[0] + normal_x * forward, second[1] + normal_y * forward), second)
-        tail_points = curve_one + curve_two[1:]
-        draw.polygon(tail_points, fill="#fffefd")
-        draw.line(tail_points + [tail_points[0]], fill="#24201e", width=4, joint="curve")
-    draw.ellipse(box, fill="#fffefd", outline="#24201e", width=4)
+def bubble(image: Image.Image, box: tuple[int, int, int, int], tail: tuple[int, int] | None = None) -> None:
+    """Use the production union-contour renderer in the review reference."""
+    _draw_seamless_dialogue_balloon(
+        image,
+        box,
+        tail,
+        _color("#fffefd"),
+        _color("#24201e"),
+        4,
+    )
 
 
 def cloud(image: Image.Image, box: tuple[int, int, int, int]) -> None:
@@ -106,7 +98,7 @@ def main() -> int:
     output = args.out.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    image = Image.new("RGB", (1080, 2160), "#f3efe7")
+    image = Image.new("RGBA", (1080, 2160), "#f3efe7")
     draw = ImageDraw.Draw(image)
     title = load_font("NanumGothic-Bold.ttf", 52)
     section_title = load_font("NanumGothic-Bold.ttf", 40)
@@ -121,20 +113,20 @@ def main() -> int:
 
     rounded_panel(draw, (56, 190, 1024, 632))
     draw.text((86, 228), "01  글자 → 여백 → 말풍선", font=section_title, fill="#272320")
-    bubble(draw, (112, 304, 650, 548), tail=(445, 610))
+    bubble(image, (112, 304, 650, 548), tail=(445, 610))
     centered(draw, (170, 336, 592, 516), "내일 훈련이 끝나면\n갈대밭까지 같이\n갈래?", dialogue, "#1d1b1a")
     dashed_line(draw, (166, 332), (596, 332), "#b49068")
     dashed_line(draw, (166, 520), (596, 520), "#b49068")
-    draw.multiline_text((704, 320), "• 가운데 줄이 가장 긴\n  다이아몬드형 줄 구성\n\n• 상하좌우: 글자 2칸 기준\n  균일 여백\n\n• 꼬리는 조판 뒤에 추가", font=body, fill="#3e3833", spacing=9)
+    draw.multiline_text((704, 320), "• 가운데 줄이 가장 긴\n  다이아몬드형 줄 구성\n\n• 상하좌우: 글자 2칸 기준\n  균일 여백\n\n• 꼬리는 조판 뒤에 외곽선과 통합", font=body, fill="#3e3833", spacing=9)
 
     rounded_panel(draw, (56, 666, 1024, 1028))
-    draw.text((86, 704), "02  꼬리: 입을 향해, 절반 길이", font=section_title, fill="#272320")
-    bubble(draw, (108, 786, 542, 960), tail=(720, 922))
+    draw.text((86, 704), "02  꼬리: 입을 향해, 짧고 넓게", font=section_title, fill="#272320")
+    bubble(image, (108, 786, 542, 960), tail=(720, 922))
     centered(draw, (164, 816, 486, 936), "창고부터요.", dialogue, "#1d1b1a")
     draw.ellipse((704, 884, 752, 932), fill="#d8a17a", outline="#7d5140", width=3)
     draw.arc((688, 864, 768, 944), 20, 340, fill="#7d5140", width=3)
     draw.ellipse((721, 906, 731, 914), fill="#241c1a")
-    draw.multiline_text((793, 840), "입/발화원\n\n긴 꼬리는\n거리·외침일 때만\n의도적으로 사용", font=body, fill="#3e3833", spacing=7)
+    draw.multiline_text((793, 840), "입/발화원\n\n말풍선과 꼬리는\n하나의 외곽선\n접점 내부 선 없음", font=body, fill="#3e3833", spacing=7)
     draw.multiline_text(
         (116, 968),
         "불합격: 꼬리 교차 · 인물 얼굴/손 침범\n작화 선과의 접선",
@@ -145,7 +137,7 @@ def main() -> int:
 
     rounded_panel(draw, (56, 1062, 1024, 1508))
     draw.text((86, 1100), "03  의미별 말풍선", font=section_title, fill="#272320")
-    bubble(draw, (100, 1190, 470, 1360), tail=(288, 1412))
+    bubble(image, (100, 1190, 470, 1360), tail=(288, 1412))
     centered(draw, (142, 1220, 428, 1330), "대사", dialogue, "#1d1b1a")
     cloud(image, (590, 1180, 952, 1360))
     draw = ImageDraw.Draw(image)
@@ -169,7 +161,7 @@ def main() -> int:
     draw.multiline_text((498, 1655), "하우스 서체\n대사  Nanum Gothic Regular\n독백  Nanum Pen Script\n내레이션  Nanum Myeongjo Bold\n효과음  Nanum Gothic Bold\n\n대사는 360px에서 항상 판독", font=body, fill="#3e3833", spacing=8)
     draw.text((86, 2044), "판독 기준: readable · even clearance · no crossings · art remains visible", font=body, fill="#6d635b")
 
-    image.save(output, format="PNG")
+    image.convert("RGB").save(output, format="PNG")
     print(output)
     return 0
 

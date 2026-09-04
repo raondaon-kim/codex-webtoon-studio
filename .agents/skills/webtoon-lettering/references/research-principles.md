@@ -21,10 +21,12 @@ webtoon panels or store screenshots in the repository.
 - Create clean path-like balloon contours. Normal dialogue balloons are
   consistent in outline width, tail width, and proportion; random wobble is not
   a substitute for a hand-drawn style.
-- Aim a dialogue tail at the mouth or emitting object. End it roughly halfway
-  to three-fifths of the gap to the speaker unless distance is a deliberate
-  story signal. Thought balloons use at least three diminishing dots aimed at
-  the head.
+- Aim a dialogue tail at the mouth or emitting object. Make it a short, broad
+  continuation of the balloon silhouette; normally end it about one third of
+  the gap to the speaker and never more than two fifths unless distance is a
+  deliberate story signal. The balloon's oval contour must not remain as an
+  internal line across the tail join. Thought balloons use at least three
+  diminishing dots aimed at the head.
 - Put the first balloon higher, preserve top-to-bottom scroll order, and do not
   cross tails or construct a wall between speakers. Space close turns closer
   only when the timing is intentionally immediate.

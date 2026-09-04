@@ -18,6 +18,7 @@ STYLE_PROFILE_PATH = REPOSITORY_ROOT / "assets" / "lettering" / "style-profile.j
 ELLIPSE_TEXT_RATIO = math.sqrt(2.0)
 MOBILE_REVIEW_WIDTH = 360
 MOBILE_MINIMUM_FONT_SIZE = {"dialogue": 12, "thought": 12, "caption": 11, "sfx": 15}
+TAIL_RENDER_SCALE = 4
 
 
 @lru_cache(maxsize=1)
@@ -334,7 +335,9 @@ def _tail_base(rect: Rect, target: tuple[int, int]) -> tuple[tuple[float, float]
     edge = (center_x + delta_x * boundary_scale, center_y + delta_y * boundary_scale)
     normal = (delta_x / distance, delta_y / distance)
     tangent = (-normal[1], normal[0])
-    half_base = max(5.0, min(radius_x, radius_y) * 0.095)
+    # A normal dialogue tail should read as a short, broad continuation of
+    # the balloon, not as a needle pointing at the speaker.
+    half_base = max(9.0, min(radius_x, radius_y) * 0.14)
     first = (edge[0] + tangent[0] * half_base, edge[1] + tangent[1] * half_base)
     second = (edge[0] - tangent[0] * half_base, edge[1] - tangent[1] * half_base)
     return first, second, edge, tangent
@@ -367,30 +370,92 @@ def _sample_cubic(
     return points
 
 
-def _draw_dialogue_tail(
-    draw: ImageDraw.ImageDraw,
+def _dialogue_tail_polygon(
     rect: Rect,
     target: tuple[int, int],
+) -> tuple[list[tuple[float, float]], tuple[float, float], tuple[float, float]] | None:
+    """Return a short, broad tail that overlaps the balloon's interior.
+
+    The overlap is intentional.  The dialogue balloon is rendered as one
+    union mask, so the original oval edge cannot remain as a line across the
+    point where this tail joins it.
+    """
+    base = _tail_base(rect, target)
+    if base is None:
+        return None
+    first, second, edge, tangent = base
+    minimum_dimension = min(rect[2] - rect[0], rect[3] - rect[1])
+    tip = _tail_tip(edge, target, max(18, round(minimum_dimension * 0.22)), 0.34)
+    if tip is None:
+        return None
+    length = math.dist(edge, tip)
+    normal = ((tip[0] - edge[0]) / length, (tip[1] - edge[1]) / length)
+    # Pull the base into the oval.  A unioned silhouette is what removes the
+    # unwanted internal outline at the tail/balloon join.
+    overlap = max(4.0, minimum_dimension * 0.055)
+    first = (first[0] - normal[0] * overlap, first[1] - normal[1] * overlap)
+    second = (second[0] - normal[0] * overlap, second[1] - normal[1] * overlap)
+    forward = min(length * 0.42, max(6.0, minimum_dimension * 0.075))
+    bend = min(5.0, math.dist(first, second) * 0.10)
+    first_curve = _sample_cubic(first, (first[0] + normal[0] * forward, first[1] + normal[1] * forward), (tip[0] + tangent[0] * bend, tip[1] + tangent[1] * bend), tip)
+    second_curve = _sample_cubic(tip, (tip[0] - tangent[0] * bend, tip[1] - tangent[1] * bend), (second[0] + normal[0] * forward, second[1] + normal[1] * forward), second)
+    return [(float(x), float(y)) for x, y in first_curve + second_curve[1:]], edge, tip
+
+
+def _scaled_rect(rect: Rect, scale: int) -> Rect:
+    return tuple(round(value * scale) for value in rect)  # type: ignore[return-value]
+
+
+def _dialogue_masks(
+    size: tuple[int, int],
+    rect: Rect,
+    target: tuple[int, int] | None,
+    stroke_width: int,
+) -> tuple[Image.Image, Image.Image, tuple[int, int]]:
+    """Create anti-aliased union masks for one seamless dialogue silhouette."""
+    tail = _dialogue_tail_polygon(rect, target) if target is not None else None
+    points = [
+        (float(rect[0]), float(rect[1])),
+        (float(rect[2]), float(rect[3])),
+    ]
+    if tail is not None:
+        points.extend(tail[0])
+    margin = stroke_width + 3
+    left = max(0, math.floor(min(point[0] for point in points)) - margin)
+    top = max(0, math.floor(min(point[1] for point in points)) - margin)
+    right = min(size[0], math.ceil(max(point[0] for point in points)) + margin)
+    bottom = min(size[1], math.ceil(max(point[1] for point in points)) + margin)
+    local_size = right - left, bottom - top
+    scale = TAIL_RENDER_SCALE
+    large_size = local_size[0] * scale, local_size[1] * scale
+    fill_mask = Image.new("L", large_size, 0)
+    draw = ImageDraw.Draw(fill_mask)
+    local_rect = rect[0] - left, rect[1] - top, rect[2] - left, rect[3] - top
+    draw.ellipse(_scaled_rect(local_rect, scale), fill=255)
+    if tail is not None:
+        tail_points, _, _ = tail
+        draw.polygon([(round((x - left) * scale), round((y - top) * scale)) for x, y in tail_points], fill=255)
+    kernel = max(3, stroke_width * scale * 2 + 1)
+    outline_mask = fill_mask.filter(ImageFilter.MaxFilter(kernel))
+    return (
+        outline_mask.resize(local_size, Image.Resampling.LANCZOS),
+        fill_mask.resize(local_size, Image.Resampling.LANCZOS),
+        (left, top),
+    )
+
+
+def _draw_seamless_dialogue_balloon(
+    overlay: Image.Image,
+    rect: Rect,
+    target: tuple[int, int] | None,
     fill: tuple[int, int, int, int],
     outline: tuple[int, int, int, int],
     stroke_width: int,
 ) -> None:
-    base = _tail_base(rect, target)
-    if base is None:
-        return
-    first, second, edge, tangent = base
-    tip = _tail_tip(edge, target, max(18, round(min(rect[2] - rect[0], rect[3] - rect[1]) * 0.32)), 0.55)
-    if tip is None:
-        return
-    length = math.dist(edge, tip)
-    normal = ((tip[0] - edge[0]) / length, (tip[1] - edge[1]) / length)
-    forward = min(length * 0.34, max(5.0, min(rect[2] - rect[0], rect[3] - rect[1]) * 0.11))
-    bend = min(6.0, math.dist(first, second) * 0.16)
-    first_curve = _sample_cubic(first, (first[0] + normal[0] * forward, first[1] + normal[1] * forward), (tip[0] + tangent[0] * bend, tip[1] + tangent[1] * bend), tip)
-    second_curve = _sample_cubic(tip, (tip[0] - tangent[0] * bend, tip[1] - tangent[1] * bend), (second[0] + normal[0] * forward, second[1] + normal[1] * forward), second)
-    points = first_curve + second_curve[1:]
-    draw.polygon(points, fill=fill)
-    draw.line(points + [points[0]], fill=outline, width=stroke_width, joint="curve")
+    """Paint the outer contour once, without a tail/oval junction line."""
+    outline_mask, fill_mask, origin = _dialogue_masks(overlay.size, rect, target, stroke_width)
+    overlay.paste(outline, origin, outline_mask)
+    overlay.paste(fill, origin, fill_mask)
 
 
 def _draw_thought_tail(
@@ -413,16 +478,6 @@ def _draw_thought_tail(
         x = round(edge[0] + (tip[0] - edge[0]) * ratio)
         y = round(edge[1] + (tip[1] - edge[1]) * ratio)
         draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill=fill, outline=outline, width=stroke_width)
-
-
-def _draw_organic_oval(
-    draw: ImageDraw.ImageDraw,
-    rect: Rect,
-    fill: tuple[int, int, int, int],
-    outline: tuple[int, int, int, int],
-    stroke_width: int,
-) -> None:
-    draw.ellipse(rect, fill=fill, outline=outline, width=stroke_width)
 
 
 def _cloud_mask(size: tuple[int, int], rect: Rect) -> Image.Image:
@@ -498,9 +553,15 @@ def apply_lettering(image: Image.Image, brief: dict[str, Any], font_path: str | 
             _draw_cloud(overlay, text_rect, fill, outline, stroke_width)
             draw = ImageDraw.Draw(overlay)
         elif kind == "dialogue":
-            if plan["tail_target"] is not None:
-                _draw_dialogue_tail(draw, text_rect, plan["tail_target"], fill, outline, stroke_width)
-            _draw_organic_oval(draw, text_rect, fill, outline, stroke_width)
+            _draw_seamless_dialogue_balloon(
+                overlay,
+                text_rect,
+                plan["tail_target"],
+                fill,
+                outline,
+                stroke_width,
+            )
+            draw = ImageDraw.Draw(overlay)
         _draw_centered_text(
             draw,
             text_rect,

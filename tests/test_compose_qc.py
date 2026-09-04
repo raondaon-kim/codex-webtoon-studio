@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 import shutil
 import tempfile
 import unittest
@@ -11,7 +12,14 @@ from webtoon_studio.balloon_assets import BalloonAssetError, balloon_asset_spec,
 from webtoon_studio.compiler import compile_brief, load_configs
 from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
-from webtoon_studio.lettering import apply_lettering, bundled_font_paths, lettering_profile, load_font, plan_lettering
+from webtoon_studio.lettering import (
+    _dialogue_tail_polygon,
+    apply_lettering,
+    bundled_font_paths,
+    lettering_profile,
+    load_font,
+    plan_lettering,
+)
 from webtoon_studio.placement import contains as rect_contains
 from webtoon_studio.qc import inspect_episode
 
@@ -181,6 +189,33 @@ class ComposeQcTests(unittest.TestCase):
         self.assertTrue(rect_contains(plan["bounds"], plan["rect"]))
         self.assertEqual(0.0, plan["subject_overlap_ratio"])
         self.assertIsNone(plan["svg_asset"])
+
+    def test_dialogue_tail_is_short_and_has_no_internal_join_outline(self) -> None:
+        source = Image.new("RGB", (640, 960), "#60758a")
+        brief = {
+            "text": {
+                "mode": "deterministic_lettering",
+                "items": [
+                    {
+                        "kind": "dialogue",
+                        "content": "Okay.",
+                        "anchor_norm": {"x": 0.24, "y": 0.10, "width": 0.42, "height": 0.20},
+                        "tail_target_norm": {"x": 0.46, "y": 0.82},
+                    }
+                ],
+                "reserved_regions": [{"x": 0.12, "y": 0.04, "width": 0.70, "height": 0.42}],
+            }
+        }
+
+        plan = plan_lettering(brief, source.size)[0]
+        tail = _dialogue_tail_polygon(plan["rect"], plan["tail_target"])
+        self.assertIsNotNone(tail)
+        _, edge, tip = tail  # type: ignore[misc]
+        self.assertLessEqual(math.dist(edge, tip), min(plan["rect"][2] - plan["rect"][0], plan["rect"][3] - plan["rect"][1]) * 0.23)
+
+        rendered = apply_lettering(source, brief)
+        join_pixel = rendered.getpixel((round(edge[0]), round(edge[1])))
+        self.assertGreater(min(join_pixel), 235, "The tail join must remain balloon fill, not an oval outline seam")
 
     def test_lettering_uses_the_bundled_house_fonts(self) -> None:
         profile = lettering_profile()
