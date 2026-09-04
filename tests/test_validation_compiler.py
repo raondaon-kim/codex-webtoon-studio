@@ -54,6 +54,25 @@ class ValidationCompilerTests(unittest.TestCase):
         report = validate_data(broken)
         self.assertTrue(any("x + width" in item for item in report.errors))
 
+    def test_lettering_tail_target_must_be_on_canvas(self) -> None:
+        brief = copy.deepcopy(load_json(PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"))
+        brief["text"] = {
+            "mode": "deterministic_lettering",
+            "items": [
+                {
+                    "kind": "dialogue",
+                    "content": "문제 대사",
+                    "anchor_norm": {"x": 0.1, "y": 0.1, "width": 0.2, "height": 0.1},
+                    "tail_target_norm": {"x": 1.1, "y": 0.5},
+                }
+            ],
+            "reserved_regions": [],
+        }
+
+        report = validate_data(brief)
+
+        self.assertTrue(any("tail_target_norm.x" in item for item in report.errors))
+
     def test_story_bible_rejects_regressing_or_unknown_age_milestone(self) -> None:
         story = load_json(PROJECT / "story-bible" / "story-bible.json")
         broken = copy.deepcopy(story)

@@ -3,7 +3,7 @@
   "artifact_type": "render_task",
   "task_id": "ep001-shot-022",
   "source_brief": "episodes/ep001/briefs/shot-022.json",
-  "source_hash": "fd50614357da5f258b5c9559767c8e2908f519f7cf3d7e48d11b500211826dcc",
+  "source_hash": "7115b001ff79d77d890c21558ca0f7beed7034ba1840e7f68ed01448769950db",
   "template_id": "webtoon-shot-v1",
   "provider": "codex",
   "operation": "edit",

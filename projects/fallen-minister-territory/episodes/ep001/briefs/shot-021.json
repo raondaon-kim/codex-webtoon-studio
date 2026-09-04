@@ -10,7 +10,7 @@
   ],
   "background": {"location_id": "walt-fort-dining-hall", "description": "열린 동쪽 문과 어두운 복도, 문밖 전령은 구체적 얼굴·복장 없이 급히 고개 숙인 실루엣으로만 보인다", "source_crop_norm": {"x": 0.58, "y": 0.06, "width": 0.36, "height": 0.84}, "perspective": "브람의 어깨를 전경으로, 열린 문을 중앙으로 둔다", "depth_layers": ["브람의 어깨", "문틀과 카일", "어두운 복도와 비식별 전령 실루엣"], "lighting": "식당의 따뜻한 빛과 복도의 차가운 빛이 경계에서 만남", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
   "art_direction": {"line": "브람의 굳은 어깨와 카일의 반응을 선명하게", "color": "실내 따뜻함과 복도 청회색의 낮은 대비", "rendering": "인물을 추가 확정하지 않는 2D 연출", "mood": "뉴스가 가족 식탁에 들어오는 순간", "composition": "문밖 아래쪽을 대사 오버레이로 비우며 전령의 얼굴은 어떤 방식으로도 읽히지 않게 한다", "must_avoid": ["전령의 캐릭터 디자인 확정", "영웅적 포즈", "읽을 수 있는 글자"]},
-  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": null, "content": "영주님! 그레이포드에서 급보입니다! 강이 너무 빨리 불고 있습니다!", "anchor_norm": {"x": 0.55, "y": 0.06, "width": 0.35, "height": 0.19}}], "reserved_regions": [{"x": 0.51, "y": 0.03, "width": 0.41, "height": 0.26}]},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": null, "content": "영주님! 그레이포드에서 왔습니다! 강이 너무 빨리 불고 있습니다!", "anchor_norm": {"x": 0.55, "y": 0.06, "width": 0.35, "height": 0.19}}], "reserved_regions": [{"x": 0.51, "y": 0.03, "width": 0.41, "height": 0.26}]},
   "continuity": {"previous_shot_id": "shot-020", "screen_direction": "right_to_left", "state_in": ["문이 닫혀 있고 첫 노크가 끝났다"], "state_out": ["문이 열렸다", "강의 수위가 비정상적으로 오르고 있다는 정보가 전달된다"]},
   "output": {"path": "episodes/ep001/art/shot-021.png", "format": "png", "quality": "high"}
 }

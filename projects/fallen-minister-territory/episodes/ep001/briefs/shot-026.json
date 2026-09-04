@@ -57,7 +57,7 @@
     "composition": "두 개의 전폭 세로 패널과 가는 흰 여백, 하단 초상은 작게 유지",
     "must_avoid": ["어머니의 구체적인 얼굴", "눈물", "멜로드라마", "말풍선", "읽을 수 있는 글자", "워터마크", "서명"]
   },
-  "text": {"mode": "none", "items": [], "reserved_regions": []},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "thought", "speaker": "theo-waldhart", "content": "그리고 브람 발트하르트. 빚이 있어도 식탁에서는 먼저 웃는, 내 아버지다.", "anchor_norm": {"x": 0.54, "y": 0.05, "width": 0.36, "height": 0.13}, "tail_target_norm": {"x": 0.25, "y": 0.66}}], "reserved_regions": [{"x": 0.51, "y": 0.03, "width": 0.41, "height": 0.18}]},
   "continuity": {
     "previous_shot_id": "shot-012",
     "screen_direction": "left_to_right",

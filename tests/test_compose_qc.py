@@ -10,6 +10,7 @@ from PIL import Image
 from webtoon_studio.compiler import compile_brief, load_configs
 from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
+from webtoon_studio.lettering import apply_lettering
 from webtoon_studio.qc import inspect_episode
 
 
@@ -91,6 +92,42 @@ class ComposeQcTests(unittest.TestCase):
             ["shot-001", "shot-002", "shot-024", "shot-003"],
             ordered_shot_ids(scroll_plan),
         )
+
+    def test_qc_rejects_script_text_that_is_not_placed(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            project = Path(raw) / "project"
+            shutil.copytree(SOURCE_PROJECT, project)
+            episode = project / "episodes" / "ep001"
+            script = load_json(episode / "script.json")
+            script["beats"][0]["text"].append({"kind": "dialogue", "content": "누락된 대사"})
+            dump_json(episode / "script.json", script)
+
+            report = inspect_episode(
+                episode,
+                project,
+                {"width_px": 320, "slice_height_px": 400, "format": "jpeg", "quality": 85},
+            )
+
+            self.assertTrue(any(issue["code"] == "script_text_missing" for issue in report["issues"]))
+
+    def test_lettering_renders_distinct_balloon_types_with_tails(self) -> None:
+        source = Image.new("RGB", (640, 960), "#7a8aa0")
+        brief = {
+            "text": {
+                "mode": "deterministic_lettering",
+                "items": [
+                    {"kind": "caption", "content": "장면 전환", "anchor_norm": {"x": 0.05, "y": 0.05, "width": 0.30, "height": 0.12}},
+                    {"kind": "dialogue", "content": "대사", "anchor_norm": {"x": 0.55, "y": 0.10, "width": 0.30, "height": 0.15}, "tail_target_norm": {"x": 0.76, "y": 0.48}},
+                    {"kind": "thought", "content": "독백", "anchor_norm": {"x": 0.08, "y": 0.50, "width": 0.30, "height": 0.15}, "tail_target_norm": {"x": 0.23, "y": 0.82}},
+                    {"kind": "sfx", "content": "쾅!", "anchor_norm": {"x": 0.52, "y": 0.62, "width": 0.30, "height": 0.16}},
+                ],
+                "reserved_regions": [],
+            }
+        }
+
+        rendered = apply_lettering(source, brief)
+
+        self.assertNotEqual(source.tobytes(), rendered.tobytes())
 
 
 if __name__ == "__main__":

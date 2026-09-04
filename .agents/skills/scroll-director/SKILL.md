@@ -24,7 +24,7 @@ For every shot:
 2. Choose `camera.shot_size`, angle, lens feel, position, movement, and focus.
 3. Give every visible character a normalized `bbox_norm`, depth, pose, expression, gaze, action, and identity invariants.
 4. Specify the environment reference and `background.source_crop_norm`; describe foreground, midground, and background depth layers.
-5. Reserve clean normalized regions for balloons/captions. Avoid placing faces, hands, or essential props there.
+5. Reserve clean normalized regions for balloons/captions. Avoid placing faces, hands, or essential props there. For dialogue and thought balloons, set `tail_target_norm` to the intended speaker or thinker; captions and SFX do not need a tail.
 6. Track screen direction and explicit state in/out.
 7. Select a generation canvas within GPT Image 2 limits. Prefer a normal shot block such as `1536x2048`; use larger dimensions only when composition needs them.
 8. Validate all briefs, including custom geometry checks.
@@ -43,3 +43,9 @@ python tools/validate_artifacts.py episodes/<episode-id>/scroll-plan.json episod
 ```
 
 Do not write the final model prompt here. The `brief-to-image-prompt` skill owns that transformation.
+
+## Deterministic lettering
+
+- Keep generated art free of text. Put final Korean copy in `text.items`; the compositor renders it after image generation.
+- Use `dialogue` for a white balloon with a speaker tail, `thought` for a cloud-like balloon with a dot tail, `caption` for a dark narration box, and `sfx` for outlined text without a balloon.
+- Read each scroll block top-to-bottom. When two speakers share a height, order their balloons by the actual turn and keep tails unambiguous.

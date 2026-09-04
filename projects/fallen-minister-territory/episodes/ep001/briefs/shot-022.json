@@ -10,7 +10,7 @@
   ],
   "background": {"location_id": "walt-fort-dining-hall", "description": "문이 열린 채인 식당, 뒤로 남겨진 작은 식탁과 식지 않은 수프", "source_crop_norm": {"x": 0.30, "y": 0.10, "width": 0.62, "height": 0.82}, "perspective": "식탁에서 문으로 뻗는 대각선이 두 사람의 움직임을 향한다", "depth_layers": ["식탁과 의자", "브람과 카일", "열린 문·복도"], "lighting": "실내광은 유지하되 문 쪽은 차갑다", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
   "art_direction": {"line": "카일의 몸이 일어나는 동작과 브람의 손짓을 명료하게", "color": "숲색·푸른 저킨·차가운 문틈의 대비", "rendering": "과장하지 않은 2D 긴장", "mood": "일상에서 즉시 대응으로 전환", "composition": "상단 두 곳에 짧은 명령 대사를 둘 여백", "must_avoid": ["실전 전투", "과도한 갑옷", "카일의 브로치", "읽을 수 있는 글자"]},
-  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": "bram-waldhart", "content": "카일, 사람을 데려와.", "anchor_norm": {"x": 0.08, "y": 0.06, "width": 0.28, "height": 0.12}}], "reserved_regions": [{"x": 0.04, "y": 0.03, "width": 0.36, "height": 0.20}]},
+  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": "bram-waldhart", "content": "카일, 사람부터 데려와라.", "anchor_norm": {"x": 0.08, "y": 0.06, "width": 0.28, "height": 0.12}, "tail_target_norm": {"x": 0.26, "y": 0.58}}], "reserved_regions": [{"x": 0.04, "y": 0.03, "width": 0.36, "height": 0.20}]},
   "continuity": {"previous_shot_id": "shot-021", "screen_direction": "left_to_right", "state_in": ["급보가 전달됐다", "카일은 의자에 앉아 있다"], "state_out": ["브람이 상황을 지휘한다", "카일은 출발할 준비를 마친다", "테오는 식탁에 남는다"]},
   "output": {"path": "episodes/ep001/art/shot-022.png", "format": "png", "quality": "high"}
 }

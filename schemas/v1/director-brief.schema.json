@@ -17,6 +17,15 @@
         "height": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
       }
     },
+    "normalizedPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": {"type": "number", "minimum": 0, "maximum": 1},
+        "y": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
     "reference": {
       "type": "object",
       "additionalProperties": false,
@@ -157,7 +166,8 @@
               "kind": {"enum": ["dialogue", "caption", "thought", "sfx"]},
               "speaker": {"type": ["string", "null"]},
               "content": {"type": "string"},
-              "anchor_norm": {"$ref": "#/$defs/normalizedBox"}
+              "anchor_norm": {"$ref": "#/$defs/normalizedBox"},
+              "tail_target_norm": {"$ref": "#/$defs/normalizedPoint"}
             }
           }
         },

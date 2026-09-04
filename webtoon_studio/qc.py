@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -75,6 +76,36 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
         for value in [load_json(path)]
         if value.get("artifact_type") == "director_brief"
     }
+    scripted_text = Counter(
+        item["content"]
+        for beat in script.get("beats", [])
+        for item in beat.get("text", [])
+    )
+    planned_text = Counter(
+        item["content"]
+        for _, brief in briefs.values()
+        for item in brief.get("text", {}).get("items", [])
+    )
+    for content, count in (scripted_text - planned_text).items():
+        checks["lettering"] = False
+        issues.append(
+            _issue(
+                "error",
+                "script_text_missing",
+                f"Script text is not placed in a director brief ({count} occurrence(s)): {content}",
+                script_path,
+            )
+        )
+    for content, count in (planned_text - scripted_text).items():
+        checks["lettering"] = False
+        issues.append(
+            _issue(
+                "error",
+                "brief_text_unsourced",
+                f"Director brief text is not present in the script ({count} occurrence(s)): {content}",
+                episode / "briefs",
+            )
+        )
     tasks = {
         value["task_id"].split("-shot-")[-1]: (path, value)
         for path in sorted((episode / "render-tasks").glob("*.json"))
@@ -139,6 +170,24 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
             issues.append(
                 _issue("error", "brief_unknown_beat", f"Brief references unknown beats: {sorted(unknown_brief_beats)}", brief_path, shot_id)
             )
+        text_for_brief_beats = {
+            item["content"]
+            for beat in script.get("beats", [])
+            if beat["id"] in brief["source"]["beat_refs"]
+            for item in beat.get("text", [])
+        }
+        for item in brief["text"]["items"]:
+            if item["content"] not in text_for_brief_beats:
+                checks["lettering"] = False
+                issues.append(
+                    _issue(
+                        "error",
+                        "lettering_beat_link",
+                        "Text must be sourced from one of the brief's beat_refs",
+                        brief_path,
+                        shot_id,
+                    )
+                )
         declared_previous = brief["continuity"]["previous_shot_id"]
         expected_previous = expected_previous_by_shot.get(shot_id)
         if declared_previous != expected_previous:
