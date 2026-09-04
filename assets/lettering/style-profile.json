@@ -1,11 +1,11 @@
 {
-  "profile_id": "fantasy-korean-webtoon-v1",
-  "description": "House lettering for Korean vertical-scroll fantasy comedy.",
+  "profile_id": "fantasy-korean-webtoon-nanum-v2",
+  "description": "Nanum house lettering for Korean vertical-scroll fantasy comedy.",
   "font_dir": "assets/fonts",
   "font_scale_reference": "canvas_height",
   "styles": {
     "dialogue": {
-      "font": "GowunDodum-Regular.ttf",
+      "font": "NanumGothic-Regular.ttf",
       "font_scale": 0.028,
       "minimum_size_px": 14,
       "text_color": "#181716",
@@ -25,7 +25,7 @@
       "tail": "dot_chain"
     },
     "caption": {
-      "font": "GowunBatang-Bold.ttf",
+      "font": "NanumMyeongjo-Bold.ttf",
       "font_scale": 0.026,
       "minimum_size_px": 14,
       "text_color": "#fffdf6",
@@ -35,7 +35,7 @@
       "tail": "none"
     },
     "sfx": {
-      "font": "BlackHanSans-Regular.ttf",
+      "font": "NanumGothic-Bold.ttf",
       "font_scale": 0.041,
       "minimum_size_px": 16,
       "text_color": "#2a211f",

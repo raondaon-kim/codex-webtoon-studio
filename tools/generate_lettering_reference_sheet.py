@@ -108,13 +108,12 @@ def main() -> int:
 
     image = Image.new("RGB", (1080, 2160), "#f3efe7")
     draw = ImageDraw.Draw(image)
-    title = load_font("BlackHanSans-Regular.ttf", 52)
-    section_title = load_font("BlackHanSans-Regular.ttf", 40)
-    body = load_font("GowunDodum-Regular.ttf", 28)
-    dialogue = load_font("GowunDodum-Regular.ttf", 42)
+    title = load_font("NanumGothic-Bold.ttf", 52)
+    section_title = load_font("NanumGothic-Bold.ttf", 40)
+    body = load_font("NanumGothic-Regular.ttf", 28)
+    dialogue = load_font("NanumGothic-Regular.ttf", 42)
     thought = load_font("NanumPenScript-Regular.ttf", 42)
-    caption = load_font("GowunBatang-Bold.ttf", 34)
-    sfx = load_font("BlackHanSans-Regular.ttf", 52)
+    caption = load_font("NanumMyeongjo-Bold.ttf", 34)
 
     draw.text((68, 58), "웹툰 레터링 기준 시트", font=title, fill="#1d1b1a")
     draw.text((70, 124), "v2 초안 · 1080px 발행 / 360px 모바일 판독", font=body, fill="#6d635b")
@@ -135,11 +134,11 @@ def main() -> int:
     draw.ellipse((704, 884, 752, 932), fill="#d8a17a", outline="#7d5140", width=3)
     draw.arc((688, 864, 768, 944), 20, 340, fill="#7d5140", width=3)
     draw.ellipse((721, 906, 731, 914), fill="#241c1a")
-    draw.multiline_text((793, 840), "입/발화원\n\n긴 꼬리는 거리·외침에만\n의도적으로 사용", font=body, fill="#3e3833", spacing=9)
+    draw.multiline_text((793, 840), "입/발화원\n\n긴 꼬리는\n거리·외침일 때만\n의도적으로 사용", font=body, fill="#3e3833", spacing=7)
     draw.multiline_text(
         (116, 968),
         "불합격: 꼬리 교차 · 인물 얼굴/손 침범\n작화 선과의 접선",
-        font=load_font("GowunDodum-Regular.ttf", 24),
+        font=load_font("NanumGothic-Regular.ttf", 24),
         fill="#9d5c37",
         spacing=4,
     )
@@ -158,16 +157,16 @@ def main() -> int:
     draw.multiline_text(
         (500, 1428),
         "일반 대사는 한 종류의\n서체·굵기·여백을 유지",
-        font=load_font("GowunDodum-Regular.ttf", 25),
+        font=load_font("NanumGothic-Regular.ttf", 25),
         fill="#3e3833",
         spacing=5,
     )
 
     rounded_panel(draw, (56, 1542, 1024, 1990), fill="#e9e2d7")
-    draw.text((86, 1580), "04  폰트: 360px에서 판독", font=section_title, fill="#272320")
+    draw.text((86, 1580), "04  나눔글꼴: 360px에서 판독", font=section_title, fill="#272320")
     draw.rounded_rectangle((112, 1660, 446, 1812), radius=24, fill="#1f1d1a")
     centered(draw, (128, 1685, 430, 1788), "카일, 사람부터\n데려와라.", dialogue, "#ffffff")
-    draw.multiline_text((498, 1655), "비교 후보\nPretendard Medium\nNoto Sans KR Medium\nGowun Dodum Regular\n\n같은 대사·같은 폭으로 비교 후\n가장 편안한 1종만 채택", font=body, fill="#3e3833", spacing=8)
+    draw.multiline_text((498, 1655), "하우스 서체\n대사  Nanum Gothic Regular\n독백  Nanum Pen Script\n내레이션  Nanum Myeongjo Bold\n효과음  Nanum Gothic Bold\n\n대사는 360px에서 항상 판독", font=body, fill="#3e3833", spacing=8)
     draw.text((86, 2044), "판독 기준: readable · even clearance · no crossings · art remains visible", font=body, fill="#6d635b")
 
     image.save(output, format="PNG")

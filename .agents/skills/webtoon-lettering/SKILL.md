@@ -35,6 +35,12 @@ explicit `font_path` is only for a deliberate one-off preview; do not rely on
 a creator's installed system font. Keep `assets/fonts/SOURCES.md` and
 `OFL-1.1.txt` with any redistributed font.
 
+The active house type system is Nanum Gothic Regular for dialogue, Nanum Pen
+Script for thoughts, Nanum Myeongjo Bold for narration, and Nanum Gothic Bold
+for SFX. Do not substitute another face for normal dialogue unless its 360px
+comparison is approved and the profile, source record, reference sheet, and
+renderer tests change together.
+
 ## Placement and review
 
 1. Copy final text exactly from the episode script into `brief.text.items`.

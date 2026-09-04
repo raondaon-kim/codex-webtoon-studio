@@ -40,6 +40,14 @@ webtoon panels or store screenshots in the repository.
   if bold text collides with neighboring lines, or if its glyph widths make
   regular balloons excessively wide or tall.
 
+## House type system
+
+Use the bundled Nanum family rather than an installed system font: Nanum
+Gothic Regular for normal dialogue, Nanum Pen Script for thought, Nanum
+Myeongjo Bold for narration, and Nanum Gothic Bold for outlined SFX. All
+bundled files must retain their SIL Open Font License 1.1 notice. The official
+Google Fonts sources are recorded in `assets/fonts/SOURCES.md`.
+
 ## Engine reference boundary
 
 [Comic Sol](https://github.com/wenn-id/comicsol) is a useful implementation

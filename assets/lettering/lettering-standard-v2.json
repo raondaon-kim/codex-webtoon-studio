@@ -22,11 +22,16 @@
   },
   "type_selection": {
     "normal_dialogue_candidates": [
-      "Pretendard Medium",
-      "Noto Sans KR Medium",
-      "Gowun Dodum Regular"
+      "NanumGothic Regular",
+      "NanumGothic Bold"
     ],
-    "selection_rule": "Select only after the same Korean dialogue is read comfortably at the mobile review width; nominal point size alone is not a decision criterion.",
+    "selected_house_type_system": {
+      "dialogue": "NanumGothic-Regular.ttf",
+      "thought": "NanumPenScript-Regular.ttf",
+      "caption": "NanumMyeongjo-Bold.ttf",
+      "sfx": "NanumGothic-Bold.ttf"
+    },
+    "selection_rule": "NanumGothic Regular is the house dialogue face. Confirm it remains comfortable with the same Korean dialogue at the mobile review width; nominal point size alone is not a decision criterion.",
     "normal_dialogue": {
       "weight": "medium_or_equivalent",
       "tracking": "font_default_unless_a_reviewed_exception",

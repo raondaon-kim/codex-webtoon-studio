@@ -26,6 +26,7 @@ class LetteringStandardTests(unittest.TestCase):
         self.assertEqual(0.5, standard["balloon_semantics"]["dialogue"]["tail_gap_fraction"]["preferred"])
         self.assertEqual("https://github.com/wenn-id/comicsol", standard["implementation_boundary"]["reference_engine"])
         self.assertIn("seamless_curved_tail_rendering", standard["implementation_boundary"]["adopt_patterns"])
+        self.assertEqual("NanumGothic-Regular.ttf", standard["type_selection"]["selected_house_type_system"]["dialogue"])
 
     def test_reference_sheet_generator_outputs_a_mobile_review_asset(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
