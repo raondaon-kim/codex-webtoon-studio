@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "asset_pack_id": "private-contributor-balloon-pack-56",
+  "license": "MIT",
+  "license_file": "LICENSE",
+  "provenance_file": "PROVENANCE.md",
+  "production_status": "approved_selectable_asset",
+  "default_renderer_policy": "Prefer the deterministic vector renderer for ordinary dialogue. Use this raster pack only when an approved brief needs a semantic special effect.",
+  "individual_asset_count": 56,
+  "groups": [
+    {
+      "asset_ids": ["1-12", "16-27"],
+      "kind": "impact_sfx",
+      "shapes": ["radial", "spiky_ring", "ink_burst"],
+      "use_for": ["impact", "surprise", "magic", "loud_sfx"],
+      "avoid_for": ["ordinary_dialogue"]
+    },
+    {
+      "asset_ids": ["13-14", "28-29"],
+      "kind": "system",
+      "shapes": ["double_hexagon_frame"],
+      "use_for": ["mechanical_signal", "radio_voice", "scene_transition"],
+      "avoid_for": ["ordinary_dialogue"]
+    },
+    {
+      "asset_ids": ["15", "30", "39", "43", "52", "56"],
+      "kind": "dialogue",
+      "shapes": ["oval_with_tail"],
+      "use_for": ["special_dialogue_variation"],
+      "avoid_for": ["untracked_tail_direction"]
+    },
+    {
+      "asset_ids": ["31", "40", "44", "53"],
+      "kind": "command",
+      "shapes": ["angular_hexagon"],
+      "use_for": ["command", "system_voice"],
+      "avoid_for": ["soft_conversation"]
+    },
+    {
+      "asset_ids": ["32", "41", "45", "54", "38", "51"],
+      "kind": "thought",
+      "shapes": ["thought_dot", "cloud"],
+      "use_for": ["internal_monologue", "imagination"],
+      "avoid_for": ["rapid_multi_speaker_exchange"]
+    },
+    {
+      "asset_ids": ["33", "42", "46", "55"],
+      "kind": "special_dialogue",
+      "shapes": ["inset_angle_tail"],
+      "use_for": ["whisper", "interruption", "special_voice"],
+      "avoid_for": ["ordinary_dialogue"]
+    },
+    {
+      "asset_ids": ["37", "50"],
+      "kind": "shout",
+      "shapes": ["jagged_outline"],
+      "use_for": ["shout", "urgent_warning"],
+      "avoid_for": ["quiet_dialogue"]
+    },
+    {
+      "asset_ids": ["34-36", "47-49"],
+      "kind": "effect_ring",
+      "shapes": ["radial_ring", "thorn_ring", "swirl_ring"],
+      "use_for": ["magic", "surprise", "impact_sfx_backdrop"],
+      "avoid_for": ["ordinary_dialogue"]
+    }
+  ],
+  "supporting_assets": [
+    "말풍선 (57).png",
+    "말풍선 (58).png",
+    "말풍선001.png",
+    "말풍선002.png",
+    "말풍선 (1).jpg"
+  ]
+}
