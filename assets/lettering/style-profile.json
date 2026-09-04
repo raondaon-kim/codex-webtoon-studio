@@ -1,0 +1,48 @@
+{
+  "profile_id": "fantasy-korean-webtoon-v1",
+  "description": "House lettering for Korean vertical-scroll fantasy comedy.",
+  "font_dir": "assets/fonts",
+  "font_scale_reference": "canvas_height",
+  "styles": {
+    "dialogue": {
+      "font": "GowunDodum-Regular.ttf",
+      "font_scale": 0.028,
+      "minimum_size_px": 14,
+      "text_color": "#181716",
+      "fill_color": "#fffefd",
+      "outline_color": "#171513",
+      "shape": "organic_oval",
+      "tail": "curved"
+    },
+    "thought": {
+      "font": "NanumPenScript-Regular.ttf",
+      "font_scale": 0.030,
+      "minimum_size_px": 14,
+      "text_color": "#28201f",
+      "fill_color": "#fffefb",
+      "outline_color": "#534b46",
+      "shape": "cloud",
+      "tail": "dot_chain"
+    },
+    "caption": {
+      "font": "GowunBatang-Bold.ttf",
+      "font_scale": 0.026,
+      "minimum_size_px": 14,
+      "text_color": "#fffdf6",
+      "fill_color": "#20252d",
+      "outline_color": "#20252d",
+      "shape": "narration_plaque",
+      "tail": "none"
+    },
+    "sfx": {
+      "font": "BlackHanSans-Regular.ttf",
+      "font_scale": 0.041,
+      "minimum_size_px": 16,
+      "text_color": "#2a211f",
+      "fill_color": "#fffdf6",
+      "outline_color": "#fffdf6",
+      "shape": "text_only",
+      "tail": "none"
+    }
+  }
+}

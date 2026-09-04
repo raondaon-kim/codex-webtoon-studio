@@ -5,12 +5,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageFont
 
 from webtoon_studio.compiler import compile_brief, load_configs
 from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
-from webtoon_studio.lettering import apply_lettering
+from webtoon_studio.lettering import apply_lettering, bundled_font_paths, lettering_profile, load_font
 from webtoon_studio.qc import inspect_episode
 
 
@@ -128,6 +128,18 @@ class ComposeQcTests(unittest.TestCase):
         rendered = apply_lettering(source, brief)
 
         self.assertNotEqual(source.tobytes(), rendered.tobytes())
+
+    def test_lettering_uses_the_bundled_house_fonts(self) -> None:
+        profile = lettering_profile()
+        fonts = bundled_font_paths()
+
+        self.assertEqual("fantasy-korean-webtoon-v1", profile["profile_id"])
+        self.assertEqual({"dialogue", "thought", "caption", "sfx"}, set(fonts))
+        for kind, path in fonts.items():
+            with self.subTest(kind=kind):
+                self.assertTrue(path.is_file())
+                self.assertGreater(path.stat().st_size, 100_000)
+                self.assertIsInstance(load_font(24, kind=kind), ImageFont.FreeTypeFont)
 
 
 if __name__ == "__main__":

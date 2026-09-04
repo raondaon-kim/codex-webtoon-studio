@@ -78,7 +78,10 @@ def compose_episode(
     render_dir = episode / "renders"
     render_dir.mkdir(parents=True, exist_ok=True)
     master_path = render_dir / "episode-master.png"
-    master.save(master_path, format="PNG", optimize=True)
+    # Optimizing a tall master can exceed interactive execution limits and leave a
+    # partially written PNG behind. Publish slices provide the delivery format;
+    # keep the review master fast and atomically complete here.
+    master.save(master_path, format="PNG")
     return master_path, []
 
 
