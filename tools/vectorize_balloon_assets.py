@@ -150,7 +150,8 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="Validate existing SVGs without retracing them")
     args = parser.parse_args()
     report = build_report(trace=not args.check)
-    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if not args.check:
+        REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{report['summary']['passed']}/{report['summary']['total']} SVG balloon assets passed validation")
     return 0 if report["summary"]["failed"] == 0 else 1
 

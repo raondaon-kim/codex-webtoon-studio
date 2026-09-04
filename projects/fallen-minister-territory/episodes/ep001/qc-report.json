@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact_type": "qc_report",
   "episode_id": "ep001",
-  "generated_at": "2026-09-04T00:49:34.764911+00:00",
+  "generated_at": "2026-09-04T02:24:22.661698+00:00",
   "status": "warn",
   "checks": {
     "schema": true,
@@ -13,6 +13,34 @@
     "publish_slices": true
   },
   "issues": [
+    {
+      "severity": "info",
+      "code": "lettering_fixed_tail_review",
+      "message": "Selected SVG balloon has a fixed tail; verify that its baked direction reads correctly.",
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\briefs\\shot-001.json",
+      "shot_id": "shot-001"
+    },
+    {
+      "severity": "info",
+      "code": "lettering_fixed_tail_review",
+      "message": "Selected SVG balloon has a fixed tail; verify that its baked direction reads correctly.",
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\briefs\\shot-012.json",
+      "shot_id": "shot-012"
+    },
+    {
+      "severity": "info",
+      "code": "lettering_fixed_tail_review",
+      "message": "Selected SVG balloon has a fixed tail; verify that its baked direction reads correctly.",
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\briefs\\shot-015.json",
+      "shot_id": "shot-015"
+    },
+    {
+      "severity": "info",
+      "code": "lettering_fixed_tail_review",
+      "message": "Selected SVG balloon has a fixed tail; verify that its baked direction reads correctly.",
+      "path": "D:\\yong_webtoon\\projects\\fallen-minister-territory\\episodes\\ep001\\briefs\\shot-023.json",
+      "shot_id": "shot-023"
+    },
     {
       "severity": "info",
       "code": "human_visual_review_required",
