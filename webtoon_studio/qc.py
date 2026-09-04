@@ -11,6 +11,8 @@ from .balloon_assets import BalloonAssetError, selected_balloon_asset
 from .compose import ordered_shot_ids
 from .geometry import contains, parse_size
 from .io_utils import content_hash, load_json, resolve_project_path
+from .lettering import plan_lettering
+from .placement import contains as pixel_contains
 from .validation import validate_file
 
 
@@ -23,9 +25,15 @@ def _issue(severity: str, code: str, message: str, path: Path | None = None, sho
     return result
 
 
-def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_profile: dict[str, Any]) -> dict[str, Any]:
+def inspect_episode(
+    episode_dir: str | Path,
+    project_root: str | Path,
+    platform_profile: dict[str, Any],
+    master_width: int | None = None,
+) -> dict[str, Any]:
     episode = Path(episode_dir).resolve()
     root = Path(project_root).resolve()
+    resolved_master_width = int(master_width or platform_profile["width_px"])
     issues: list[dict[str, Any]] = []
     checks = {
         "schema": True,
@@ -226,6 +234,45 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
                     issues.append(
                         _issue("warning", "lettering_outside_reserve", "Text anchor is outside all reserved regions", brief_path, shot_id)
                     )
+            try:
+                canvas = brief["canvas"]
+                display_width = max(1, round(resolved_master_width * float(brief["scroll"]["display_width_ratio"])))
+                display_height = max(1, round(int(canvas["height_px"]) * display_width / int(canvas["width_px"])))
+                resolved_plans = plan_lettering(brief, (display_width, display_height))
+            except ValueError as error:
+                checks["lettering"] = False
+                issues.append(
+                    _issue(
+                        "error",
+                        "lettering_fit_failure",
+                        str(error),
+                        brief_path,
+                        shot_id,
+                    )
+                )
+            else:
+                for plan in resolved_plans:
+                    if regions and not pixel_contains(plan["bounds"], plan["rect"]):
+                        checks["lettering"] = False
+                        issues.append(
+                            _issue(
+                                "error",
+                                "lettering_resolved_outside_reserve",
+                                "Text-first balloon extends outside its assigned reserved region",
+                                brief_path,
+                                shot_id,
+                            )
+                        )
+                    if plan["subject_overlap_ratio"] > 0.08:
+                        issues.append(
+                            _issue(
+                                "warning",
+                                "lettering_subject_overlap",
+                                "Resolved balloon substantially covers a director subject bbox; move the reserved region.",
+                                brief_path,
+                                shot_id,
+                            )
+                        )
         task_key = shot_id.removeprefix("shot-")
         task_entry = tasks.get(task_key)
         if not task_entry:

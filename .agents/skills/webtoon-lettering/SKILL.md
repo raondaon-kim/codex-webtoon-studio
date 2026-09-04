@@ -36,7 +36,9 @@ effect library, not a replacement for ordinary speech balloons. Before using
 one, check `asset-catalog.json` and `vectorization-report.json`; only a
 passing asset may be selected through `text.items[].balloon_asset_id`. Its
 catalog text kind must match the item. A `tail_behavior` of `baked` preserves
-the original SVG tail and cannot be re-aimed with `tail_target_norm`.
+the original SVG tail and cannot be re-aimed with `tail_target_norm`; use it
+only for a deliberate tail-free special effect, never ordinary dialogue or
+thought.
 
 Use the bundled files in `assets/fonts/` for any selected house font. An
 explicit `font_path` is only for a deliberate one-off preview; do not rely on
@@ -52,8 +54,11 @@ renderer tests change together.
 ## Placement and review
 
 1. Copy final text exactly from the episode script into `brief.text.items`.
-2. Reserve a simple background region in direction. Set `tail_target_norm` for
-   every dialogue or thought item; captions and SFX have no tail target.
+2. Reserve a simple background region in direction. `anchor_norm` expresses a
+   preferred placement, while `reserved_regions` are the maximum area for the
+   final text-first balloon. Keep director subject bboxes out of that area:
+   the compositor uses them as semantic keep-out masks. Set `tail_target_norm`
+   for every dialogue or thought item; captions and SFX have no tail target.
 3. Generate or update the visual review sheet with:
 
    ```powershell

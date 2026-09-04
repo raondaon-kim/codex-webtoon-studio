@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from webtoon_studio.io_utils import dump_json, load_json
+from webtoon_studio.compiler import load_configs
 from webtoon_studio.qc import inspect_episode
 from webtoon_studio.validation import validate_data
 
@@ -20,7 +21,13 @@ def main() -> int:
     studio_root = Path(__file__).resolve().parents[1]
     profile_path = Path(args.platform_profile) if args.platform_profile else studio_root / "config" / "platforms" / "generic-webtoon.json"
     profile = load_json(profile_path)
-    report = inspect_episode(args.episode_dir, args.project_root, profile)
+    project_config, _ = load_configs(args.project_root)
+    report = inspect_episode(
+        args.episode_dir,
+        args.project_root,
+        profile,
+        master_width=int(project_config["scroll_master"]["width_px"]),
+    )
     schema_report = validate_data(report)
     if schema_report.errors:
         for error in schema_report.errors:

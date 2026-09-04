@@ -11,7 +11,8 @@ from webtoon_studio.balloon_assets import BalloonAssetError, balloon_asset_spec,
 from webtoon_studio.compiler import compile_brief, load_configs
 from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
-from webtoon_studio.lettering import apply_lettering, bundled_font_paths, lettering_profile, load_font
+from webtoon_studio.lettering import apply_lettering, bundled_font_paths, lettering_profile, load_font, plan_lettering
+from webtoon_studio.placement import contains as rect_contains
 from webtoon_studio.qc import inspect_episode
 
 
@@ -153,6 +154,33 @@ class ComposeQcTests(unittest.TestCase):
         self.assertNotEqual(source.tobytes(), rendered.tobytes())
         with self.assertRaises(BalloonAssetError):
             selected_balloon_asset({"kind": "sfx", "balloon_asset_id": "11"})
+
+    def test_text_first_layout_uses_reserve_and_subject_keepouts(self) -> None:
+        brief = {
+            "subjects": [
+                {"character_id": "speaker", "bbox_norm": {"x": 0.08, "y": 0.45, "width": 0.38, "height": 0.48}}
+            ],
+            "text": {
+                "mode": "deterministic_lettering",
+                "items": [
+                    {
+                        "kind": "dialogue",
+                        "speaker": "speaker",
+                        "content": "작은애는 더 먹어야지. 접시가 아직 비어 있잖아.",
+                        "anchor_norm": {"x": 0.55, "y": 0.06, "width": 0.30, "height": 0.15},
+                        "tail_target_norm": {"x": 0.27, "y": 0.56},
+                        "balloon_asset_id": "15",
+                    }
+                ],
+                "reserved_regions": [{"x": 0.50, "y": 0.03, "width": 0.42, "height": 0.30}],
+            },
+        }
+        plan = plan_lettering(brief, (1080, 1440))[0]
+        self.assertGreaterEqual(plan["font_size"], 36)
+        self.assertGreaterEqual(len(plan["lines"]), 2)
+        self.assertTrue(rect_contains(plan["bounds"], plan["rect"]))
+        self.assertEqual(0.0, plan["subject_overlap_ratio"])
+        self.assertIsNone(plan["svg_asset"])
 
     def test_lettering_uses_the_bundled_house_fonts(self) -> None:
         profile = lettering_profile()

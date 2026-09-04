@@ -7,7 +7,7 @@
     "dialogue": {
       "font": "NanumGothic-Regular.ttf",
       "font_scale": 0.028,
-      "minimum_size_px": 14,
+      "minimum_size_px": 10,
       "text_color": "#181716",
       "fill_color": "#fffefd",
       "outline_color": "#171513",
@@ -17,7 +17,7 @@
     "thought": {
       "font": "NanumPenScript-Regular.ttf",
       "font_scale": 0.030,
-      "minimum_size_px": 14,
+      "minimum_size_px": 10,
       "text_color": "#28201f",
       "fill_color": "#fffefb",
       "outline_color": "#534b46",
@@ -27,7 +27,7 @@
     "caption": {
       "font": "NanumMyeongjo-Bold.ttf",
       "font_scale": 0.026,
-      "minimum_size_px": 14,
+      "minimum_size_px": 10,
       "text_color": "#fffdf6",
       "fill_color": "#20252d",
       "outline_color": "#20252d",
@@ -37,7 +37,7 @@
     "sfx": {
       "font": "NanumGothic-Bold.ttf",
       "font_scale": 0.041,
-      "minimum_size_px": 16,
+      "minimum_size_px": 14,
       "text_color": "#2a211f",
       "fill_color": "#fffdf6",
       "outline_color": "#fffdf6",

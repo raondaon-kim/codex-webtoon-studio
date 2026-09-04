@@ -1,16 +1,187 @@
 {
-  "schema_version": "1.0", "artifact_type": "director_brief", "episode_id": "ep001", "sequence_id": "seq-001", "shot_id": "shot-002",
-  "source": {"beat_refs": ["beat-001"], "dramatic_purpose": "카일의 자연스러운 챙김과 테오의 어른스러운 반박으로 형제의 코믹한 관계를 보인다."},
-  "canvas": {"width_px": 1536, "height_px": 2048, "safe_margin_norm": 0.05},
-  "scroll": {"display_width_ratio": 0.92, "whitespace_before_px": 0, "whitespace_after_px": 50, "transition_in": "continuous", "transition_out": "cut"},
-  "camera": {"shot_size": "medium", "angle": "eye_level", "lens_feel": "portrait", "position": "테오의 오른쪽 어깨 너머에서 카일을 향해", "movement": "locked", "focus": "치즈 조각과 서로 마주 보는 두 형제의 표정"},
+  "schema_version": "1.0",
+  "artifact_type": "director_brief",
+  "episode_id": "ep001",
+  "sequence_id": "seq-001",
+  "shot_id": "shot-002",
+  "source": {
+    "beat_refs": [
+      "beat-001"
+    ],
+    "dramatic_purpose": "카일의 자연스러운 챙김과 테오의 어른스러운 반박으로 형제의 코믹한 관계를 보인다."
+  },
+  "canvas": {
+    "width_px": 1536,
+    "height_px": 2048,
+    "safe_margin_norm": 0.05
+  },
+  "scroll": {
+    "display_width_ratio": 0.92,
+    "whitespace_before_px": 0,
+    "whitespace_after_px": 50,
+    "transition_in": "continuous",
+    "transition_out": "cut"
+  },
+  "camera": {
+    "shot_size": "medium",
+    "angle": "eye_level",
+    "lens_feel": "portrait",
+    "position": "테오의 오른쪽 어깨 너머에서 카일을 향해",
+    "movement": "locked",
+    "focus": "치즈 조각과 서로 마주 보는 두 형제의 표정"
+  },
   "subjects": [
-    {"character_id": "theo-waldhart", "bbox_norm": {"x": 0.05, "y": 0.46, "width": 0.36, "height": 0.47}, "depth": "foreground", "pose": "작은 어깨만 보이는 반측면", "expression": "진지하게 항의한다", "gaze": "카일", "action": "손으로 치즈를 살짝 밀어 되돌린다", "identity_invariants": ["작은 체격", "밤색 머리", "푸른 회색 튜닉"], "references": [{"path": "visual-bible/characters/theo-waldhart-canonical-v4.png", "role": "character_identity", "asset_id": "theo-waldhart-canonical-v4"}]},
-    {"character_id": "kyle-waldhart", "bbox_norm": {"x": 0.52, "y": 0.20, "width": 0.34, "height": 0.62}, "depth": "midground", "pose": "팔꿈치를 식탁에 둔 편한 자세", "expression": "장난스러운 미소", "gaze": "테오", "action": "치즈를 다시 테오 쪽으로 밀어준다", "identity_invariants": ["열네 살의 긴 팔다리", "붉은 갈색 머리", "문장 없는 푸른 저킨"], "references": [{"path": "visual-bible/characters/kyle-waldhart-canonical-v2.png", "role": "character_identity", "asset_id": "kyle-waldhart-canonical-v2"}]}
+    {
+      "character_id": "theo-waldhart",
+      "bbox_norm": {
+        "x": 0.05,
+        "y": 0.46,
+        "width": 0.36,
+        "height": 0.47
+      },
+      "depth": "foreground",
+      "pose": "작은 어깨만 보이는 반측면",
+      "expression": "진지하게 항의한다",
+      "gaze": "카일",
+      "action": "손으로 치즈를 살짝 밀어 되돌린다",
+      "identity_invariants": [
+        "작은 체격",
+        "밤색 머리",
+        "푸른 회색 튜닉"
+      ],
+      "references": [
+        {
+          "path": "visual-bible/characters/theo-waldhart-canonical-v4.png",
+          "role": "character_identity",
+          "asset_id": "theo-waldhart-canonical-v4"
+        }
+      ]
+    },
+    {
+      "character_id": "kyle-waldhart",
+      "bbox_norm": {
+        "x": 0.52,
+        "y": 0.2,
+        "width": 0.34,
+        "height": 0.62
+      },
+      "depth": "midground",
+      "pose": "팔꿈치를 식탁에 둔 편한 자세",
+      "expression": "장난스러운 미소",
+      "gaze": "테오",
+      "action": "치즈를 다시 테오 쪽으로 밀어준다",
+      "identity_invariants": [
+        "열네 살의 긴 팔다리",
+        "붉은 갈색 머리",
+        "문장 없는 푸른 저킨"
+      ],
+      "references": [
+        {
+          "path": "visual-bible/characters/kyle-waldhart-canonical-v2.png",
+          "role": "character_identity",
+          "asset_id": "kyle-waldhart-canonical-v2"
+        }
+      ]
+    }
   ],
-  "background": {"location_id": "walt-fort-dining-hall", "description": "식탁 위 수프와 빵, 뒤로 흐린 창이 조금 보이는 식당의 가까운 구도", "source_crop_norm": {"x": 0.20, "y": 0.25, "width": 0.64, "height": 0.52}, "perspective": "테이블 수평선이 두 형제를 잇는 평범한 인물 시선", "depth_layers": ["테오의 어깨", "치즈와 카일", "식탁·창가"], "lighting": "잔잔한 저녁 실내광", "references": [{"path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png", "role": "background_space", "asset_id": "walt-fort-dining-hall-v1"}]},
-  "art_direction": {"line": "깨끗한 인물 중심 웹툰 선화", "color": "차분한 청회색과 음식의 따뜻한 베이지", "rendering": "표정과 손에 선명도를 둔 2D 채색", "mood": "가벼운 형제 농담", "composition": "상단 중앙과 하단 오른쪽에 말풍선 여백을 분리한다", "must_avoid": ["카일의 브로치", "과도하게 성숙한 카일", "말풍선이나 읽을 수 있는 글자"]},
-  "text": {"mode": "deterministic_lettering", "items": [{"kind": "dialogue", "speaker": "kyle-waldhart", "content": "작은애는 더 먹어야지.", "anchor_norm": {"x": 0.56, "y": 0.05, "width": 0.28, "height": 0.12}, "tail_target_norm": {"x": 0.72, "y": 0.46}}, {"kind": "dialogue", "speaker": "theo-waldhart", "content": "저 안 작아요. 일곱 살이에요.", "anchor_norm": {"x": 0.08, "y": 0.76, "width": 0.30, "height": 0.12}, "tail_target_norm": {"x": 0.25, "y": 0.66}}], "reserved_regions": [{"x": 0.52, "y": 0.03, "width": 0.36, "height": 0.18}, {"x": 0.04, "y": 0.74, "width": 0.38, "height": 0.18}]},
-  "continuity": {"previous_shot_id": "shot-001", "screen_direction": "left_to_right", "state_in": ["치즈가 테오 앞에 있다"], "state_out": ["테오의 손이 치즈와 빵 부스러기로 향한다"]},
-  "output": {"path": "episodes/ep001/art/shot-002.png", "format": "png", "quality": "high"}
+  "background": {
+    "location_id": "walt-fort-dining-hall",
+    "description": "식탁 위 수프와 빵, 뒤로 흐린 창이 조금 보이는 식당의 가까운 구도",
+    "source_crop_norm": {
+      "x": 0.2,
+      "y": 0.25,
+      "width": 0.64,
+      "height": 0.52
+    },
+    "perspective": "테이블 수평선이 두 형제를 잇는 평범한 인물 시선",
+    "depth_layers": [
+      "테오의 어깨",
+      "치즈와 카일",
+      "식탁·창가"
+    ],
+    "lighting": "잔잔한 저녁 실내광",
+    "references": [
+      {
+        "path": "visual-bible/backgrounds/walt-fort-dining-hall-v1.png",
+        "role": "background_space",
+        "asset_id": "walt-fort-dining-hall-v1"
+      }
+    ]
+  },
+  "art_direction": {
+    "line": "깨끗한 인물 중심 웹툰 선화",
+    "color": "차분한 청회색과 음식의 따뜻한 베이지",
+    "rendering": "표정과 손에 선명도를 둔 2D 채색",
+    "mood": "가벼운 형제 농담",
+    "composition": "상단 중앙과 하단 오른쪽에 말풍선 여백을 분리한다",
+    "must_avoid": [
+      "카일의 브로치",
+      "과도하게 성숙한 카일",
+      "말풍선이나 읽을 수 있는 글자"
+    ]
+  },
+  "text": {
+    "mode": "deterministic_lettering",
+    "items": [
+      {
+        "kind": "dialogue",
+        "speaker": "kyle-waldhart",
+        "content": "작은애는 더 먹어야지.",
+        "anchor_norm": {
+          "x": 0.56,
+          "y": 0.05,
+          "width": 0.28,
+          "height": 0.12
+        },
+        "tail_target_norm": {
+          "x": 0.72,
+          "y": 0.46
+        }
+      },
+      {
+        "kind": "dialogue",
+        "speaker": "theo-waldhart",
+        "content": "저 안 작아요. 일곱 살이에요.",
+        "anchor_norm": {
+          "x": 0.08,
+          "y": 0.24,
+          "width": 0.3,
+          "height": 0.14
+        },
+        "tail_target_norm": {
+          "x": 0.25,
+          "y": 0.66
+        }
+      }
+    ],
+    "reserved_regions": [
+      {
+        "x": 0.52,
+        "y": 0.03,
+        "width": 0.36,
+        "height": 0.18
+      },
+      {
+        "x": 0.04,
+        "y": 0.22,
+        "width": 0.38,
+        "height": 0.23
+      }
+    ]
+  },
+  "continuity": {
+    "previous_shot_id": "shot-001",
+    "screen_direction": "left_to_right",
+    "state_in": [
+      "치즈가 테오 앞에 있다"
+    ],
+    "state_out": [
+      "테오의 손이 치즈와 빵 부스러기로 향한다"
+    ]
+  },
+  "output": {
+    "path": "episodes/ep001/art/shot-002.png",
+    "format": "png",
+    "quality": "high"
+  }
 }

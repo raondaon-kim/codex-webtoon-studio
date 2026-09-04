@@ -24,7 +24,7 @@ For every shot:
 2. Choose `camera.shot_size`, angle, lens feel, position, movement, and focus.
 3. Give every visible character a normalized `bbox_norm`, depth, pose, expression, gaze, action, and identity invariants.
 4. Specify the environment reference and `background.source_crop_norm`; describe foreground, midground, and background depth layers.
-5. Reserve clean normalized regions for balloons/captions. Avoid placing faces, hands, or essential props there. For dialogue and thought balloons, set `tail_target_norm` to the intended speaker or thinker; captions and SFX do not need a tail.
+5. Reserve clean normalized regions for balloons/captions. Treat `anchor_norm` as the preferred placement, not the final balloon size: leave the surrounding `reserved_regions` large enough for the compositor's text-first geometry. Keep every subject `bbox_norm` out of those regions; the lettering stage treats them as semantic subject masks. For dialogue and thought balloons, set `tail_target_norm` to the intended speaker or thinker; captions and SFX do not need a tail.
 6. Track screen direction and explicit state in/out.
 7. Select a generation canvas within GPT Image 2 limits. Prefer a normal shot block such as `1536x2048`; use larger dimensions only when composition needs them.
 8. Validate all briefs, including custom geometry checks.
@@ -48,6 +48,6 @@ Do not write the final model prompt here. The `brief-to-image-prompt` skill owns
 
 - Keep generated art free of text. Put final Korean copy in `text.items`; the compositor renders it after image generation.
 - Use `dialogue` for a white balloon with a speaker tail, `thought` for a cloud-like balloon with a dot tail, `caption` for a dark narration box, and `sfx` for outlined text without a balloon.
-- Leave `balloon_asset_id` absent for ordinary dialogue. Set it only for an approved, vector-validation-passing special asset whose catalog permits the item's text kind. A baked-tail asset is fixed-direction and still needs a visual review.
+- Leave `balloon_asset_id` absent for ordinary dialogue and thought. A baked-tail asset may only be used as an approved, tail-free special effect; it cannot be re-aimed after text-first resizing.
 - Read each scroll block top-to-bottom. When two speakers share a height, order their balloons by the actual turn and keep tails unambiguous.
 - For Korean font roles, balloon geometry, and final visual review, hand off to the `webtoon-lettering` skill; do not depend on system fonts.

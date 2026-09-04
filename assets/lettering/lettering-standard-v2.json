@@ -7,7 +7,9 @@
     "adopt_patterns": [
       "explicit_speaker_anchors",
       "seamless_curved_tail_rendering",
-      "font_glyph_coverage_preflight"
+      "font_glyph_coverage_preflight",
+      "measured_text_first_balloon_geometry",
+      "semantic_subject_keepout_map"
     ],
     "do_not_adopt": [
       "page_comic_project_model",
@@ -80,7 +82,7 @@
     "brief_field": "balloon_asset_id",
     "selection_rule": "Select only an asset that passes vectorization-report.json and whose catalog group permits the text kind.",
     "default": "Use the deterministic vector renderer for ordinary dialogue and any tail that must point at a speaker.",
-    "fixed_tail": "A selected asset with tail_behavior=baked keeps its original tail direction; visually review it rather than treating tail_target_norm as a transform instruction."
+    "fixed_tail": "A selected asset with tail_behavior=baked keeps its original tail direction. Use it only for a deliberate tail-free special effect; ordinary dialogue and thought always use the dynamic renderer."
   },
   "placement": {
     "reading_order": "top_to_bottom_then_turn_order",
