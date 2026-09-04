@@ -50,3 +50,44 @@ python -m unittest discover -s tests -v
 python tools/validate_artifacts.py examples/project
 python tools/compile_render_tasks.py examples/project/episodes/ep001/briefs --project-root examples/project --check
 ```
+
+## New-PC bootstrap
+
+Open the cloned repository at its root and keep project-specific artifacts
+under `projects/<project-id>/`; do not introduce PC-specific absolute paths.
+
+1. Install Python 3.11 or later, then run `python -m pip install -e .` from
+   the repository root.
+2. Start Codex where it can read the repository-local `.agents/skills/`.
+   Keep `.agents/skills/`, `assets/`, `schemas/`, and `config/` in the clone;
+   they are the portable studio contract and must not be copied into a user
+   home directory.
+3. Install the image CLI once on the new PC: `npm install --global
+   gpt-image-2-skill` (or `cargo install gpt-image-2-skill --locked` when
+   using Rust). Confirm it with `gpt-image-2-skill --provider codex doctor`
+   and `gpt-image-2-skill auth inspect`; redact their output and never save it
+   to the repository. `python tools/run_image_tasks.py ...` stays dry-run
+   until the user explicitly approves `--execute`.
+4. Let Codex sign in on the new PC. Its credentials stay in
+   `$CODEX_HOME/auth.json`; never copy `auth.json`, API keys, or tokens into
+   this repository.
+5. Prove the local setup before creating art:
+
+```powershell
+python -m unittest discover -s tests -v
+python tools/validate_artifacts.py examples/project
+python tools/compile_render_tasks.py examples/project/episodes/ep001/briefs --project-root examples/project --check
+python tools/generate_lettering_reference_sheet.py
+```
+
+### Approved lettering contract
+
+- Use the bundled `NanumGothic-Regular.ttf` for dialogue, thought, and
+  narration. Use `NanumGothic-Bold.ttf` only for emphasized SFX. Never depend
+  on a system-installed font.
+- Render ordinary dialogue balloons text-first, then add a short, broad tail
+  as part of the same outer contour. Do not leave a line at the tail join or
+  use a long needle-like tail for routine dialogue.
+- `assets/lettering/lettering-standard-v2.json` is the single source of truth
+  for the approved numeric limits and exceptions. A change requires an updated
+  reference sheet, renderer tests, and recomposition of affected episodes.
