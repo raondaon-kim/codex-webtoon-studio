@@ -32,6 +32,15 @@ The standard is text-first:
    outer contour: render balloon and tail as one joined silhouette, with no
    internal outline at their junction. Do not use a long needle-like triangle.
 
+### Approved dialogue-tail rule
+
+For ordinary dialogue, use the dynamic union-contour renderer and the approved
+values in `balloon_semantics.dialogue.tail_geometry`: a 14px minimum, a cap of
+14% of the balloon's smaller dimension, and a 22% target-gap fraction. The
+tail remains broad, points toward the speaker, and has no internal join line.
+Do not lengthen it for routine distant speakers; an exception needs explicit
+special-effect direction and visual approval.
+
 The approved 56-shape pack is vectorized at
 `assets/lettering/reference-balloons-56/vectors/`. It is an explicit special
 effect library, not a replacement for ordinary speech balloons. Before using
@@ -47,11 +56,11 @@ explicit `font_path` is only for a deliberate one-off preview; do not rely on
 a creator's installed system font. Keep `assets/fonts/SOURCES.md` and
 `OFL-1.1.txt` with any redistributed font.
 
-The active house type system is Nanum Gothic Regular for dialogue, Nanum Pen
-Script for thoughts, Nanum Myeongjo Bold for narration, and Nanum Gothic Bold
-for SFX. Do not substitute another face for normal dialogue unless its 360px
-comparison is approved and the profile, source record, reference sheet, and
-renderer tests change together.
+The active house type system is Nanum Gothic only: Nanum Gothic Regular for
+dialogue, thoughts, and narration, and Nanum Gothic Bold only for SFX
+emphasis. Do not substitute another family unless its 360px comparison is
+approved and the profile, source record, reference sheet, and renderer tests
+change together.
 
 ## Placement and review
 

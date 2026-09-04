@@ -15,7 +15,7 @@
       "tail": "curved"
     },
     "thought": {
-      "font": "NanumPenScript-Regular.ttf",
+      "font": "NanumGothic-Regular.ttf",
       "font_scale": 0.030,
       "minimum_size_px": 10,
       "text_color": "#28201f",
@@ -25,7 +25,7 @@
       "tail": "dot_chain"
     },
     "caption": {
-      "font": "NanumMyeongjo-Bold.ttf",
+      "font": "NanumGothic-Regular.ttf",
       "font_scale": 0.026,
       "minimum_size_px": 10,
       "text_color": "#fffdf6",

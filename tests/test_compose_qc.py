@@ -224,8 +224,8 @@ class ComposeQcTests(unittest.TestCase):
         self.assertEqual("fantasy-korean-webtoon-nanum-v2", profile["profile_id"])
         self.assertEqual({"dialogue", "thought", "caption", "sfx"}, set(fonts))
         self.assertEqual("NanumGothic-Regular.ttf", fonts["dialogue"].name)
-        self.assertEqual("NanumPenScript-Regular.ttf", fonts["thought"].name)
-        self.assertEqual("NanumMyeongjo-Bold.ttf", fonts["caption"].name)
+        self.assertEqual("NanumGothic-Regular.ttf", fonts["thought"].name)
+        self.assertEqual("NanumGothic-Regular.ttf", fonts["caption"].name)
         self.assertEqual("NanumGothic-Bold.ttf", fonts["sfx"].name)
         for kind, path in fonts.items():
             with self.subTest(kind=kind):

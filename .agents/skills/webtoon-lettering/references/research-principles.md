@@ -44,11 +44,11 @@ webtoon panels or store screenshots in the repository.
 
 ## House type system
 
-Use the bundled Nanum family rather than an installed system font: Nanum
-Gothic Regular for normal dialogue, Nanum Pen Script for thought, Nanum
-Myeongjo Bold for narration, and Nanum Gothic Bold for outlined SFX. All
-bundled files must retain their SIL Open Font License 1.1 notice. The official
-Google Fonts sources are recorded in `assets/fonts/SOURCES.md`.
+Use the bundled Nanum Gothic family rather than an installed system font:
+Nanum Gothic Regular for dialogue, thought, and narration, with Nanum Gothic
+Bold only for outlined SFX emphasis. All bundled files must retain their SIL
+Open Font License 1.1 notice. The official Google Fonts sources are recorded
+in `assets/fonts/SOURCES.md`.
 
 ## Engine reference boundary
 

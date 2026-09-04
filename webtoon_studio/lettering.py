@@ -15,6 +15,7 @@ from .placement import Rect, contains, normalized_rect, subject_aware_rect, subj
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 STYLE_PROFILE_PATH = REPOSITORY_ROOT / "assets" / "lettering" / "style-profile.json"
+LETTERING_STANDARD_PATH = REPOSITORY_ROOT / "assets" / "lettering" / "lettering-standard-v2.json"
 ELLIPSE_TEXT_RATIO = math.sqrt(2.0)
 MOBILE_REVIEW_WIDTH = 360
 MOBILE_MINIMUM_FONT_SIZE = {"dialogue": 12, "thought": 12, "caption": 11, "sfx": 15}
@@ -25,6 +26,13 @@ TAIL_RENDER_SCALE = 4
 def lettering_profile() -> dict[str, Any]:
     """Load the repository's deterministic lettering house style."""
     with STYLE_PROFILE_PATH.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+@lru_cache(maxsize=1)
+def lettering_standard() -> dict[str, Any]:
+    """Load the approved lettering contract shared by direction and rendering."""
+    with LETTERING_STANDARD_PATH.open(encoding="utf-8") as handle:
         return json.load(handle)
 
 
@@ -385,7 +393,13 @@ def _dialogue_tail_polygon(
         return None
     first, second, edge, tangent = base
     minimum_dimension = min(rect[2] - rect[0], rect[3] - rect[1])
-    tip = _tail_tip(edge, target, max(14, round(minimum_dimension * 0.14)), 0.23)
+    geometry = lettering_standard()["balloon_semantics"]["dialogue"]["tail_geometry"]
+    tip = _tail_tip(
+        edge,
+        target,
+        max(int(geometry["minimum_length_px"]), round(minimum_dimension * float(geometry["length_cap_by_balloon_min_dimension"]))),
+        float(geometry["renderer_target_gap_fraction"]),
+    )
     if tip is None:
         return None
     length = math.dist(edge, tip)

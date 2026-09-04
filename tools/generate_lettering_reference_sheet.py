@@ -104,12 +104,12 @@ def main() -> int:
     section_title = load_font("NanumGothic-Bold.ttf", 40)
     body = load_font("NanumGothic-Regular.ttf", 28)
     dialogue = load_font("NanumGothic-Regular.ttf", 42)
-    thought = load_font("NanumPenScript-Regular.ttf", 42)
-    caption = load_font("NanumMyeongjo-Bold.ttf", 34)
+    thought = load_font("NanumGothic-Regular.ttf", 42)
+    caption = load_font("NanumGothic-Regular.ttf", 34)
 
     draw.text((68, 58), "웹툰 레터링 기준 시트", font=title, fill="#1d1b1a")
-    draw.text((70, 124), "v2 초안 · 1080px 발행 / 360px 모바일 판독", font=body, fill="#6d635b")
-    draw.text((1010, 128), "시각 승인 대기", anchor="ra", font=body, fill="#9d5c37")
+    draw.text((70, 124), "v2 확정 · 1080px 발행 / 360px 모바일 판독", font=body, fill="#6d635b")
+    draw.text((1010, 128), "시각 승인 완료", anchor="ra", font=body, fill="#9d5c37")
 
     rounded_panel(draw, (56, 190, 1024, 632))
     draw.text((86, 228), "01  글자 → 여백 → 말풍선", font=section_title, fill="#272320")
@@ -117,7 +117,7 @@ def main() -> int:
     centered(draw, (170, 336, 592, 516), "내일 훈련이 끝나면\n갈대밭까지 같이\n갈래?", dialogue, "#1d1b1a")
     dashed_line(draw, (166, 332), (596, 332), "#b49068")
     dashed_line(draw, (166, 520), (596, 520), "#b49068")
-    draw.multiline_text((704, 320), "• 가운데 줄이 가장 긴\n  다이아몬드형 줄 구성\n\n• 상하좌우: 글자 2칸 기준\n  균일 여백\n\n• 꼬리는 조판 뒤에 외곽선과 통합", font=body, fill="#3e3833", spacing=9)
+    draw.multiline_text((704, 320), "• 가운데 줄이 가장 긴\n  다이아몬드형 줄 구성\n\n• 상하좌우: 글자 2칸 기준\n  균일 여백\n\n• 꼬리는 조판 뒤에\n  말풍선 외곽선과 통합", font=body, fill="#3e3833", spacing=9)
 
     rounded_panel(draw, (56, 666, 1024, 1028))
     draw.text((86, 704), "02  꼬리: 입을 향해, 짧고 넓게", font=section_title, fill="#272320")
@@ -158,7 +158,7 @@ def main() -> int:
     draw.text((86, 1580), "04  나눔글꼴: 360px에서 판독", font=section_title, fill="#272320")
     draw.rounded_rectangle((112, 1660, 446, 1812), radius=24, fill="#1f1d1a")
     centered(draw, (128, 1685, 430, 1788), "카일, 사람부터\n데려와라.", dialogue, "#ffffff")
-    draw.multiline_text((498, 1655), "하우스 서체\n대사  Nanum Gothic Regular\n독백  Nanum Pen Script\n내레이션  Nanum Myeongjo Bold\n효과음  Nanum Gothic Bold\n\n대사는 360px에서 항상 판독", font=body, fill="#3e3833", spacing=8)
+    draw.multiline_text((498, 1655), "하우스 서체\n대사  Nanum Gothic Regular\n독백  Nanum Gothic Regular\n내레이션  Nanum Gothic Regular\n효과음  Nanum Gothic Bold\n\n대사는 360px에서 항상 판독", font=body, fill="#3e3833", spacing=8)
     draw.text((86, 2044), "판독 기준: readable · even clearance · no crossings · art remains visible", font=body, fill="#6d635b")
 
     image.convert("RGB").save(output, format="PNG")

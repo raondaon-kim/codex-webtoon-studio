@@ -1,7 +1,7 @@
 {
   "standard_id": "korean-webtoon-lettering-v2",
-  "status": "draft_for_visual_approval",
-  "purpose": "Reference contract for reviewing type, balloon geometry, spacing, and mobile readability before changing the renderer.",
+  "status": "approved",
+  "purpose": "Approved house contract for Korean webtoon type, balloon geometry, spacing, and mobile readability.",
   "implementation_boundary": {
     "reference_engine": "https://github.com/wenn-id/comicsol",
     "adopt_patterns": [
@@ -29,11 +29,11 @@
     ],
     "selected_house_type_system": {
       "dialogue": "NanumGothic-Regular.ttf",
-      "thought": "NanumPenScript-Regular.ttf",
-      "caption": "NanumMyeongjo-Bold.ttf",
+      "thought": "NanumGothic-Regular.ttf",
+      "caption": "NanumGothic-Regular.ttf",
       "sfx": "NanumGothic-Bold.ttf"
     },
-    "selection_rule": "NanumGothic Regular is the house dialogue face. Confirm it remains comfortable with the same Korean dialogue at the mobile review width; nominal point size alone is not a decision criterion.",
+    "selection_rule": "NanumGothic is the only house typeface family: Regular for dialogue, thought, and caption; Bold only for SFX emphasis. Confirm it remains comfortable with the same Korean dialogue at the mobile review width; nominal point size alone is not a decision criterion.",
     "normal_dialogue": {
       "weight": "medium_or_equivalent",
       "tracking": "font_default_unless_a_reviewed_exception",
@@ -62,7 +62,13 @@
         "preferred": 0.22,
         "maximum_normal": 0.30
       },
-      "tail_shape": "short, broad, gently tapered; join it into the balloon silhouette rather than outlining a separate triangle"
+      "tail_shape": "short, broad, gently tapered; join it into the balloon silhouette rather than outlining a separate triangle",
+      "tail_geometry": {
+        "minimum_length_px": 14,
+        "length_cap_by_balloon_min_dimension": 0.14,
+        "renderer_target_gap_fraction": 0.22,
+        "exception": "Only an explicitly approved special-effect direction may use a longer tail."
+      }
     },
     "thought": {
       "contour": "cloud_or_reviewed_inner_monologue_caption",

@@ -64,7 +64,7 @@
       {"kind": "thought", "speaker": "haeun", "content": "분명 출입 금지라고 했는데.", "anchor_norm": {"x": 0.56, "y": 0.1, "width": 0.32, "height": 0.12}}
     ],
     "reserved_regions": [
-      {"x": 0.5, "y": 0.06, "width": 0.42, "height": 0.22}
+      {"x": 0.5, "y": 0.06, "width": 0.42, "height": 0.32}
     ]
   },
   "continuity": {
