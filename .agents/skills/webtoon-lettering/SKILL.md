@@ -9,32 +9,50 @@ Use deterministic lettering after art generation. Generated art must remain free
 of Korean text and speech balloons so dialogue can be edited, localized, and
 QC'd independently.
 
-## House style
+## Reference-driven standard
 
-Read `assets/lettering/style-profile.json` before changing lettering behavior.
-It maps the four semantic text kinds to the bundled OFL fonts in `assets/fonts/`:
+Read `assets/lettering/lettering-standard-v2.json` before designing a new
+lettering profile or renderer. It is a reviewable contract, not an instruction
+to overwrite an approved episode automatically.
 
-- `dialogue`: Gowun Dodum in a soft, slightly irregular oval with a short curved tail.
-- `thought`: Nanum Pen Script in a cloud balloon with a three-dot tail.
-- `caption`: Gowun Batang Bold in a quiet charcoal narration plaque.
-- `sfx`: Black Han Sans with a light outline and no balloon.
+For the source-backed rationale behind its rules, read
+[references/research-principles.md](references/research-principles.md). Use it
+when reviewing an existing episode, choosing a dialogue typeface, or revising
+balloon geometry.
 
-Use the bundled file for each role. An explicit `font_path` is only for a
-deliberate one-off preview; do not rely on a creator's installed system font.
-Keep `assets/fonts/SOURCES.md` and `OFL-1.1.txt` with any redistributed font.
+The standard is text-first:
+
+1. Typeset the exact dialogue at a mobile-readable size.
+2. Choose line breaks that form a roughly diamond-shaped text block and avoid
+   orphaned first or last lines.
+3. Size the balloon from the text block using a consistent glyph-relative
+   clearance.
+4. Add the tail last, aiming dialogue at the mouth and thought dots at the
+   head.
+
+Use the bundled files in `assets/fonts/` for any selected house font. An
+explicit `font_path` is only for a deliberate one-off preview; do not rely on
+a creator's installed system font. Keep `assets/fonts/SOURCES.md` and
+`OFL-1.1.txt` with any redistributed font.
 
 ## Placement and review
 
 1. Copy final text exactly from the episode script into `brief.text.items`.
-2. Use the semantic `kind`, reserve its `anchor_norm` region in direction, and
-   set `tail_target_norm` for every dialogue or thought item. Captions and SFX
-   have no tail target.
-3. Compose the episode without regenerating art unless art itself needs a fix.
-4. Run QC. It must account for every script text item and reject text assigned
-   to a brief outside that brief's source beats.
-5. Inspect the assembled scroll: tails identify the intended speaker without
-   crossing faces, text is readable at publish width, and bubbles do not cover
-   story-critical details.
+2. Reserve a simple background region in direction. Set `tail_target_norm` for
+   every dialogue or thought item; captions and SFX have no tail target.
+3. Generate or update the visual review sheet with:
 
-Changing the house profile or balloon geometry requires updating the renderer
-and its tests, then recompiling render tasks and composing the affected episode.
+   ```powershell
+   python tools/generate_lettering_reference_sheet.py
+   ```
+
+4. Compose without regenerating art unless art itself needs a fix.
+5. Run QC. It must account for every script text item and reject text assigned
+   to a brief outside that brief's source beats.
+6. Inspect the assembled scroll at its mobile review width. Confirm reading
+   order, glyph-relative clearance, non-crossing tails, and that faces, hands,
+   and depth cues remain visible.
+
+Changing the selected house profile or balloon geometry requires an approved
+comparison sheet, renderer tests, recompilation of affected render tasks, and
+composition of the affected episode.

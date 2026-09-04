@@ -1,0 +1,105 @@
+{
+  "standard_id": "korean-webtoon-lettering-v2",
+  "status": "draft_for_visual_approval",
+  "purpose": "Reference contract for reviewing type, balloon geometry, spacing, and mobile readability before changing the renderer.",
+  "implementation_boundary": {
+    "reference_engine": "https://github.com/wenn-id/comicsol",
+    "adopt_patterns": [
+      "explicit_speaker_anchors",
+      "seamless_curved_tail_rendering",
+      "font_glyph_coverage_preflight"
+    ],
+    "do_not_adopt": [
+      "page_comic_project_model",
+      "whole_repository_as_a_dependency"
+    ],
+    "license_note": "Use the upstream MIT license and attribution requirements if source code, rather than ideas, is copied."
+  },
+  "review_target": {
+    "publish_width_px": 1080,
+    "mobile_review_width_px": 360,
+    "reference_sheet": "assets/lettering/lettering-standard-sheet.png"
+  },
+  "type_selection": {
+    "normal_dialogue_candidates": [
+      "Pretendard Medium",
+      "Noto Sans KR Medium",
+      "Gowun Dodum Regular"
+    ],
+    "selection_rule": "Select only after the same Korean dialogue is read comfortably at the mobile review width; nominal point size alone is not a decision criterion.",
+    "normal_dialogue": {
+      "weight": "medium_or_equivalent",
+      "tracking": "font_default_unless_a_reviewed_exception",
+      "line_height": "set so a bold word cannot touch the lines above or below at mobile width"
+    }
+  },
+  "text_first_layout": {
+    "line_shape": "rough_diamond",
+    "avoid": [
+      "single_short_word_first_line",
+      "single_short_word_last_line",
+      "arbitrary_fixed_anchor_as_final_balloon_size"
+    ],
+    "inner_clearance": {
+      "unit": "normal_dialogue_glyph_advance",
+      "target_each_side": 2,
+      "require_uniform_visual_clearance": true
+    },
+    "alignment": "center_text_block_before_tail"
+  },
+  "balloon_semantics": {
+    "dialogue": {
+      "contour": "clean_consistent_path",
+      "tail_target": "speaker_mouth_or_emitting_object",
+      "tail_gap_fraction": {
+        "preferred": 0.5,
+        "maximum_normal": 0.6
+      }
+    },
+    "thought": {
+      "contour": "cloud_or_reviewed_inner_monologue_caption",
+      "tail_target": "speaker_head",
+      "minimum_dot_count": 3
+    },
+    "caption": {
+      "contour": "quiet_rectangular_or_reviewed_plaque",
+      "tail_target": "none"
+    },
+    "sfx": {
+      "contour": "text_effect_or_reviewed_integrated_shape",
+      "tail_target": "none"
+    }
+  },
+  "placement": {
+    "reading_order": "top_to_bottom_then_turn_order",
+    "prefer": [
+      "simple_background_space",
+      "first_turn_higher_than_following_turns",
+      "clear_face_hand_and_depth_cues"
+    ],
+    "reject": [
+      "crossing_tails",
+      "dialogue_wall_between_speakers",
+      "tangent_with_art_or_other_lettering",
+      "unintentional_panel_edge_clipping"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "Totus webtoon typesetting guide",
+      "url": "https://guide.totus.pro/0c91fe75-a5be-42d6-8bac-dcc89279389d"
+    },
+    {
+      "source": "Clip Studio TIPS lettering guide",
+      "url": "https://tips.clip-studio.com/en-us/articles/3751"
+    },
+    {
+      "source": "Evan Waterman lettering guide",
+      "url": "https://evanjwaterman.com/guide/lettering/general-tips/"
+    },
+    {
+      "source": "Blambot comic book grammar",
+      "url": "https://blambot.com/pages/comic-book-grammar-tradition"
+    }
+  ]
+}
