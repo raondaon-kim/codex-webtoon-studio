@@ -211,7 +211,7 @@ class ComposeQcTests(unittest.TestCase):
         tail = _dialogue_tail_polygon(plan["rect"], plan["tail_target"])
         self.assertIsNotNone(tail)
         _, edge, tip = tail  # type: ignore[misc]
-        self.assertLessEqual(math.dist(edge, tip), min(plan["rect"][2] - plan["rect"][0], plan["rect"][3] - plan["rect"][1]) * 0.23)
+        self.assertLessEqual(math.dist(edge, tip), min(plan["rect"][2] - plan["rect"][0], plan["rect"][3] - plan["rect"][1]) * 0.15)
 
         rendered = apply_lettering(source, brief)
         join_pixel = rendered.getpixel((round(edge[0]), round(edge[1])))

@@ -59,8 +59,8 @@
       "contour": "one seamless clean outer path; the tail and balloon may not retain an internal junction line",
       "tail_target": "speaker_mouth_or_emitting_object",
       "tail_gap_fraction": {
-        "preferred": 0.34,
-        "maximum_normal": 0.42
+        "preferred": 0.22,
+        "maximum_normal": 0.30
       },
       "tail_shape": "short, broad, gently tapered; join it into the balloon silhouette rather than outlining a separate triangle"
     },

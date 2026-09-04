@@ -22,8 +22,8 @@ webtoon panels or store screenshots in the repository.
   consistent in outline width, tail width, and proportion; random wobble is not
   a substitute for a hand-drawn style.
 - Aim a dialogue tail at the mouth or emitting object. Make it a short, broad
-  continuation of the balloon silhouette; normally end it about one third of
-  the gap to the speaker and never more than two fifths unless distance is a
+  continuation of the balloon silhouette; normally end it about one fifth of
+  the gap to the speaker and never more than one third unless distance is a
   deliberate story signal. The balloon's oval contour must not remain as an
   internal line across the tail join. Thought balloons use at least three
   diminishing dots aimed at the head.

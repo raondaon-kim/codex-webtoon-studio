@@ -385,7 +385,7 @@ def _dialogue_tail_polygon(
         return None
     first, second, edge, tangent = base
     minimum_dimension = min(rect[2] - rect[0], rect[3] - rect[1])
-    tip = _tail_tip(edge, target, max(18, round(minimum_dimension * 0.22)), 0.34)
+    tip = _tail_tip(edge, target, max(14, round(minimum_dimension * 0.14)), 0.23)
     if tip is None:
         return None
     length = math.dist(edge, tip)
