@@ -1,0 +1,578 @@
+{
+  "schema_version": "1.0",
+  "asset_pack_id": "private-contributor-balloon-pack-56",
+  "generated_at": "2026-09-04T02:10:50.104513+00:00",
+  "generator": {
+    "tracer": "vtracer color/spline",
+    "renderer": "resvg-py",
+    "visual_similarity_minimum": 0.985,
+    "alpha_iou_minimum": 0.97
+  },
+  "summary": {
+    "total": 56,
+    "passed": 15,
+    "failed": 41
+  },
+  "assets": [
+    {
+      "asset_id": "1",
+      "source_png": "말풍선 (1).png",
+      "svg": "vectors/balloon-001.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.969219,
+      "alpha_iou": 0.972704,
+      "mean_absolute_error": 7.849196,
+      "passed": false
+    },
+    {
+      "asset_id": "2",
+      "source_png": "말풍선 (2).png",
+      "svg": "vectors/balloon-002.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.98355,
+      "alpha_iou": 0.927791,
+      "mean_absolute_error": 4.194873,
+      "passed": false
+    },
+    {
+      "asset_id": "3",
+      "source_png": "말풍선 (3).png",
+      "svg": "vectors/balloon-003.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.973397,
+      "alpha_iou": 0.930449,
+      "mean_absolute_error": 6.783808,
+      "passed": false
+    },
+    {
+      "asset_id": "4",
+      "source_png": "말풍선 (4).png",
+      "svg": "vectors/balloon-004.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.957555,
+      "alpha_iou": 0.905083,
+      "mean_absolute_error": 10.823456,
+      "passed": false
+    },
+    {
+      "asset_id": "5",
+      "source_png": "말풍선 (5).png",
+      "svg": "vectors/balloon-005.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.97382,
+      "alpha_iou": 0.953059,
+      "mean_absolute_error": 6.675884,
+      "passed": false
+    },
+    {
+      "asset_id": "6",
+      "source_png": "말풍선 (6).png",
+      "svg": "vectors/balloon-006.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.959622,
+      "alpha_iou": 0.90776,
+      "mean_absolute_error": 10.296348,
+      "passed": false
+    },
+    {
+      "asset_id": "7",
+      "source_png": "말풍선 (7).png",
+      "svg": "vectors/balloon-007.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.975455,
+      "alpha_iou": 0.896925,
+      "mean_absolute_error": 6.25908,
+      "passed": false
+    },
+    {
+      "asset_id": "8",
+      "source_png": "말풍선 (8).png",
+      "svg": "vectors/balloon-008.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.988517,
+      "alpha_iou": 0.964337,
+      "mean_absolute_error": 2.928154,
+      "passed": false
+    },
+    {
+      "asset_id": "9",
+      "source_png": "말풍선 (9).png",
+      "svg": "vectors/balloon-009.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.996426,
+      "alpha_iou": 0.986739,
+      "mean_absolute_error": 0.911318,
+      "passed": true
+    },
+    {
+      "asset_id": "10",
+      "source_png": "말풍선 (10).png",
+      "svg": "vectors/balloon-010.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.972541,
+      "alpha_iou": 0.925439,
+      "mean_absolute_error": 7.002115,
+      "passed": false
+    },
+    {
+      "asset_id": "11",
+      "source_png": "말풍선 (11).png",
+      "svg": "vectors/balloon-011.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.932309,
+      "alpha_iou": 0.903703,
+      "mean_absolute_error": 17.261172,
+      "passed": false
+    },
+    {
+      "asset_id": "12",
+      "source_png": "말풍선 (12).png",
+      "svg": "vectors/balloon-012.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.992615,
+      "alpha_iou": 0.980701,
+      "mean_absolute_error": 1.883084,
+      "passed": true
+    },
+    {
+      "asset_id": "13",
+      "source_png": "말풍선 (13).png",
+      "svg": "vectors/balloon-013.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.985032,
+      "alpha_iou": 0.966749,
+      "mean_absolute_error": 3.816952,
+      "passed": false
+    },
+    {
+      "asset_id": "14",
+      "source_png": "말풍선 (14).png",
+      "svg": "vectors/balloon-014.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.989861,
+      "alpha_iou": 0.986837,
+      "mean_absolute_error": 2.585557,
+      "passed": true
+    },
+    {
+      "asset_id": "15",
+      "source_png": "말풍선 (15).png",
+      "svg": "vectors/balloon-015.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99459,
+      "alpha_iou": 0.992816,
+      "mean_absolute_error": 1.379662,
+      "passed": true
+    },
+    {
+      "asset_id": "16",
+      "source_png": "말풍선 (16).png",
+      "svg": "vectors/balloon-016.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.972347,
+      "alpha_iou": 0.897161,
+      "mean_absolute_error": 7.051606,
+      "passed": false
+    },
+    {
+      "asset_id": "17",
+      "source_png": "말풍선 (17).png",
+      "svg": "vectors/balloon-017.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.984528,
+      "alpha_iou": 0.566261,
+      "mean_absolute_error": 3.945314,
+      "passed": false
+    },
+    {
+      "asset_id": "18",
+      "source_png": "말풍선 (18).png",
+      "svg": "vectors/balloon-018.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.973977,
+      "alpha_iou": 0.591779,
+      "mean_absolute_error": 6.635811,
+      "passed": false
+    },
+    {
+      "asset_id": "19",
+      "source_png": "말풍선 (19).png",
+      "svg": "vectors/balloon-019.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.955878,
+      "alpha_iou": 0.744237,
+      "mean_absolute_error": 11.251153,
+      "passed": false
+    },
+    {
+      "asset_id": "20",
+      "source_png": "말풍선 (20).png",
+      "svg": "vectors/balloon-020.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.972435,
+      "alpha_iou": 0.654286,
+      "mean_absolute_error": 7.029093,
+      "passed": false
+    },
+    {
+      "asset_id": "21",
+      "source_png": "말풍선 (21).png",
+      "svg": "vectors/balloon-021.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.958334,
+      "alpha_iou": 0.6678,
+      "mean_absolute_error": 10.624756,
+      "passed": false
+    },
+    {
+      "asset_id": "22",
+      "source_png": "말풍선 (22).png",
+      "svg": "vectors/balloon-022.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.968989,
+      "alpha_iou": 0.715273,
+      "mean_absolute_error": 7.907683,
+      "passed": false
+    },
+    {
+      "asset_id": "23",
+      "source_png": "말풍선 (23).png",
+      "svg": "vectors/balloon-023.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.997392,
+      "alpha_iou": 0.96442,
+      "mean_absolute_error": 0.664953,
+      "passed": false
+    },
+    {
+      "asset_id": "24",
+      "source_png": "말풍선 (24).png",
+      "svg": "vectors/balloon-024.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.999239,
+      "alpha_iou": 0.987569,
+      "mean_absolute_error": 0.193991,
+      "passed": true
+    },
+    {
+      "asset_id": "25",
+      "source_png": "말풍선 (25).png",
+      "svg": "vectors/balloon-025.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.9938,
+      "alpha_iou": 0.925426,
+      "mean_absolute_error": 1.580998,
+      "passed": false
+    },
+    {
+      "asset_id": "26",
+      "source_png": "말풍선 (26).png",
+      "svg": "vectors/balloon-026.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.984638,
+      "alpha_iou": 0.903501,
+      "mean_absolute_error": 3.917262,
+      "passed": false
+    },
+    {
+      "asset_id": "27",
+      "source_png": "말풍선 (27).png",
+      "svg": "vectors/balloon-027.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994135,
+      "alpha_iou": 0.961804,
+      "mean_absolute_error": 1.495468,
+      "passed": false
+    },
+    {
+      "asset_id": "28",
+      "source_png": "말풍선 (28).png",
+      "svg": "vectors/balloon-028.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.987484,
+      "alpha_iou": 0.769592,
+      "mean_absolute_error": 3.191519,
+      "passed": false
+    },
+    {
+      "asset_id": "29",
+      "source_png": "말풍선 (29).png",
+      "svg": "vectors/balloon-029.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.991245,
+      "alpha_iou": 0.934643,
+      "mean_absolute_error": 2.232495,
+      "passed": false
+    },
+    {
+      "asset_id": "30",
+      "source_png": "말풍선 (30).png",
+      "svg": "vectors/balloon-030.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99711,
+      "alpha_iou": 0.926248,
+      "mean_absolute_error": 0.736959,
+      "passed": false
+    },
+    {
+      "asset_id": "31",
+      "source_png": "말풍선 (31).png",
+      "svg": "vectors/balloon-031.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99468,
+      "alpha_iou": 0.991473,
+      "mean_absolute_error": 1.356533,
+      "passed": true
+    },
+    {
+      "asset_id": "32",
+      "source_png": "말풍선 (32).png",
+      "svg": "vectors/balloon-032.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.992836,
+      "alpha_iou": 0.991715,
+      "mean_absolute_error": 1.826805,
+      "passed": true
+    },
+    {
+      "asset_id": "33",
+      "source_png": "말풍선 (33).png",
+      "svg": "vectors/balloon-033.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.991476,
+      "alpha_iou": 0.98264,
+      "mean_absolute_error": 2.173653,
+      "passed": true
+    },
+    {
+      "asset_id": "34",
+      "source_png": "말풍선 (34).png",
+      "svg": "vectors/balloon-034.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.964548,
+      "alpha_iou": 0.883425,
+      "mean_absolute_error": 9.04021,
+      "passed": false
+    },
+    {
+      "asset_id": "35",
+      "source_png": "말풍선 (35).png",
+      "svg": "vectors/balloon-035.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.975232,
+      "alpha_iou": 0.958385,
+      "mean_absolute_error": 6.315894,
+      "passed": false
+    },
+    {
+      "asset_id": "36",
+      "source_png": "말풍선 (36).png",
+      "svg": "vectors/balloon-036.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.962631,
+      "alpha_iou": 0.924137,
+      "mean_absolute_error": 9.529003,
+      "passed": false
+    },
+    {
+      "asset_id": "37",
+      "source_png": "말풍선 (37).png",
+      "svg": "vectors/balloon-037.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.992869,
+      "alpha_iou": 0.983941,
+      "mean_absolute_error": 1.818289,
+      "passed": true
+    },
+    {
+      "asset_id": "38",
+      "source_png": "말풍선 (38).png",
+      "svg": "vectors/balloon-038.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994498,
+      "alpha_iou": 0.992737,
+      "mean_absolute_error": 1.403124,
+      "passed": true
+    },
+    {
+      "asset_id": "39",
+      "source_png": "말풍선 (39).png",
+      "svg": "vectors/balloon-039.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.991584,
+      "alpha_iou": 0.982511,
+      "mean_absolute_error": 2.146161,
+      "passed": true
+    },
+    {
+      "asset_id": "40",
+      "source_png": "말풍선 (40).png",
+      "svg": "vectors/balloon-040.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994952,
+      "alpha_iou": 0.992598,
+      "mean_absolute_error": 1.287153,
+      "passed": true
+    },
+    {
+      "asset_id": "41",
+      "source_png": "말풍선 (41).png",
+      "svg": "vectors/balloon-041.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994194,
+      "alpha_iou": 0.992629,
+      "mean_absolute_error": 1.480481,
+      "passed": true
+    },
+    {
+      "asset_id": "42",
+      "source_png": "말풍선 (42).png",
+      "svg": "vectors/balloon-042.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994167,
+      "alpha_iou": 0.991866,
+      "mean_absolute_error": 1.487527,
+      "passed": true
+    },
+    {
+      "asset_id": "43",
+      "source_png": "말풍선 (43).png",
+      "svg": "vectors/balloon-043.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99442,
+      "alpha_iou": 0.991582,
+      "mean_absolute_error": 1.422921,
+      "passed": true
+    },
+    {
+      "asset_id": "44",
+      "source_png": "말풍선 (44).png",
+      "svg": "vectors/balloon-044.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.997134,
+      "alpha_iou": 0.93297,
+      "mean_absolute_error": 0.73071,
+      "passed": false
+    },
+    {
+      "asset_id": "45",
+      "source_png": "말풍선 (45).png",
+      "svg": "vectors/balloon-045.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.995465,
+      "alpha_iou": 0.899193,
+      "mean_absolute_error": 1.156461,
+      "passed": false
+    },
+    {
+      "asset_id": "46",
+      "source_png": "말풍선 (46).png",
+      "svg": "vectors/balloon-046.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.992206,
+      "alpha_iou": 0.816958,
+      "mean_absolute_error": 1.987524,
+      "passed": false
+    },
+    {
+      "asset_id": "47",
+      "source_png": "말풍선 (47).png",
+      "svg": "vectors/balloon-047.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.963294,
+      "alpha_iou": 0.620357,
+      "mean_absolute_error": 9.360045,
+      "passed": false
+    },
+    {
+      "asset_id": "48",
+      "source_png": "말풍선 (48).png",
+      "svg": "vectors/balloon-048.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.981826,
+      "alpha_iou": 0.811704,
+      "mean_absolute_error": 4.634274,
+      "passed": false
+    },
+    {
+      "asset_id": "49",
+      "source_png": "말풍선 (49).png",
+      "svg": "vectors/balloon-049.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.961554,
+      "alpha_iou": 0.750444,
+      "mean_absolute_error": 9.80366,
+      "passed": false
+    },
+    {
+      "asset_id": "50",
+      "source_png": "말풍선 (50).png",
+      "svg": "vectors/balloon-050.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.994848,
+      "alpha_iou": 0.905137,
+      "mean_absolute_error": 1.313734,
+      "passed": false
+    },
+    {
+      "asset_id": "51",
+      "source_png": "말풍선 (51).png",
+      "svg": "vectors/balloon-051.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.997129,
+      "alpha_iou": 0.920247,
+      "mean_absolute_error": 0.732158,
+      "passed": false
+    },
+    {
+      "asset_id": "52",
+      "source_png": "말풍선 (52).png",
+      "svg": "vectors/balloon-052.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.995781,
+      "alpha_iou": 0.886041,
+      "mean_absolute_error": 1.07575,
+      "passed": false
+    },
+    {
+      "asset_id": "53",
+      "source_png": "말풍선 (53).png",
+      "svg": "vectors/balloon-053.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.997398,
+      "alpha_iou": 0.829096,
+      "mean_absolute_error": 0.663455,
+      "passed": false
+    },
+    {
+      "asset_id": "54",
+      "source_png": "말풍선 (54).png",
+      "svg": "vectors/balloon-054.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99697,
+      "alpha_iou": 0.778116,
+      "mean_absolute_error": 0.772767,
+      "passed": false
+    },
+    {
+      "asset_id": "55",
+      "source_png": "말풍선 (55).png",
+      "svg": "vectors/balloon-055.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.99564,
+      "alpha_iou": 0.710188,
+      "mean_absolute_error": 1.111801,
+      "passed": false
+    },
+    {
+      "asset_id": "56",
+      "source_png": "말풍선 (56).png",
+      "svg": "vectors/balloon-056.svg",
+      "dimensions_match": true,
+      "visual_similarity": 0.997131,
+      "alpha_iou": 0.741153,
+      "mean_absolute_error": 0.731654,
+      "passed": false
+    }
+  ]
+}

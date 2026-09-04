@@ -54,3 +54,15 @@
   다섯 개의 벡터 말풍선 프리셋을 우리 레터링 엔진에 추가한다.
 - 실제 PNG를 쓸 컷에서는 먼저 자산 ID와 화면 안 배치·크롭 규칙을 디렉터
   브리프에 명시한다.
+# SVG production path
+
+The source PNGs are retained as the immutable licensed source. `vectors/`
+contains a real VTracer path conversion for every numbered asset, not SVG
+wrappers around PNG data. `vectorization-report.json` compares each SVG
+rendered through `resvg-py` against its source on light and colored surfaces,
+and also records alpha-mask overlap.
+
+Only assets whose report entry has `passed: true` are selectable in a director
+brief through `text.items[].balloon_asset_id`. This gate currently admits 15
+assets. The remaining SVG files are retained for manual refinement; lowering
+the validation threshold is not a substitute for correcting their paths.

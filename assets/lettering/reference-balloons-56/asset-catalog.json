@@ -4,13 +4,23 @@
   "license": "MIT",
   "license_file": "LICENSE",
   "provenance_file": "PROVENANCE.md",
-  "production_status": "approved_selectable_asset",
-  "default_renderer_policy": "Prefer the deterministic vector renderer for ordinary dialogue. Use this raster pack only when an approved brief needs a semantic special effect.",
+  "production_status": "approved_svg_asset_with_per_asset_similarity_gate",
+  "default_renderer_policy": "Use the validated SVG assets only when an approved brief explicitly selects balloon_asset_id. Keep the deterministic vector renderer for ordinary dialogue and any tail that must aim at a speaker.",
+  "vectorization": {
+    "source_format": "PNG",
+    "production_format": "SVG",
+    "vector_directory": "vectors",
+    "validation_report": "vectorization-report.json",
+    "build_command": "python tools/vectorize_balloon_assets.py",
+    "check_command": "python tools/vectorize_balloon_assets.py --check"
+  },
   "individual_asset_count": 56,
   "groups": [
     {
       "asset_ids": ["1-12", "16-27"],
       "kind": "impact_sfx",
+      "allowed_text_kinds": ["sfx"],
+      "tail_behavior": "none",
       "shapes": ["radial", "spiky_ring", "ink_burst"],
       "use_for": ["impact", "surprise", "magic", "loud_sfx"],
       "avoid_for": ["ordinary_dialogue"]
@@ -18,6 +28,8 @@
     {
       "asset_ids": ["13-14", "28-29"],
       "kind": "system",
+      "allowed_text_kinds": ["caption"],
+      "tail_behavior": "none",
       "shapes": ["double_hexagon_frame"],
       "use_for": ["mechanical_signal", "radio_voice", "scene_transition"],
       "avoid_for": ["ordinary_dialogue"]
@@ -25,6 +37,8 @@
     {
       "asset_ids": ["15", "30", "39", "43", "52", "56"],
       "kind": "dialogue",
+      "allowed_text_kinds": ["dialogue"],
+      "tail_behavior": "baked",
       "shapes": ["oval_with_tail"],
       "use_for": ["special_dialogue_variation"],
       "avoid_for": ["untracked_tail_direction"]
@@ -32,6 +46,8 @@
     {
       "asset_ids": ["31", "40", "44", "53"],
       "kind": "command",
+      "allowed_text_kinds": ["caption"],
+      "tail_behavior": "baked",
       "shapes": ["angular_hexagon"],
       "use_for": ["command", "system_voice"],
       "avoid_for": ["soft_conversation"]
@@ -39,6 +55,8 @@
     {
       "asset_ids": ["32", "41", "45", "54", "38", "51"],
       "kind": "thought",
+      "allowed_text_kinds": ["thought"],
+      "tail_behavior": "baked",
       "shapes": ["thought_dot", "cloud"],
       "use_for": ["internal_monologue", "imagination"],
       "avoid_for": ["rapid_multi_speaker_exchange"]
@@ -46,6 +64,8 @@
     {
       "asset_ids": ["33", "42", "46", "55"],
       "kind": "special_dialogue",
+      "allowed_text_kinds": ["dialogue"],
+      "tail_behavior": "baked",
       "shapes": ["inset_angle_tail"],
       "use_for": ["whisper", "interruption", "special_voice"],
       "avoid_for": ["ordinary_dialogue"]
@@ -53,6 +73,8 @@
     {
       "asset_ids": ["37", "50"],
       "kind": "shout",
+      "allowed_text_kinds": ["dialogue", "sfx"],
+      "tail_behavior": "none",
       "shapes": ["jagged_outline"],
       "use_for": ["shout", "urgent_warning"],
       "avoid_for": ["quiet_dialogue"]
@@ -60,6 +82,8 @@
     {
       "asset_ids": ["34-36", "47-49"],
       "kind": "effect_ring",
+      "allowed_text_kinds": ["sfx"],
+      "tail_behavior": "none",
       "shapes": ["radial_ring", "thorn_ring", "swirl_ring"],
       "use_for": ["magic", "surprise", "impact_sfx_backdrop"],
       "avoid_for": ["ordinary_dialogue"]

@@ -7,6 +7,7 @@ from typing import Any
 
 from PIL import Image
 
+from .balloon_assets import BalloonAssetError, selected_balloon_asset
 from .compose import ordered_shot_ids
 from .geometry import contains, parse_size
 from .io_utils import content_hash, load_json, resolve_project_path
@@ -188,6 +189,22 @@ def inspect_episode(episode_dir: str | Path, project_root: str | Path, platform_
                         shot_id,
                     )
                 )
+            try:
+                selected_asset = selected_balloon_asset(item)
+            except BalloonAssetError as error:
+                checks["lettering"] = False
+                issues.append(_issue("error", "lettering_asset_invalid", str(error), brief_path, shot_id))
+            else:
+                if selected_asset and selected_asset["tail_behavior"] == "baked":
+                    issues.append(
+                        _issue(
+                            "info",
+                            "lettering_fixed_tail_review",
+                            "Selected SVG balloon has a fixed tail; verify that its baked direction reads correctly.",
+                            brief_path,
+                            shot_id,
+                        )
+                    )
         declared_previous = brief["continuity"]["previous_shot_id"]
         expected_previous = expected_previous_by_shot.get(shot_id)
         if declared_previous != expected_previous:

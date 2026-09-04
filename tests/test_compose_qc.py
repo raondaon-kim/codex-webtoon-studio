@@ -7,6 +7,7 @@ from pathlib import Path
 
 from PIL import Image, ImageFont
 
+from webtoon_studio.balloon_assets import BalloonAssetError, balloon_asset_spec, selected_balloon_asset
 from webtoon_studio.compiler import compile_brief, load_configs
 from webtoon_studio.compose import compose_episode, ordered_shot_ids, slice_master
 from webtoon_studio.io_utils import dump_json, load_json
@@ -128,6 +129,30 @@ class ComposeQcTests(unittest.TestCase):
         rendered = apply_lettering(source, brief)
 
         self.assertNotEqual(source.tobytes(), rendered.tobytes())
+
+    def test_lettering_renders_only_an_svg_balloon_that_passed_similarity_validation(self) -> None:
+        source = Image.new("RGB", (640, 960), "#7a8aa0")
+        brief = {
+            "text": {
+                "mode": "deterministic_lettering",
+                "items": [
+                    {
+                        "kind": "sfx",
+                        "content": "쾅!",
+                        "anchor_norm": {"x": 0.18, "y": 0.32, "width": 0.64, "height": 0.30},
+                        "balloon_asset_id": "37",
+                    }
+                ],
+                "reserved_regions": [],
+            }
+        }
+
+        rendered = apply_lettering(source, brief)
+
+        self.assertEqual("37", balloon_asset_spec("37")["asset_id"])
+        self.assertNotEqual(source.tobytes(), rendered.tobytes())
+        with self.assertRaises(BalloonAssetError):
+            selected_balloon_asset({"kind": "sfx", "balloon_asset_id": "11"})
 
     def test_lettering_uses_the_bundled_house_fonts(self) -> None:
         profile = lettering_profile()

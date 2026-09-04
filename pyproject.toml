@@ -11,11 +11,13 @@ requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
   "jsonschema>=4.22",
-  "Pillow>=10.0"
+  "Pillow>=10.0",
+  "resvg-py>=0.5"
 ]
 
 [project.optional-dependencies]
 pdf = ["pypdf>=5.0"]
+vectorize = ["vtracer>=0.6"]
 
 [tool.setuptools]
 packages = ["webtoon_studio"]

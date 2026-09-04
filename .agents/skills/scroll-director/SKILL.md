@@ -48,5 +48,6 @@ Do not write the final model prompt here. The `brief-to-image-prompt` skill owns
 
 - Keep generated art free of text. Put final Korean copy in `text.items`; the compositor renders it after image generation.
 - Use `dialogue` for a white balloon with a speaker tail, `thought` for a cloud-like balloon with a dot tail, `caption` for a dark narration box, and `sfx` for outlined text without a balloon.
+- Leave `balloon_asset_id` absent for ordinary dialogue. Set it only for an approved, vector-validation-passing special asset whose catalog permits the item's text kind. A baked-tail asset is fixed-direction and still needs a visual review.
 - Read each scroll block top-to-bottom. When two speakers share a height, order their balloons by the actual turn and keep tails unambiguous.
 - For Korean font roles, balloon geometry, and final visual review, hand off to the `webtoon-lettering` skill; do not depend on system fonts.

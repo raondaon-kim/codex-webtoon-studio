@@ -8,6 +8,8 @@ from typing import Any
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+from .balloon_assets import render_balloon_svg, selected_balloon_asset
+
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 STYLE_PROFILE_PATH = REPOSITORY_ROOT / "assets" / "lettering" / "style-profile.json"
@@ -322,6 +324,20 @@ def _draw_caption(
     draw.rounded_rectangle(rect, radius=radius, fill=fill)
 
 
+def _draw_selected_svg_balloon(
+    overlay: Image.Image,
+    asset: dict[str, Any],
+    rect: tuple[int, int, int, int],
+) -> tuple[int, int, int, int]:
+    """Place a validated SVG balloon inside its declared reserved region."""
+    left, top, right, bottom = rect
+    balloon = render_balloon_svg(asset, (right - left, bottom - top))
+    x = left + (right - left - balloon.width) // 2
+    y = top + (bottom - top - balloon.height) // 2
+    overlay.alpha_composite(balloon, (x, y))
+    return x, y, x + balloon.width, y + balloon.height
+
+
 def apply_lettering(image: Image.Image, brief: dict[str, Any], font_path: str | Path | None = None) -> Image.Image:
     text_spec = brief.get("text", {})
     if text_spec.get("mode") != "deterministic_lettering" or not text_spec.get("items"):
@@ -337,10 +353,20 @@ def apply_lettering(image: Image.Image, brief: dict[str, Any], font_path: str | 
         bottom = int((box["y"] + box["height"]) * height)
         rect = (left, top, right, bottom)
         kind = item["kind"]
+        selected_asset = selected_balloon_asset(item)
         style = _style(kind)
-        padding = max(8, int(min(width, height) * 0.018))
-        available_width = max(20, right - left - padding * 2)
-        available_height = max(20, bottom - top - padding * 2)
+        if selected_asset is not None:
+            text_rect = _draw_selected_svg_balloon(overlay, selected_asset, rect)
+        else:
+            text_rect = rect
+        text_left, text_top, text_right, text_bottom = text_rect
+        padding = (
+            max(8, int(min(text_right - text_left, text_bottom - text_top) * 0.09))
+            if selected_asset is not None
+            else max(8, int(min(width, height) * 0.018))
+        )
+        available_width = max(20, text_right - text_left - padding * 2)
+        available_height = max(20, text_bottom - text_top - padding * 2)
         target_spec = item.get("tail_target_norm")
         target = (
             (round(float(target_spec["x"]) * width), round(float(target_spec["y"]) * height))
@@ -350,7 +376,7 @@ def apply_lettering(image: Image.Image, brief: dict[str, Any], font_path: str | 
         fill = _color(style["fill_color"])
         outline = _color(style["outline_color"])
         text_color = _color(style["text_color"])
-        stroke_width = max(1, round(min(right - left, bottom - top) * 0.014))
+        stroke_width = max(1, round(min(text_right - text_left, text_bottom - text_top) * 0.014))
         draw = ImageDraw.Draw(overlay)
         font, lines, line_height = _fit_text(
             draw,
@@ -361,6 +387,23 @@ def apply_lettering(image: Image.Image, brief: dict[str, Any], font_path: str | 
             kind,
             font_path,
         )
+
+        if selected_asset is not None:
+            if kind == "sfx":
+                _draw_centered_text(
+                    draw,
+                    text_rect,
+                    lines,
+                    font,
+                    line_height,
+                    text_color,
+                    padding,
+                    max(1, int(height * 0.0025)),
+                    outline,
+                )
+            else:
+                _draw_centered_text(draw, text_rect, lines, font, line_height, text_color, padding)
+            continue
 
         if kind == "caption":
             _draw_caption(draw, rect, _color(style["fill_color"], alpha=232))

@@ -30,6 +30,14 @@ The standard is text-first:
 4. Add the tail last, aiming dialogue at the mouth and thought dots at the
    head.
 
+The approved 56-shape pack is vectorized at
+`assets/lettering/reference-balloons-56/vectors/`. It is an explicit special
+effect library, not a replacement for ordinary speech balloons. Before using
+one, check `asset-catalog.json` and `vectorization-report.json`; only a
+passing asset may be selected through `text.items[].balloon_asset_id`. Its
+catalog text kind must match the item. A `tail_behavior` of `baked` preserves
+the original SVG tail and cannot be re-aimed with `tail_target_norm`.
+
 Use the bundled files in `assets/fonts/` for any selected house font. An
 explicit `font_path` is only for a deliberate one-off preview; do not rely on
 a creator's installed system font. Keep `assets/fonts/SOURCES.md` and
@@ -58,6 +66,17 @@ renderer tests change together.
 6. Inspect the assembled scroll at its mobile review width. Confirm reading
    order, glyph-relative clearance, non-crossing tails, and that faces, hands,
    and depth cues remain visible.
+
+Regenerate and validate the SVG pack only when changing its source artwork or
+tracing settings:
+
+```powershell
+python tools/vectorize_balloon_assets.py
+```
+
+Use `--check` to prove that already committed SVG files still match their
+approved source PNGs. Do not relax the recorded thresholds merely to make an
+asset selectable; leave it out or correct its vector source instead.
 
 Changing the selected house profile or balloon geometry requires an approved
 comparison sheet, renderer tests, recompilation of affected render tasks, and

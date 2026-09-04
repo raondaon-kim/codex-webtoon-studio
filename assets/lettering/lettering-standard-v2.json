@@ -75,6 +75,13 @@
       "tail_target": "none"
     }
   },
+  "approved_svg_balloon_assets": {
+    "catalog": "assets/lettering/reference-balloons-56/asset-catalog.json",
+    "brief_field": "balloon_asset_id",
+    "selection_rule": "Select only an asset that passes vectorization-report.json and whose catalog group permits the text kind.",
+    "default": "Use the deterministic vector renderer for ordinary dialogue and any tail that must point at a speaker.",
+    "fixed_tail": "A selected asset with tail_behavior=baked keeps its original tail direction; visually review it rather than treating tail_target_norm as a transform instruction."
+  },
   "placement": {
     "reading_order": "top_to_bottom_then_turn_order",
     "prefer": [

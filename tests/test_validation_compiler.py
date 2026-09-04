@@ -73,6 +73,25 @@ class ValidationCompilerTests(unittest.TestCase):
 
         self.assertTrue(any("tail_target_norm.x" in item for item in report.errors))
 
+    def test_lettering_svg_balloon_asset_id_is_schema_checked(self) -> None:
+        brief = copy.deepcopy(load_json(PROJECT / "episodes" / "ep001" / "briefs" / "shot-001.json"))
+        brief["text"] = {
+            "mode": "deterministic_lettering",
+            "items": [
+                {
+                    "kind": "sfx",
+                    "content": "쾅!",
+                    "anchor_norm": {"x": 0.1, "y": 0.1, "width": 0.2, "height": 0.1},
+                    "balloon_asset_id": "37",
+                }
+            ],
+            "reserved_regions": [],
+        }
+
+        self.assertEqual([], validate_data(brief).errors)
+        brief["text"]["items"][0]["balloon_asset_id"] = "57"
+        self.assertTrue(any("balloon_asset_id" in error for error in validate_data(brief).errors))
+
     def test_story_bible_rejects_regressing_or_unknown_age_milestone(self) -> None:
         story = load_json(PROJECT / "story-bible" / "story-bible.json")
         broken = copy.deepcopy(story)

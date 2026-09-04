@@ -167,7 +167,12 @@
               "speaker": {"type": ["string", "null"]},
               "content": {"type": "string"},
               "anchor_norm": {"$ref": "#/$defs/normalizedBox"},
-              "tail_target_norm": {"$ref": "#/$defs/normalizedPoint"}
+              "tail_target_norm": {"$ref": "#/$defs/normalizedPoint"},
+              "balloon_asset_id": {
+                "type": "string",
+                "pattern": "^(?:[1-9]|[1-4][0-9]|5[0-6])$",
+                "description": "Optional approved SVG balloon asset. Its compatible text kind and tail behavior are defined by the asset catalog."
+              }
             }
           }
         },
